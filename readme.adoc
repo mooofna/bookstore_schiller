@@ -1,18 +1,3 @@
-image:https://github.com/st-tu-dresden-praktikum/swt23w32/workflows/CI%20build/badge.svg["CI Build", link="https://github.com/st-tu-dresden-praktikum/swt23w32/actions"]
-image:https://img.shields.io/badge/SonarQube-checked-blue?logo=sonarqube["SonarQube status", link="https://st-lab-ci.inf.tu-dresden.de/sonarqube/"]
-
-// Hi there! We've already included some generally useful information in here.
-// Feel free to edit the first section to add a short description of your task and your project.
-
-= Kickstart
-
-The kickstart module is a template project to bootstrap the Java project in the Software Engineering lab.
-Each group's repository is initialized with this template.
-It contains the following features:
-
-* a skeleton Java 17 web application based on Spring Boot and Salespoint framework (see `src/main/java` and `src/test/java`)
-* Asciidoc documentation templates in `src/main/asciidoc`
-
 == Important documents in this repo
 
 * link:src/main/asciidoc/protocols[Meeting Protocols]
