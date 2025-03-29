@@ -1,0 +1,49 @@
+= Protokoll Gruppe 32
+
+Treffen am 07.11.2023
+
+Ort:      Oval Office (APB 2101) +
+Beginn:   16:40 Uhr +
+Ende:     18:10 Uhr
+
+__Schriftführer:__ Nova & Maurice
+
+*Nächstes Treffen:* +
+14.11.2023, 16:40 Uhr, APB 2101
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Nova
+- Krystina
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+
+== Retrospektive des letzten Sprints
+
+- Demonstration der Wichtigkeit von Backend-Validation und Konsistenz der Validation in unterschiedlichen Views anhand des Videoshop Beispiels von Marcel
+- Unterschied zwischen einem idempotenten und einem nicht idempotenten Request (z.B. Eignung von GetMapping für primitive Suche)
+- Möglichkeit der Verwendung sämtlicher Salespoint-Objekte (inkl. Entitäten) für @PathVariable
+- Verwendung des DomainClassConverter
+- Wichtigkeit des Prinzips "Composition over Inheritance"
+- Optimierung der Lösung für "Primitive Suche" von Louis
+
+== Planung des nächsten Sprints
+
+- Termin fuer Praesentation in November
+    - Grundlagen Architektur (gerne mit einfachen Diagrammen, z.B. Ausschnitt des Klassendiagramms)
+    - Zielgruppe: Kund*in
+    - Quasi Probelauf fuer Endpraesentation
+    - 30 min
+        - 10 Folienpraesentation
+        - 10 Prototyppraesentation: Pfad durch Applikation mittels Storyline
+        - 10 Diskussion und Fragen
+    - Selbstreflektion mit einbeziehen
+    - Termin: Do 14:50 23.11.2023 (unter Vorbehalt)
+    - Wenn moeglich alle Redeanteile
+- Diskussion über die Implementierung von User
+    - Verschiedene Unterklassen gegenüber Komposition, z.B. Enum für verschiedene Typen von Nutzern
+    - Verwendung der Salespoint Funktionalität für Authorisierung

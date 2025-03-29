@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="${event.getTitle()}"/>
+</head>
+<body>
+<section layout:fragment="content">
+    <! Event Details + Updating >
+    <div class="new-event-container">
+
+        <h2 class="new-event-form-header" th:text="#{events.details}"/>
+
+        <form class="new-event-form" method="post" th:action="@{/events/update}" th:object="${eventForm}" enctype="multipart/form-data">
+            <input type="hidden" name="eventId" th:value="${event.getId()}">
+
+            <div class="form-group">
+                <label class="label" for="title" th:text="#{events.event_title}"/>
+                <input class="form-control" id="title" maxlength="200" th:readonly="${!updateMode}" th:field="*{title}"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="image" th:text="#{events.image}"/>
+                <input class="form-control" type="file" id="image" th:field="*{image}" accept="image/png, image/jpeg, image/gif"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="speaker" th:text="#{events.speaker}"/>
+                <input class="form-control" id="speaker" maxlength="200" th:readonly="${!updateMode}" th:field="*{speaker}"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="room" th:text="#{events.room}"/>
+                <input class="form-control" id="room" maxlength="200" th:readonly="${!updateMode}" th:field="*{room}"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="date" th:text="#{events.date}"/>
+                <input class="form-control" id="date" type="date" th:readonly="${!updateMode}" th:field="*{date}"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="time" th:text="#{events.time}"/>
+                <input class="form-control" id="time" type="time" th:readonly="${!updateMode}" th:field="*{time}"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="capacity" th:text="#{events.capacity}"/>
+                <input class="form-control" id="capacity" type="number" th:min="${event.getOccupiedSeats()}" th:readonly="${!updateMode}" th:field="*{capacity}"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="description" th:text="#{events.description}"/>
+                <input class="form-control" id="description" th:readonly="${!updateMode}" th:field="*{description}"/>
+            </div>
+
+            <button th:if="${updateMode}" type="submit" th:text="#{events.submit_update}"/>
+            <br>
+            <div style="display:block; color: green" th:if="${changeSuccessful}" class="alert alert-danger">
+                <p th:text="#{events.change_successful}" th:class="red-text"></p>
+            </div>
+            <div style="display:block; color: red" th:if="${changeFailed}" class="alert alert-danger">
+                <p th:text="#{events.change_failed}" th:class="red-text"></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="events-edit">
+
+        <form method="get" th:action="@{/events/view}">
+            <input type="hidden" name="eventId" th:value="${event.getId()}">
+            <input type="hidden" name="updatable" th:value="${!updateMode}">
+            <button th:if="${!updateMode}" type="submit" th:text="#{events.set_updatable}"/>
+            <button th:if="${updateMode}" type="submit" th:text="#{events.set_readonly}"/>
+        </form>
+        <br>
+
+        <form method="post" th:action="@{/events/delete}">
+            <input type="hidden" name="eventId" th:value="${event.getId()}">
+            <button type="submit" th:text="#{events.delete}"/>
+        </form>
+
+        <! Reservation overview >
+        <h2 th:text="#{events.reservations}" th:unless="${event.getReservations().isEmpty()}"/>
+        <table class="user-table" th:unless="${event.getReservations().isEmpty()}">
+            <thead class="user-head">
+            <tr>
+                <th class="table-text" th:text="#{events.reservations.user}"/>
+                <th class="table-text" th:text="#{events.reservations.quantity}"/>
+                <th class="table-text"></th> <!delete button>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="reservation : ${event.getReservations()}">
+                <!Username>
+                <td th:text="${reservation.getUserAccount().getUsername()}"/>
+
+                <!Quantity>
+                <td th:text="${reservation.getQuantity()}"/>
+
+                <!Delete Button>
+                <td>
+                    <form method="post" th:action="@{/events/delete_reservation}">
+                        <input type="hidden" name="eventId" th:value="${event.getId()}">
+                        <input type="hidden" name="userAccount" th:value="${reservation.getUserAccount()}">
+                        <button type="submit" th:text="#{events.reservations.delete}"/>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2 th:if="${event.getReservations().isEmpty()}" th:text="#{events.no_reservations}"/>
+
+    </div>
+
+</section>
+</body>
+</html>

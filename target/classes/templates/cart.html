@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="#{cart.title}"/>
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="cart-notempty" th:unless="${cart.isEmpty()}">
+        <img class="cart-image" th:src="@{/resources/img/loginbooks2.jpeg}" src="../static/resources/img/loginbooks2.jpeg" alt="bookimage">
+        <div class="catalog-row">
+            <div class="cart-title" th:text="#{cart.title}"/>
+            <div class="catalog-books" th:each="item : ${cart}">
+                <div class="cart-imageSplit">
+                    <div>
+                        <img class="cart-bookImage" th:src="@{/files/{image}(image=${bookImages[item.id]})}" alt="bookimage">
+                    </div>
+                    <div class="cart-info">
+                        <div class="cart-topInfo">
+                            <div class="cart-productName" th:text="${item.productName}"/>
+                            <form class="cart-deleteButton" method="post" action="cart/deleteItem">
+                                <input th:value="${item.product.id}" type="hidden" name="pid"/>
+                                <button type="submit">
+                                    <i>X</i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="cart-centerInfo">
+                            <div class="cart-author" th:text="${bookAuthors.containsKey(item.id) ? bookAuthors[item.id] : 'Unknown Author'}"/>
+<!--                            <div class="cart-genre" th:text="${bookGenres}"/>-->
+                            <div th:text="#{cart.still} + ${availability.get(item.getProduct())} + ' ' + #{cart.exist}"/>
+                        </div>
+
+                        <div class="cart-bottomInfo">
+                            <div th:text="#{cart.quantity}"/>
+                            <form method="post" action="cart/addOrUpdate">
+                                <input th:value="${item.product.id}" type="hidden" name="productId"/>
+                                <input th:value="true" type="hidden" name="onCartSite"/>
+                                <button type="button" onclick="decrementQuantity('quantityInput')">-</button>
+                                <input id="quantityInput" th:value="${item.quantity}" name="amount" type="number" min="1" th:max="${T(java.lang.Math).min(5, availability.get(item.getProduct()))}" step="1">
+                                <button type="button" onclick="incrementQuantity('quantityInput')">+</button>
+                                <noscript>
+                                    <button type="submit">
+                                        <i>🔄</i>
+                                    </button>
+                                </noscript>
+                                <script>
+                                    function incrementQuantity(inputId) {
+                                        var input = document.getElementById(inputId);
+                                        var currentValue = parseInt(input.value);
+                                        var maxValue = parseInt(input.max);
+                                        if (currentValue < maxValue) {
+                                            input.value = currentValue + 1;
+                                        }
+                                    }
+
+                                    function decrementQuantity(inputId) {
+                                        var input = document.getElementById(inputId);
+                                        var currentValue = parseInt(input.value);
+                                        if (currentValue > 1) {
+                                            input.value = currentValue - 1;
+                                        }
+                                    }
+                                </script>
+                            </form>
+
+                            <div class="cart-price"  th:text="${item.product.price}"/>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div style="display:block; color: red" th:if="${validationError}" class="alert alert-danger">
+                <p th:text="#{cart.validation_error}" th:class="red-text"></p>
+            </div>
+            <div th:text="#{cart.total_price} + ${cart.price}"/>
+            <form class="cart-form" method="post" th:action="@{/cart/checkout}">
+                <div class="cart-delivery">
+                    <input type="radio" id="d" value="Delivery" name="OrderType"/>
+                    <label for="d" th:text="#{cart.delivery}"/><br>
+                </div>
+                <div class="cart-pickup">
+                    <input type="radio" id="p" value="Pickup" name="OrderType" checked="true"/>
+                    <label for="p" th:text="#{cart.pickup}"/>
+                </div>
+                <button class="cart-buy" type="submit" th:text="#{cart.buy}"/>
+            </form>
+            <form method="post" th:action="@{/cart/empty_cart}">
+                <button type="submit" th:text="#{cart.to_empty}"></button>
+            </form>
+
+        </div>
+        <div></div>
+    </div>
+
+    <div th:if="${cart.isEmpty()}">
+        <h2 th:text="#{cart.empty}"/>
+        <div style="display:block; color: red" th:if="${validationError}" class="alert alert-danger">
+            <p th:text="#{cart.validation_error.empty_cart}" th:class="red-text"></p>
+        </div>
+    </div>
+</section>
+</body>
+</html>

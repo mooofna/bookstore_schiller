@@ -1,0 +1,34 @@
+Folgende Hinweise sind nach Bereiche bzw. Funktionalitäten der Webseite aufgeteilt.
+
+
+=== Katalog
+* Funktionen der Buttons "Merchandise" und "Kalender" noch nicht implementiert
+* Es sollten keine Whitelabel Errors auftreten
+* Die Suche sucht zuerst nach Titel des Buches, dann Autor des Buches, und schließlich noch Genre des Buches. (Die Ergebnisse basieren auf Teilstrings und sollten in der genannten Reihenfolge erscheinen)
+
+
+=== User und Einloggen/Registrieren:
+* Um sich als Admin anzumelden, gibt man als **Username** _boss_ ein und als **Passwort** _123_
+* Um sich als schon existierender Kunde anzumelden, kann man als **Username** _Ghastly Bespoke_ und als **Passwort** _123_ eingeben
+* Um sich als schon existierener Mitarbeiter anzumelden, kann man als **Username** _China Sorrows_ und als **Passwort** _123_ eingeben
+
+=== Warenkorb
+* Das Button mit dem 🔄 emoji dient dazu, die Anzahl und den Preis zu updaten, falls die Anzahl (des ausgewählten Buches) erhöht wird
+* Wird unangemeldet der Kaufen Button geklickt, wird auf die Login Seite weitergeleitet. Meldet man sich dort mit einem Account mit der Rolle 'CUSTOMER' an, wird die Bestellung zuende abgeschlossen. Meldet man sich jedoch mit einem Account mit der Rolle 'BOSS' oder 'EMPLOYEE' an, wird der Bestelvorgang abgebrochen und man wird auf die Index Seite weitergeleitet.
+
+=== Finanzübersicht
+* Input dient der Auswahl eines Zeitintervalles, indem das Einkommen des Buchladens angezeigt werden soll
+* Die aktuelle Systemzeit wird unter _time_ angezeigt und es gibt einen button, um ins naechste Quartal zu skippen
+
+=== Nutzerliste
+* Der Edit Button ist bis jetzt nur ein Platzhalter
+* Die neu hinzugefügten Mitarbeiter haben alle das gleiche _123_ **Passwort** 
+
+=== Inventar
+* Ab 10 Stück eines Produktes wird keine Meldung mehr angezeigt
+
+=== Time
+* Lediglich zum testen der Finanzuebersicht, keine Funktionalitaet, die Teil des Endprodukts sein wird
+
+=== Eventkalender
+* Noch nicht implementiert

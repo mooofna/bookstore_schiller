@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="#{order.title}">Bestellliste</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div layout:fragment="content">
+    <section class="header-section">
+        <img th:src="@{/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg}" src="../static/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg" alt="Library Background">
+        <div class="header-text">
+            <p style="font-size: 50px">TICKETS</p>
+        </div>
+    </section>
+    <section class="login-container">
+        <div class="center">
+            <table class="issue-table">
+                <tr class="ticket-sub">
+                    <th th:text="#{support.issue_ID}">Issue ID</th>
+                    <th th:text="#{support.title}">Title</th>
+                    <th th:text="#{support.status}">Status</th>
+                    <th th:text="#{support.user_name}">Username</th>
+                </tr>
+                <tr th:each="issue : ${issues}" class="issue">
+                    <td th:text="${issue.id}"></td>
+                    <td>
+                        <a th:href="@{/admin/support_chat/{id}(id=${issue.id})}" th:text="${issue.title}"></a>
+                    </td>
+                    <td th:text="${issue.closed ? 'Closed' : 'Open'}"></td>
+                    <td th:text="${issue.customer?.userAccount?.username}"></td>
+                </tr>
+            </table>
+            <p class="satisfaction" th:text="#{support.customer_satisfaction} + ': ' + ${averageRating}"></p>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>

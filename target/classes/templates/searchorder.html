@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title>Schiller Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+    <section class="header-section">
+        <img th:src="@{/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg}" src="../static/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg" alt="Library Background">
+        <div class="header-text">
+            <p>Schiller</p>
+
+        </div>
+    </section>
+
+    <section class="welcome-section">
+        <p>Suche</p>
+    </section>
+    <div class="container mt-3 mb-3">
+            <form th:action="@{/orders/search}" method="get">
+                <div class="mb-3">
+                    <label for="searchTerm" class="form-label">Suche nach</label>
+                    <input class="form-control" id="searchTerm" name="searchTerm" type="text" required="required" aria-describedby="searchHelp" autofocus="autofocus">
+                    <div id="searchHelp" class="form-text">Geben Sie ein Wort ein</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Suche</button>
+            </form>
+
+        </div>
+    </div>
+
+</section>
+
+<footer>
+
+</footer>
+</section>
+</body>
+</html>

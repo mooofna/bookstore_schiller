@@ -1,0 +1,1268 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 3.2em;
+    text-align:center;
+}
+
+h2 {
+    font-family: "Baskerville", "Times New Roman", serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ede8df;
+}
+
+p {
+    font-family: "Red Hat Display", "Times New Roman", serif;
+}
+
+.navigation {
+    background-color: #ede8df;
+    padding-top: 10px;
+}
+
+.nav-top{
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.right{
+    order: 3;
+    font-family: "Red Hat Display", "Times New Roman", serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+.left{
+    order: 1;
+    font-family: "Red Hat Display", "Times New Roman", serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+.right:hover{
+    color: rgba(211, 141, 141, 0.62);
+}
+
+.left:hover{
+    color: rgba(211, 141, 141, 0.62);
+}
+
+button{
+    background-color: rgb(59,26, 38);
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    padding: 7px 20px;
+    color: #fff;
+    font-family: "Red Hat Display", "Times New Roman", serif;
+    font-weight: 500;
+}
+
+button:hover{
+    background-color: rgb(86, 51, 64);
+}
+
+nav a {
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.divider {
+    border: 1px solid #000;
+    margin: 10px 3%;
+}
+
+.title {
+    font-family: "Baskerville";
+    font-size: xx-large;
+    order: 0;
+    text-decoration: none;
+    color: black;
+    position: flex;
+    left: 0;
+}
+
+.header-section {
+    position: relative;
+    height: 100px;
+}
+
+.header-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-section button {
+    color: black;
+    background-color: #ede8df;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.header-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+}
+
+.header-buttons .search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+}
+
+.header-buttons .search-form input {
+    padding: 9px;
+    margin-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.header-buttons .search-form button {
+    padding: 10px 15px;
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 1px solid #ccc;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.header-text h1, .header-text h2, .header-text p {
+    color: #fff;
+    font-size: 100px;
+
+}
+
+.inventory-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.multi-genre-select {
+    height: auto;
+    overflow-y: auto;
+}
+
+
+.home-title{
+    font-family: Baskerville, "Times New Roman", serif;
+}
+
+.welcome-section{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 50px;
+}
+
+.welcome-section p{
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.about-section {
+    background-color: #2e3635;
+    padding: 50px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.about-section p{
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: "Baskerville", serif;
+}
+
+.about-icon img {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: Baskerville, Arial, sans-serif;
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.catalog-section {
+    display: flex;
+    height: 100%;
+}
+
+.Book-Categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(204, 201, 195);
+    height: 100%;
+    padding: 5px;
+    flex-grow: 1;
+    margin: 20px;
+}
+
+.Book-Categories .buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.Book-Categories .button {
+    flex-grow: 1;
+    margin: 5px;
+    padding: 3px;
+    font-family: "Red Hat Display", "Times New Roman", serif;
+    text-align: center;
+    font-size: 18px;
+}
+
+.Book-Categories .button button {
+    width: 100%;
+    height: 100%;
+}
+
+
+.Book-Categories .categories-header {
+    font-size: 24px;
+    font-family: "Red Hat Display", Arial, sans-serif;
+    margin-bottom: 0;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.Book-Categories .categories-subheader {
+    font-size: 20px;
+    font-family: "Red Hat Display", Arial, sans-serif;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.Catalog {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 75%;
+    /* max-width: 1000px; */
+    margin: 10px auto;
+    align-items: self-start;
+    justify-content: center;
+}
+
+.book-title {
+    font-family: Red Hat Display, Arial, sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.book-author {
+    font-family: Red Hat Display, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Catalog.associated-books-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    scrollbar-width: none;
+    justify-content: start;
+    scrollbar-width: none;
+}
+
+.Catalog.associated-books-container::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .Catalog {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 799px) {
+    .Catalog {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .Catalog-wrapper {
+        position: relative;
+    }
+}
+
+.book {
+    padding: 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.book:hover{
+    background-color: lightgrey;
+}
+
+.book a {
+    font-family: "Red Hat Display", Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.book img {
+    height: 75%;
+    margin-bottom: 15px;
+}
+
+.book p {
+    font-family: Baskerville, Arial, sans-serif;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    color: black;
+
+}
+
+.tab:hover {
+    background-color: lightgray;
+}
+
+.tab:active {
+    background-color: darkgray;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+
+}
+
+.left-image, .right-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.thank-you-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    width: 120%;
+    margin-top: 25px;
+}
+
+.grey-box {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(204, 201, 195);
+    align-items: center;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: 100%;
+}
+
+.thank-you-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(204, 201, 195);
+    align-items: center;
+    margin-right: 40px;
+    margin-left: 100px;
+    width: 80%;
+    margin-top: 25px;
+    padding: 20px;
+    height: 300px;
+}
+
+.thank-you-text {
+    margin-bottom:45px;
+    font-style:italic;
+}
+
+.thank-you {
+    font-family: Baskerville, "Times New Roman", serif;
+    font-size: xxx-large;
+    margin-top: 15px;
+    margin-bottom: 38px;
+}
+
+.grey-box-login {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(204, 201, 195);
+    align-items: center;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.ui-items {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-heading {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-family: 'Red Hat Display', Arial, sans-serif;
+    font-size: x-large;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-form > .input {
+    width: 100%;
+    font-family: "Red Hat Display", "Times New Roman", serif;
+    font-weight: 500;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form > .input > input {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(187, 183, 177);
+    height: 40px;
+    width: 80%;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.login-form > button[type="submit"] {
+    background-color: rgb(59, 26, 38);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.registered {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registered p {
+    font-family: "Red Hat Display", Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.registered a button {
+    margin: 10px;
+}
+
+.header-item p {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: Baskerville, Arial, sans-serif;
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.header-row {
+    background-color: #252d2d;
+    padding: 50px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    border-color: rgb(187, 183, 177);
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.Titel {
+    text-align: center;
+}
+
+.lagerbestand {
+    text-align: center;
+}
+
+.nachbestellen {
+    width: 20%;
+    margin-left: 2.5%;
+}
+
+.ui-icon-button {
+    min-height: 30px;
+    margin: 10px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.book-detail-container{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.book-detail-title {
+    font-family: "Baskerville", "Times New Roman", serif;
+    font-size: 42px;
+}
+
+.book-detail-author{
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 25px;
+    margin-bottom: 17px;
+}
+
+.detail-box{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(204, 201, 195);
+    align-items: flex-start;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: 50%;
+    padding: 15px;
+}
+
+.comment-box{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(250, 250, 250);
+    align-items: flex-start;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 50%;
+    padding: 5px;
+}
+
+.detail-descriptor{
+    font-family: 'Red Hat Display', 'Arial', sans-serif;
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 10px
+}
+
+.purchase{
+    font-family: 'Red Hat Display', 'Arial', sans-serif;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.detail-blurb{
+    font-family: 'Red Hat Display', 'Arial', sans-serif;
+}
+
+.detail-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-right: 10px;
+    margin-bottom:10px;
+}
+
+.detail-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin-right: 30px;
+    font-family: Baskerville, "Times New Roman", serif;
+}
+
+.book-detail-image {
+    width:300px;
+    height: 500px;
+    flex-grow: 2;
+    margin-left: 30px;
+    object-fit: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.comments {
+    font-family: "Red Hat Display", Arial, sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.user-row {
+    background-color: #7d7b6c;
+    border-style: none;
+    padding: 10px;
+    height: 45px;
+    width:100%;
+    text-align: match-parent;
+    font-family: "Red Hat Display", Arial, sans-serif;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+table, tr, td, th {
+    border: none;
+}
+
+.user-head {
+    font-family: "Red Hat Display", Arial, sans-serif;
+    padding-bottom: 15px;
+    height: 42px;
+}
+
+.add-employee-button {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.back {
+    background-color: #252d2d;
+    padding: 40px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    border-radius: 10px;
+    color: #e3d5c1;
+}
+
+.user-table {
+    width:100%;
+    border-spacing: 0px 10px;
+    margin-top: 10px;
+}
+
+.user-table input, select {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Red Hat Display", Arial, sans-serif;
+    font-size: 12px;
+}
+
+input {
+    text-align: center;
+    height: 20px;
+    line-height: 30px;
+}
+
+.table-text{
+    color: rgb(187, 183, 177);
+}
+
+.cart-title{
+    font-family: "Baskerville", "Times New Roman", serif;
+    font-size: 55px;
+    text-decoration: underline;
+    justify-self: flex-start;
+}
+
+.cart-notempty{
+    display: flex;
+}
+
+.cart-empty{
+    text-align: center;
+}
+
+.cart-productName{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.cart-price{
+    background-color: #8c8c8c;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cart-image{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.cart-deleteButton{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -20px;
+}
+
+.cart-deleteButton button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: black;
+    background-color: transparent;
+    padding: 2px 10px 2px 2px;
+    font-size: 20px;
+}
+
+.cart-deleteButton button:hover{
+    color: rgba(49, 49, 47, 0.74);
+}
+
+.catalog-books{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(203, 201, 195);
+    margin-left: 20px;
+    width: 100%;
+    padding: 5px;
+}
+
+.catalog-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-imageSplit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cart-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    width: 100%;
+}
+
+.cart-bookImage{
+    width: 100px;
+    height: 150px;
+    margin-right: 10px;
+}
+
+.cart-topInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-centerInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.cart-bottomInfo{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-author{
+    font-style: oblique;
+}
+
+.cart-delivery{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-pickup{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-form button{
+    margin-top: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.account-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-family: "Red Hat Display", Arial, sans-serif;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.account-descriptor {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.orderdetail-card {
+    background: white;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.orderdetail-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.orderdetail-content {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.orderdetail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.orderdetail-item:last-child {
+    margin-bottom: 0;
+}
+
+.itemdetail-label {
+    font-weight: bold;
+    color: #666;
+}
+
+.itemdetail-value {
+    text-align: right;
+    color: #333;
+    margin-left: 20px;
+}
+
+.itemdetail-highlight {
+    background: #e0e0e0;
+    padding: 3px 8px;
+    border-radius: 8px;
+}
+.order-detail-layout{
+    display: flex;
+}
+
+.finance {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.finance-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-direction: column;
+    font-family: "Red Hat Display", Arial, sans-serif;
+    font-weight: bold;
+    height: 100%;
+}
+
+.total-to {
+    font-size: xxx-large;
+    display: block;
+}
+
+.total-to-below {
+    font-size: x-large;
+    display: block;
+}
+
+.total-ito {
+    font-size: xx-large;
+    display: block;
+}
+
+.finance-table {
+    margin-top: 30px;
+    border-width: medium;
+    border-color: #333333;
+    background-color: #8c887c;
+    border-bottom: #333333;
+    border-spacing: unset;
+}
+
+.finance-table th, td, tr{
+    border-bottom: 1px solid #ddd;
+    height: 35px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+    .reorder-form .reorder-field-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .reorder-form .reorder-quantity {
+        width: 55px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .reorder-form .reorder-button {
+        padding: 5px 10px;
+    }
+    
+.grey-box-login {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(204, 201, 195);
+    align-items: center;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.ticket {
+    font-family: 'Red Hat Display', Arial, sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ticket-sub {
+    font-family: 'Red Hat Display', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.issue {
+    background-color: #c1c0bf;
+    height: 36px;
+    font-size: 18px;
+    margin:8px;
+    padding: 12px;
+    border: none;
+    border-radius: 100px;
+    font-family: "Red Hat Display", Arial, sans-serif;
+}
+
+.ticket-form {
+    background-color: #b7b5b2ff;
+    margin:8px;
+    padding: 12px;
+    border: none;
+    font-family: "Red Hat Display", Arial, sans-serif;
+    max-width: 400px;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    word-wrap: break-word;
+}
+
+.chat {
+    background-color: #b7b5b2ff;
+    font-family: 'Red Hat Display', Arial, sans-serif;
+    font-size: 27px;
+    text-align: center;
+    width: 100%;
+    height:50px;
+    padding-top: 15px;
+    margin-bottom: 35px;
+}
+
+.chat-description {
+    background-color: #b7b5b2ff;
+    font-family: 'Red Hat Display', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 35px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 85%;
+}
+
+.message-meta {
+    margin-left: 8px;
+}
+
+.send {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: flex-end;
+    margin: 25px 15px 15px 15px;
+    width: 90%;
+}
+
+.send-message {
+    margin-right: 10px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.messages-bottom {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+
+.issue-table {
+    width: 80%;
+}
+
+.satisfaction {
+    margin-top: 18px;
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.new-event-container {
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.new-event-form {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-event-form-header {
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-family: "Red Hat Display", "Times New Roman", serif;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+
+    .label {
+        font-family: "Red Hat Display", Arial, sans-serif;
+    }
+}
+
+.form-group textarea {
+    height: 80px;
+    overflow-y: scroll;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    height: 35px;
+
+    #description {
+        height: 70px;
+    }
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.calendar-title{
+    font-size: 40px;
+}
+
+.calendar-container{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.calendar-group{
+    padding: 10px;
+}
+
+.calendar-split{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.calendar-image{
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 10px;
+
+}
+
+.events-button{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.events-empty{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.events-edit{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.reservation-space{
+    margin-left: 30px;
+}
+
+.associated-books-heading {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-family: 'Red Hat Display', Arial, sans-serif;
+    font-size: x-large;
+}

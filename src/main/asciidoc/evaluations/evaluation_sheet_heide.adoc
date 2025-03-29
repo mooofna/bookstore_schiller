@@ -1,0 +1,64 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2023/24
+// Auch wenn der Bogen nicht anonymisiert ist, dürfen Sie gern Ihre Meinung offen kundtun.
+// Sowohl positive als auch negative Anmerkungen werden gern gesehen und zur stetigen Verbesserung genutzt.
+// Versuchen Sie in dieser Auswertung also stets sowohl Positives wie auch Negatives zu erwähnen.
+
+**Von:** Maurice Heide
+
+**Gruppe:** 32
+
+== Was habe ich gelernt 
+
+- Mit der Dokumentation von Frameworks arbeiten
+- Auflösen von zyklischen Abhängigkeiten
+- Sich schnell in fremden Code einlesen
+- Fehlersuche / Debugging
+- Es ist sinnvoll, Pausen einzulegen, wenn man schon lange am selben Problem sitzt und alles nur schlimmer zu werden scheint
+- Schnelle Bearbeitung von Aufgaben, die Mentalität "Das Feature implementiere ich innerhalb der nächsten Stunde"
+- Arbeit im Frontend (HTML, CSS, Thymeleaf)
+- Dokumentation von Packages mit StarUML
+
+== Was habe ich nicht gelernt?
+
+- Tests im Frontend
+- Eine Woche Git zu verwenden, ohne eine selbstverantwortliche Krise auszulösen (git reset --hard hätte ich gerne früher kennengelernt xD)
+
+== Welche positiven Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+
+- Leistungsstarkes Team, in welchem, mit Ausnahme weniger, jeder kontinuierlich seinen Teil zur Anwendung beitrug und sich freute, Aufgaben übernehmen zu dürfen
+- Ich freute mich extrem darüber, dass Benedikt so gut in unsere Gruppe passte. Obwohl er die einzige Person war, die vor dem Praktikum niemanden innerhalb der Gruppe kannte, stimmte am Ende die Chemie und jeder hätte es als schade empfunden, Benedikt nicht im Team gehabt zu haben.
+- Extreme Arbeitsgeschwindigkeit und Zuverlässigkeit von Gruppenmitgliedern
+- Kommunikation kann innerhalb von Meetings sehr schnell erfolgen, wenn man ein passendens Protokoll, im Sinne eines festen Ablaufs besitzt, und auf das Plaudern sowie Kaffeetrinken mal kurz verzichtet
+- Mir hat es Spaß gemacht, der Scrummaster zu sein und über Dinge einen Überblick behalten zu müssen, bei Interessenskonflikten eine Lösung zu finden und den Aufgabenpool zu definieren sowie Einzelaufgaben zu verteilen
+
+== Welche negativen Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+
+- Zu oft haben wir aufgrund mangelnder Kommunikation, nicht klar voneinander abgegrenzte Aufgaben mehrfach bearbeitet
+- Codeabhängigkeiten führt zur Produktivitätsminderung, wenn Personen zurückfielen
+- Einarbeitung in das Entwickeln einer Anwendung im Team benötigte seine Zeit und resultiere innerhalb der ersten zwei Wochen in ein kleines Durcheinander von Pull-Request und neu dazukommenden Features
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+
+- Die ausgibige Einarbeitung in ein Framework erleichtert das Programmieren, um ein Vielfaches, da man sonst bereits vorhandene Funktionalität meint, neuerfinden zu müssen
+- Mit Framework-Sourcecode arbeiten, wenn die Dokumentation nicht weiterhilft
+- Salespoint und Spring gaben bereits eine erweiterbare Struktur unserer Anwendung vor und erleichterte die Dokumentation
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+
+- Verwendung von JavaScript passt nach meinem Empfinden hervorragend in das Ziel der Lehrveranstaltung und würde uns ermöglichen einen fundamentalen Teil der Frontend- und Softwareentwicklung kennenzulernen (Eine Lösung wäre in zukünftigen Iterationen des SWT-Praktikums die Verwendung von JavaScript zu erlauben und durch bestimmte Aufgaben dessen Nutzung innerhalb der Anwendung zu motivieren)
+- Konzept des Pair Programming war für uns Anfänger nicht leicht und nur teilweise umsetzbar (Eine Lösung wäre dies nicht als Intention sondern Option im Praktikum zu betonen, da unsere Gruppe trotz Einzelarbeit die uns gestellten Aufgaben bewältigen konnte)
+- Erlernen der Grundlagen von HTML und CSS in vorherigen Modulen (Ein weiteres Modul stelle ich mir schwer vor - eine Lösung wäre entweder Softwaretechnologie I abzuspecken und auf wesentliche und wichtigere Informationen zu reduzieren sowie durch eine nachvollziehbare Struktur nachhaltiger zu lehren, anderenfalls könnte HTML und CSS, so wie es ursprünglich auch vorgesehen wurde, wieder in das Modul Medieninformatik aufgenommen werden)
+- Die thematische Nähe unserer Aufgabe zur Beispielaufgabe Bibliothek ermöglichte uns einen schnellen Einstieg und damit eventuell auf unfairen Vorteil gegenüber zum Beispiel unserer Cross-Testing-Gruppe (Hinsichtlich einer Lösung bin ich mir unsicher, eine Möglichkeit wäre, dass jede Gruppe eine thematische nahe Beispielaufgabe erhält und zum Beispiel über jede Iteration des SWT-Praktikums neue Beispielaufgaben hinzugefügt werden)
+- Die Rollentrennung von Tutor und Kunde war manchmal verwirrend (Eine Lösung wäre, den Tutor als Kontaktperson zwischen Entwicklerteam und Kunde zu definieren, welcher uns unsere Aufgaben mitteilt und durch eigene Erfahrung auch unterstützt)
+
+== Positives Feedback für den Tutor
+
+- Hilfsbereit, unterstützend, verständnisvoll, nahbar, fördernd, lustig, empathisch (trotz familärer Verpflichtungen, dafür ein riesiges Dankeschön :) )
+- Es wahr extrem hilfreich, die letzten Zusatzaufgaben bereits vor den Weihnachtsferien bekannt zu geben
+- Meetings konnte erfolgreich dazu verwendet werden, Fehler zu finden und zu korrigieren
+- Meetings gaben Inspirationen zur Definition neuer Tickets für unsere Meilensteine, wir erhielten konstruktives Feedback
+- Keine zu angespannte, sondern lockere zwischenmenschliche Interaktion half, das Projekt mit Spaß anzugehen
+
+== Negatives Feedback für den Tutor
+
+- Vielleicht könnten sich im nächsten Jahr die Tutoren des Praktikums früh absprechen und in Absprache mit ihren Gruppen feste Räume für ihre Meetings buchen, ansonsten empfand ich die Online-Meetings als ebenso produktiv

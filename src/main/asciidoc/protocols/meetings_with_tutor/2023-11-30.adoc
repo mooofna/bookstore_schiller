@@ -1,0 +1,57 @@
+= Protokoll Gruppe 32
+
+Treffen am 30.11.2023
+
+Ort:      APB/E005 +
+Beginn:   14:50 Uhr +
+Ende:     16:20 Uhr
+
+__Schriftführer:__ Nicola, Maurice
+
+*Nächstes Treffen:* +
+30.11.2023, 14:50 Uhr, APB E005
+
+__Teilnehmer:__
+
+- Maurice
+- Nicola
+- Louis
+- Nova
+- Cosme
+- Krystina
+- Benedikt
+- Marcel
+
+== Bemerkungen
+
+Verlauf Meeting:
+
+- Nova erklärt Strategy Pattern zum Lösen des Problems Order + PaymentMethod + DeliveryMethod
+- Diskussion des Errors, die Nova und Cosme hatten beim Expandieren des Orders
+- Gemeinsames Lösen mit dem Tutor (adding Inheritance and Entity annotations and more)
+- Louis lösen CSS Problem auf Buch Katalog Seite
+- Behandlung Louis RefactoringCatalog
+- Problem kein Rendering von Umlauten
+
+Anmerkungen von Andreas:
+
+- Nächster Meilenstein: Basis-Funktionalität sollte fertig sein bis nächste Woche Donnerstag (7. Dezember) (ist basically schon so weit)
+- Bis zum 10. Dezember die Anwendung für das Cross Testing vorbereiten
+- Bestellprozess sollte gut abgebildet sein
+- Für Cross-Testing sind Tests für jetzt noch nicht wichtig
+- Meilenstein danach: Cross-Testing mit einer anderen Gruppe
+- Zum Testen: Ziel für jetzt 60% Coverage
+
+== Planung des nächsten Sprints
+
+- Error: Boss erhält Error beim Abwickeln einer Bestellung
+- Button in Katalog ausgrauen
+- Warenkorb nicht mehr für Boss zugänglich machen
+- NavigationBar so erweitern, dass neben dem Warenkorb die Anzahl der im Warenkorb liegenden Objekte angezeigt werden
+- Möglichkeit für den Kunden, seine Bestellungen anzusehen (Lösung mit Filtern, PreAuthorise ?)
+- Möglichkeit für Boss zum Hinzufügen von Items (Möglicherweise Wiederverwendung für das Hinzufügen von Veranstaltungen)
+- Verwendung von Spring Storage, da sonst .jar verändert werden müsste
+- (Möglichkeit für Boss zum Hinzufügen von Genres)
+- Anfangen Finanzübersicht: wie viel wird verdient?
+- Use Business Time module to simulate longer time periods
+- Input Validation in Formularen, z.B. Passwort, Mail (javax.validation) -> noch nicht für Basis-Funktionalität notwendig

@@ -1,0 +1,32 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2023/24
+// Auch wenn der Bogen nicht anonymisiert ist, dürfen Sie gern Ihre Meinung offen kundtun.
+// Sowohl positive als auch negative Anmerkungen werden gern gesehen und zur stetigen Verbesserung genutzt.
+// Versuchen Sie in dieser Auswertung also stets sowohl Positives wie auch Negatives zu erwähnen.
+
+**Von:** Nicola Doyle
+
+**Gruppe:** 32
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+// Ausführung der positiven und negativen Erfahrungen, die im Softwarepraktikum gesammelt wurden
+Das Beste an dem Modul ist auf jeden Fall, dass man praktische Erfahrung bekommt, an einem größeren Projekt zu arbeiten. Es ist cool, am Ende sehen zu können, dass man zusammen mit den anderen Teammitgliedern eine ganze funktionierende Webseite zusammenbauen konnte. Ich habe jetzt ein viel besseres Verständnis, wie Webseiten funktionieren, und wie Teamarbeit in so einem Projekt aussehen kann. Mit der Zeit konnte ich auch zurückschauen, und schon erkennen, was ich hätte besser machen können - was man nur in so einem praktischen Projekt machen kann. Ich habe jetzt ein viel besseres Gefühl, was für Schritte (und in welcher Reihenfolge) man erledigen muss, um eine Feature z.B. zu implementieren.  
+
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+// Kurze Beschreibung der Zusammenarbeit im Team. Was lief gut? Was war verbesserungswürdig? Was würden Sie das nächste Mal anders machen?
+Die Zusammenarbeit im Team hat gezeigt, wie wichtig Kommunikation ist, ob man Ideen für die Webseite diskutiert, oder die Verteilung der verschiedenen Aufgaben aushandelt. Auch die Partnerarbeit war sehr interessant, besonders da ich das noch nie so gemacht hatte. Man lernt fast jedes Mal etwas nützliches dazu, oder kann dem anderen etwas neützliches zeigen, was sehr cool war. Was ich mir aber für das nächste größere Teamprojekt merken will, ist das Struktur in Meetings sehr wichtig ist. In einer größeren Gruppe kann es sehr schnell passieren, dass sehr lange über Sachen diskutiert werden können, ohne zu irgendwelchen Schlüssen zu kommen. Uns hat es auf jeden Fall geholfen, als wir einen Plan für den Meeting festgesetzt hatten, und uns konkrete Ziele am Anfang überlegt haben.
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+// Einschätzung der Arbeit mit den bereitgestellten und zusätzlich genutzten Frameworks. Was War gut? Was war verbesserungswürdig?
+Es war auf jeden Fall nützlich, einen Framework zu haben, welcher viel Arbeit für einen übernehmen konnte. Manche back-end Funktionalitäten haben sich somit in wenigen Minuten implementieren lassen, ohne dass man dafür sehr viel schreiben musste. Obwohl das später im Projekt sehr viel Zeit sparen konnte, war es aber am Anfang ein bisschen überwältigend, weil man sich zuerst mit der ganzen Dokumentation auseinandersetzen musste. Ich behaupte aber, das ist gute Übung, denn wenn man später irgendwo arbeitet, ist es wahrscheinlich unvermeindbar, dass man mit irgendwelchen Frameworks arbeitet. Jetzt schon bei meinem HiWi Job hat es viel geholfen, dass ich überhaupt wusste, was Frameworks sind, wie sie funktionieren, und wie man am Besten mit ihnen arbeiten kann. 
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+// Möglichst mit Beschreibung, warum die Umsetzung des von Ihnen angebrachten Vorschlages nötig ist.
+Für mich selbst war der Anfang des Praktikums am schwierigsten und stressigsten. Man musste innerhalb kurzer Zeit verstehen wie Webseiten funktionieren (ex. MVC), sich mit Spring, Salespoint und Thymeleaf auseinandersetzen, CSS und HTML lernen, und es alles auch schon anwenden. Wenn ich was ändern könnte, dann würde ich im ersten Software Modul schon wenigstens ein oder zwei Themen eingeführen. Auch wenn es nicht super ausführlich ist, aber sodass wenigstens nicht alles Neue und Unbekannte auf einmal kommt. 
+
+== Feedback für den Tutor
+// Fühlten Sie sich durch den vom Lehrstuhl bereitgestellten Tutor gut betreut? Was war positiv? Was war verbesserungswürdig?
+Ich habe mich auf jeden Fall sehr unterstützt gefühlt. Jedes Mal als ich ein Problem hatte, konnte ich es nach dem Feedback nicht nur lösen, sondern auch verstehen, was fehlgeschlagen war. Die Meetings hatten auch immer eine gleichzeitig entspannte, aber auch fördernde Atmosphäre. 
+
+== Sonstiges und Anmerkungen
+// Welche Aspekte fanden in den oben genannten Punkten keine Erwähnung?

@@ -1,0 +1,35 @@
+= Protokoll Gruppe 32
+
+Treffen am 18.01.2024
+
+Ort:      Discord +
+Beginn:   14:50 Uhr +
+Ende:     16:20 Uhr
+
+__Schriftführer:__ Maurice
+
+__Teilnehmer:__
+
+- Krystina
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Marcel
+- Cosme
+
+*Finale*
+
+- In UML-Diagrammen können Assoziationen mit Prosa annotiert werden
+- Hygiene-Faktoren: Encoding berichtigen!'
+
+
+TODO:
+
+1. Bug mit Date (important!)
+2. Frontend Calender
+3. Sort Customer Open Order
+4. Order Klassen
+5. Calendar Class und Seq
+6. Finance Seq diagram
+

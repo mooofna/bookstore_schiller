@@ -1,0 +1,54 @@
+= Protokoll Gruppe 32
+
+Treffen am 15.10.2023
+
+Ort:      SLUB 066 +
+Beginn:   10:00 Uhr +
+Ende:     14:00 Uhr
+
+__Schriftführer:__ Maurice Heide
+
+*Nächstes Treffen:* +
+22.10.2023, 10:00 Uhr, SLUB 066
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Louis
+- Cosme
+- Nicola
+- Marcel
+- Nova
+- Kristina
+- Benedikt
+- Maurice
+
+== Bemerkungen
+Verwarnungen, besondere Vorfälle, Organisatorisches, wichtige getroffene Entscheidungen + 
+- IDE: IntelliJ (Grund: Erfahrung aus Softwaretechnologie 1) +
+- Projektmanagement: GitHub (Grund: geringe Größe der Gruppe) +
+- Vorschlag Kristina: Einteilung der Verantwortlichkeiten nicht ausschließlich vertikal, z.B. Aufteilung in Front-End / Back-End, sodass weniger Abhängigkeiten zwischen den verschiedenen Gruppenmitgliedern herrscht +
+- Verzicht auf einzelne Gruppen-Branches (Branches für die Programming-Pairs), um Komplexität zu reduzieren => ausschließliche Verwendung von Feature Branches +
+- Modellierungstool: Verwendung von StarUML in den einzelnen Gruppen, da dort Versionskontrolle von geringer Relevanz ist; im Integrationsprozess oder Erarbeitung der Präsentation ist ein Umschwung auf draw.io möglich => bis zur nächsten Woche muss sich jeder in StarUML eingearbeitet werden + 
+- Datenmanagement: DBeaver, weil einfachere Inspektion der Datenbankprozesse (kleinere Skripts, etc.) +
+- Einigung auf Branch-Bezeichnung: .../[Name des Verantwortlichen]/[Name des Branches] +
+- Reflektion der Code Rules +
+- Materialien, die bis zum nächsten Treffen studiert werden: https://youtu.be/7EmboKQH8lM?si=yCbWvoJvLkeML4DJ, https://www.youtube.com/watch?v=vtPkZShrvXQ
+
+|===
+|Gruppe |Mitglied 1 | Mitglied 2
+|1 | Louis| Maurice
+|2 | Marcel| Kristina
+|3 | Cosme| Nova
+|4 | Benedikt| Nicola
+|===
+
+== Retrospektive des letzten Sprints
+- Keine bisher fixierten Issues +
+- Einarbeitung und Erweiterung von Guestbook in der Gruppe erfolgreich +
+- Maurice muss krankheitsbedingt (Freitag und Samstag ausgefallen) die Erweiterung des Guestbooks noch heute beenden +
+
+== Aktueller Stand
+- Gruppen wurden aufgeteilt +
+- Toolbase wurde bestimmt +
+- Ziele der nächsten Woche wurden festgelegt +

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title>Account</title>
+    <link rel="stylesheet" href="../static/resources/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="main-content">
+
+        <div class="login-container">
+            <div class="left-image">
+                <img th:src="@{/resources/img/loginbooks1.jpeg}" src="../static/resources/img/loginbooks1.jpeg">
+            </div>
+            <div class="grey-box-login">
+                <div class="login-heading">
+                    <p th:text="#{account.title}">
+                    </p>
+                </div>
+                <div class="account-box">
+                    <div th:text="#{account.name}" class="account-descriptor"></div>
+                    <div th:text="${username}"></div>
+                </div>
+                <div class="account-box">
+                    <div th:text="#{account.email}" class="account-descriptor"></div>
+                    <div th:text="${email}"></div>
+                </div>
+                <div class="account-box">
+                    <div th:text="#{account.address}" class="account-descriptor"></div>
+                    <div th:text="${address}"></div>
+                </div>
+                <a th:href="@{/edit_account}">
+                    <button th:text="#{account.edit}" style="margin: 15px "/>
+                </a>
+            </div>
+            <div class="right-image">
+                <img th:src="@{/resources/img/loginbooks1.jpeg}" src="../static/resources/img/loginbooks2.jpeg">
+            </div>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,118 @@
+[cols="1,2,3,3,3",options="header"]
+|===
+| Testfall ID | Test Case Description | Steps | Valid Data | Expected Result
+
+| **TF01a**
+| Search for an item using a valid keyword.
+| 1. Navigate to search bar. 
+2. Type valid keyword.
+3. Click 'Search'.
+| Keyword related to actual product names or categories in the database.
+| List of products matching the keyword; sorting and filtering options available.
+
+| **TF01b**
+| Search for an item using an invalid keyword.
+| 1. Navigate to search bar.
+2. Type invalid keyword.
+3. Click 'Search'.
+| Keywords not related to any product names or categories.
+| "No products found" message; suggestions for relevant products or corrected search terms.
+
+| **TF02a**
+| Select an available item and purchase.
+| 1. Browse products.
+2. Click 'Add to Cart'.
+3. Navigate to cart.
+4. Checkout.
+| Valid credit card number (16 digits), CVV (3-digit number), expiry date (future date), and a valid billing address.
+| Confirmation page displaying purchase details; receipt sent to the user's email.
+
+| **TF02b**
+| Attempt to purchase with an invalid credit card.
+| 1. Add item to cart.
+2. Navigate to checkout.
+3. Input invalid credit card details.
+| Invalid credit card number or past expiry date.
+| "Payment failed" message; suggestions to check card details or try a different payment method.
+
+| **TF03a**
+| Log in with valid credentials.
+| 1. Click 'Login'.
+2. Enter email & password.
+3. Click 'Submit'.
+| Email in standard format (e.g., user@example.com) & password (min. 8 characters, 1 uppercase, 1 number).
+| User's dashboard or main page displays with personalized greetings; user's account settings accessible.
+
+| **TF03b**
+| Log in with invalid credentials.
+| 1. Click 'Login'.
+2. Enter incorrect email or password.
+3. Click 'Submit'.
+| Incorrect email format or password that doesn't match any user account.
+| "Invalid credentials" message; suggestions to reset password or create a new account.
+
+| **TF04a**
+| View list of available events.
+| 1. Navigate to 'Events'.
+2. Browse listed events.
+| None.
+| Chronologically sorted list of events with clear event details, such as date, time, location, and description.
+
+| **TF05a**
+| Register for an available event.
+| 1. View events.
+2. Click event.
+3. Click 'Register'.
+| User must be logged in.
+| Confirmation message of successful event registration; option to add event to the calendar or share details.
+
+| **TF05b**
+| Attempt to register for an event without logging in.
+| 1. View events.
+2. Click event.
+3. Click 'Register'.
+| User not logged in.
+| "Please login to register" message; redirection to the login page.
+
+| **TF06a**
+| Create a new user account with valid details.
+| 1. Navigate to 'Sign Up'.
+2. Input required details.
+3. Click 'Create Account'.
+| Valid email format, unique username, and password (min. 8 characters, 1 uppercase, 1 number, 1 special char).
+| Welcome message with account verification link sent to provided email.
+
+| **TF06b**
+| Attempt to create an account with a taken username.
+| 1. Navigate to 'Sign Up'.
+2. Input used username.
+3. Click 'Create Account'.
+| Username already associated with an existing account.
+| "Username already taken" message; suggestions for alternative usernames.
+
+| **TF06c**
+| Attempt to create an account with a weak password.
+| 1. Navigate to 'Sign Up'.
+2. Input weak password.
+3. Click 'Create Account'.
+| Password less than 8 characters or lacking required complexity (e.g., all lowercase without numbers or special characters).
+| "Password too weak" message; password guidelines and recommendations displayed.
+
+| **TF07a**
+| Edit user profile with valid details.
+| 1. Navigate to profile.
+2. Click 'Edit'.
+3. Modify details.
+4. Save changes.
+| Valid changes according to field requirements (e.g., phone number in correct national format, valid date of birth).
+| Profile updated successfully message; changes reflected immediately in the profile.
+
+| **TF07b**
+| Attempt to edit user profile with invalid details.
+| 1. Navigate to profile.
+2. Click 'Edit'.
+3. Input invalid details.
+4. Save.
+| Data that doesn't meet field requirements (e.g., phone number with letters or invalid date format).
+| Error messages next to the invalid fields; suggestions for valid inputs.
+|===

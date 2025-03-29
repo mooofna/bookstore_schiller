@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="#{finance.title}"/>
+</head>
+<body>
+<section layout:fragment="content">
+    <section class="header-section">
+        <img th:src="@{/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg}" src="../static/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg" alt="Library Background">
+        <div class="header-text">
+            <p th:text="#{finance.header}" style="font-size: 50px">FINANCES</p>
+        </div>
+    </section>
+    <div class="finance">
+        <div class="finance-box" style="margin-left: 25px; padding: 10px">
+            <div class="total-to" th:text="${totalTurnover}"></div>
+            <div class="total-to-below" th:text="#{finance.total-turnover}"></div>
+        </div>
+        <div class="finance-box" style="margin-right: 25px">
+            <div class="total-ito" th:text="${totalIntervalTurnover}"></div>
+            <div class="total-to-below" th:text="#{finance.total-interval-turnover}"></div>
+
+            <form role="form" th:action="@{/finance}" method="post" th:object="${intervalForm}">
+                <div th:if="${param.error}">
+                    <p style="color: red;">Invalid username or password.</p>
+                </div>
+                <div class="error message" th:if="${#fields.hasErrors('*')}">
+                    <p>Einige Angaben sind nicht korrekt.</p>
+                </div>
+                <div class="input" style="margin-top: 20px">
+                    <label for="startYear" hidden="hidden"></label>
+                    <input type="number" id="startYear" name="startYear" th:field="*{startYear}" th:errorclass="fieldError" required="required"/>
+
+                    <label for="startQuarterOfYear" hidden="hidden"></label>
+                    <select th:field="*{startQuarterOfYear}" required="required" id="startQuarterOfYear" name="startQuarterOfYear" th:errorclass="fieldError">
+                        <option th:each="quarter : ${quarters}"
+                                th:value="${quarter}"
+                                th:text="${quarter.toString()}"
+                                th:selected="${quarter.equals(intervalForm.startQuarterOfYear)}">
+                        </option>
+                    </select>
+
+                    <label for="endYear" hidden="hidden"></label>
+                    <input type="number" id="endYear" name="endYear" th:field="*{endYear}" th:errorclass="fieldError" required="required"/>
+
+                    <label for="endQuarterOfYear" hidden="hidden"></label>
+                    <select th:field="*{endQuarterOfYear}" required="required" id="endQuarterOfYear" name="endQuarterOfYear" th:errorclass="fieldError">
+                        <option th:each="quarter : ${quarters}"
+                                th:value="${quarter}"
+                                th:text="${quarter.toString()}"
+                                th:selected="${quarter.equals(intervalForm.endQuarterOfYear)}">
+                        </option>
+                    </select>
+                </div>
+                <button class="update" type="submit">UPDATE</button>
+            </form>
+
+            <table class="finance-table">
+                <thead>
+                    <tr>
+                        <th>TIME</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each=" entry: ${turnoverPerQuarter}">
+                        <td th:text="${entry.getKey()}"></td>
+                        <td th:text="${entry.getValue()}"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <form role="form" th:action="@{/timeSkip}" method="post" style="margin-top: 20px;">
+                <button type="submit" th:text="#{time.skip_time}"/>
+            </form>
+            <div th:text="#{time.current_time} + ' ' + ${currentTime}"/>
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,55 @@
+= Protokoll Gruppe 32
+
+Treffen am 29.10.2023
+
+Ort:      SLUB 042 +
+Beginn:   10:00 Uhr +
+Ende:     13:00 Uhr
+
+__Schriftführer:__ Nicola
+
+*Nächstes Treffen:* +
+05.11.2023, 10:00 Uhr, SLUB
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Maurice
+- Nova
+- Kristina
+- Marcel
+- Nicola
+- Louis
+
+
+== Bemerkungen
+- Meeting wurde damit verbracht, das Pflichtenheft von oben bis unten durchzugehen, indem alle nacheinander ihren bearbeiteten Teil präsentierten
+- Wichige Entscheidungen und Überlegungen dabei waren:
+* Stakeholders: Minimale Änderung der Prioritäten von Entwickler und Admins +
+* Überlegung: Welche genauen Unterschiede gibt es zwischen Admins und Mitarbeiter +
+-> vorläufige Entscheidung bis weitere Informationen vom Kunde: Admins können Benutzer verwalten, Mitarbeiter nur Bestellungen verwalten +
+* Entscheidung für das Wort "Bookstore" und nicht "Bookshop" +
+* Bei der Top Level Architektur wird Category Management entfernt und Events Management hinzugefügt +
+* Diskussion User Hierarchie und Benennung: Entscheidung auf generelle Klasse User und Klassen unregistered User und registered User - Employee und Admin bleiben gleich +
+* Use Case Descriptions: minimale Änderungen bei den "Essential Steps" mancher Use Cases +
+* Besprechung GUI und wie Funktionalitäten visuell implementiert werden sollen (ex. Quantity eines Produktes aussuchen) +
+* Klassendiagramm: Kapazität wird als Attribut zu den Lesungen hinzugefügt, generelle Klasse Event wurde auch hinzugefügt
+* Klassendiagramm: Cancel Status wurde besprochen und als Attribut in der "Order" Klasse hinzugefügt
+
+== Retrospektive des letzten Sprints
+*Issue referenziert die Issue ID von GitHub*
+// Wie ist der Status der im letzten Sprint erstellten Issues/veteilten Aufgaben?
+
+- Alles was jeder individuelle Mitglied vorhatte wurde geschafft, sodass wir heute alles zusammen besprechen und vergleichen konnten
+
+
+== Aktueller Stand
+Anmerkungen und Kritik zum aktuellen Stand der Software, den Diagrammen und den
+Dokumenten. +
+- Alles sieht ganz gut aus, das Pflichtenheft ist außer ein Paar minimalen Änderungen fertiggestellt
+
+== Planung des nächsten Sprints
+*Issue referenziert die Issue ID von GitHub*
+
+- Alle müssen ihre letzten Veränderung und fertigen Versionen ihren Teilaufgaben vom Pflichtenheft pushen und mit dem Main branch mergen
+- Es müssen zunächst die verschiedenen Komponenten des Projektes auf die Team-Mitglieder aufgeteilt werden

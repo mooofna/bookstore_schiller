@@ -1,0 +1,60 @@
+= Cross-Testing Feedback
+
+__Durchführende Gruppe:__ 32
+__Anwendung von Gruppe:__ 27
+
+== Getestetes System
+Welche Aufgabe/Problemstellung löst die Anwendung:
+
+* Webseite soll Usern die Möglichkeit geben, Lotto Tickets zu kaufen und somit Geld zu gewinnen
+* Dabei gibt es zwei Arten von Lotto Spielen: "Lotto Bets" und "Toto Bets"
+* Der Admin kann die gewinnenden Zahlen setzen oder zufällig generieren lassen
+* Zudem kann man auch "Pools" joinen, um zusammen mit anderen Usern Gewinnspiele beizutreten
+
+== Fehler-Report
+// See http://asciidoctor.org/docs/user-manual/#tables
+[options="header"]
+|===
+|Pfad |Parameter |Beschreibung |Rückgabe
+| localhost:8080/adminPanel | (Nutzer, der gelöscht wurde) | Wenn man ein Nutzer löscht, den aber dann als Admin wieder hinzufügt  | Whitelabel Error Page
+| localhost:8080/register | (Nutzer, der gelöscht wurde) | Wenn der Admin ein Nutzer löscht, man aber mit den gleichen Daten sich neu registrieren will | Whitelabel Error Page
+| localhost:8080/toto | 14/12/2023, 21/12/2023 (und mehrere andere Möglichkeiten) | Eingabe der "first match day" und "draw date" wird nicht angenommen | "Please select a valid date." 
+| localhost:8080/lotto | 22/12/2023, 90 | Eingabe der "draw date" und "ticket price" wird nicht angenommen | "Please select a valid date and price."
+| localhost:8080/lottoWinningBet | Adminpanel validierung| Wenn man eine Bet confirmed wird man zum adminpanel geleitet. Geht man wieder zur vorherigen Seite zurück und confirmed nochmals erscheint eine Error Page | Whitelabel Error Page
+| localhost:8080/create | Username->Pools | Sehr unintuitive, dass die Eingabe des Pool Chefs eine E-Mail verlangt |  
+| localhost:8080/lotto | Ticket Price | Wenn man eine (etwas) zu große Zahl als ticket price angibt entsteht ein Error | Whitelabel Error Page
+| localhost:8080/lottoWinningBet | Winning Bets | Wenn man mehrmals gleichzeitig die gewinnenden Nummern bestätigt, werden diese einfach überschrieben | 
+| localhost:8080/lottoWinningBet | Winning Bets | Bestätigt man die winning bets mehrmals mit einem random draw entsteht eine Error Page | Whitelabel Error Page 
+| localhost:8080/lottoWinningBet | Finanzen und Gewinner calc | Wenn es für die gleiche ID mehrere bestätigungen gab, wird das Income/die Expenses mehrmals gezählt und die Gewinner bekommen nicht die korrekten Gewinne | 
+| localhost:8080/userdetails | Bet limitierung | Nutzer können bei der gleichen Lotterie mehrere Bets mit den gleichen Zahlen setzen. Falls dieser User gewinnt, gewinnt er nur für ein bet aka wird absolut gescammed |
+| localhost:8080/1/lottobet | longTermDuration: x ∈ ℤ & x≠0;4;12;24 | Manipuliert man longTermDuration im Post Request, werden x Lottoscheine zu einem nicht existierenden Preis für ein Event mit der ID -1 gekauft | betplaced.html 
+| localhost:8080/1/lottobet | nummer: x ∈ ℤ | die Lottozahlen und die Superzahl werden nicht im Backend nach den möglichen Zahlen gefilter | betplaced.html 
+| localhost:8080/3/totobet | match: x ∈ ℤ | match nummern werden nicht im Backend nach den möglichen Zahlen gefilter | betplaced.html 
+| localhost:8080/betDetails/2 | Detailseite einer Fußball-Wette mit nicht existierenden matches bspw. 143 | match nummern werden nicht im Backend nach den möglichen Zahlen gefilter | Whitelabel Error Page 
+
+
+|===
+
+== Sonstiges
+
+Optik der Anwendung
+
+    * Überladene Ansicht für Admin
+    * Keine Übereinstimmung mit Pflichtenheft
+
+Fehlende Features
+
+    * F0141: Als Admin Geld vom User account nehmen
+    * F0200: Pool verlassen
+
+Interaktion mit der Anwendung (Usability)
+
+    * teilweise unintuitive Bedinung der Webseite (siehe Verbesserungsvorschläge)
+
+Ansonsten ist alles in Ordnung
+
+== Verbesserungsvorschläge
+
+* Bei dem Login muss man in dem Feld "Username" seine Email eingeben, was nicht sehr intuitiv ist
+* Bei der Pool Erstellung muss man auch die Email bei "Pool Chef" angeben - vielleicht das Label anpassen, damit man weiß, die Email einzugeben
+* Es wäre schön wenn man sich als Nutzer die existierenden Pools schon anschauen könnte, und nur das Passwort eingeben müsste - ansonsten wird irgendwie impliziert, dass die User die Infos von dem Admin selbst bekommen müssen

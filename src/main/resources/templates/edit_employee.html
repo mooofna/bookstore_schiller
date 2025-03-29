@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+    <link rel="stylesheet" href="../static/resources/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="main-content">
+
+        <div class="login-container">
+            <div class="left-image">
+                <img th:src="@{/resources/img/loginbooks1.jpeg}" src="../static/resources/img/loginbooks1.jpeg">
+            </div>
+            <div class="grey-box-login">
+                <div class="login-heading" th:text="#{edit-employee.title}">
+                    <p>
+                        EDIT EMPLOYEE
+                    </p>
+                </div>
+                <form class="login-form" role="form" th:action="@{/edit_employee/{employeeName}(employeeName=${name})}" method="post" th:object="${employeeForm}">
+                    <div th:if="${param.error}">
+                        <p style="color: red;">Invalid username or password.</p>
+                    </div>
+                    <div class="error message" th:if="${#fields.hasErrors('*')}">
+                        <p>Einige Angaben sind nicht korrekt.</p>
+                    </div>
+                    <div class="input">
+                        <label th:text="#{employee.name}" for="name" hidden="hidden"></label>
+                        <input type="text" maxlength="200" id="name" name="name" th:field="*{name}" th:errorclass="fieldError" required="required"
+                               autofocus="autofocus" th:placeholder="${name}"/> <br/>
+                        <div style="display:block; color: red" th:if="${username_error}" class="alert alert-danger">
+                            <p th:text="${username_error}" th:class="red-text"></p>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label th:text="#{employee.email}" for="email" hidden="hidden"></label>
+                        <input type="text" maxlength="200" id="email" name="email" th:field="*{email}" th:errorclass="fieldError" required="required"
+                               autofocus="autofocus" th:placeholder="${email}"/> <br/>
+                        <!--                        <div class="error message" th:if="${#field.hasErrors('email')" th:errors="{email}">-->
+                        <!--                            <p>E-Mail is not allowed to be empty</p>-->
+                        <!--                        </div>-->
+                        <!--                        <div th:if="${email_error}" class="alert alert-danger">-->
+                        <!--                            <p th:text="${email_error}" th:class="red-text"></p>-->
+                        <!--                        </div>-->
+                    </div>
+                    <button type="submit" th:text="#{edit-employee.edit}">Update</button>
+                </form>
+            </div>
+            <div class="right-image">
+                <img th:src="@{/resources/img/loginbooks1.jpeg}" src="../static/resources/img/loginbooks2.jpeg">
+            </div>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

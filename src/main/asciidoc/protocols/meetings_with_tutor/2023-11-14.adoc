@@ -1,0 +1,51 @@
+= Protokoll Gruppe 32
+
+Treffen am 14.11.2023 
+
+Ort:      Online (BBB)
+Beginn:   16:40 Uhr
+Ende:     18:10 Uhr
+
+__Schriftführer:__ Nova, Maurice
+
+*Nächstes Treffen:* +
+19.11.2023, 11:00 Uhr, SLUB 0.66
+
+__Teilnehmer:__
+
+- Nova
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+
+== Bemerkungen
+Organisatorisches: 
+- Nächsten Wochen werden so gestaltet werden, dass eher nur Issues und Features durchgearbeitet und besprochen werden
+- CI build soll auf grün bleiben
+- Von jetzt an soll SonarCube regelmäßig gecheckt werden
+- Testcoverage soll wenigstens bei 60% liegen
+- Von jetzt an pro Komponente Tests schreiben (idealerweise)
+- Nächste Woche Vorlesung von Oliver Geisel zum Testing 
+- Nächste Woche Donnerstag: Treffen durch Zwischenpräsentation ersetzt
+- Umstellung Protokoll Benennung: Jahr-Monat-Tag (ISO 8601)
+- JavaDoc sollte zu den wichtigsten Methoden dazugeschrieben werden
+
+== Zwischenpraesentation
+- Redeanteil pro Paar
+    - Andere Person redet bei Prototyp demo
+
+
+== Retrospektive des letzten Sprints
+- Review des aktuellen Stands
+    - "data ink ratio" bei Diagrammen
+    - getter und setter bei Diagrammen weglassen
+- Im Code Assert-Klasse verwenden
+- Konvention im Sequence-Diagramm: "Objektbezeichner: Klasse"
+
+== Planung des nächsten Sprints
+- Übergang zur Phase, in der hauptsächliche Features umgesetzt und keine großen Abgaben verlangt werden
+- Features dürfen selbst priorisiert werden, d.h. zunächst werden die nächsten Schritte selbst geplant und nicht von Frau Schiller vorgeschrieben
+- Empfehlung: Debugger + Hot Reloading

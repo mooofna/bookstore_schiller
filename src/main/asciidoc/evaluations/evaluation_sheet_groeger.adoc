@@ -1,0 +1,50 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2021/22
+// Auch wenn der Bogen nicht anonymisiert ist, dürfen Sie gern Ihre Meinung offen kundtun.
+// Sowohl positive als auch negative Anmerkungen werden gern gesehen und zur stetigen Verbesserung genutzt.
+// Versuchen Sie in dieser Auswertung also stets sowohl Positives wie auch Negatives zu erwähnen.
+
+**Von:** Louis Gröger
+**Gruppe:** 32
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+Was ich gelernt habe:
+
+- Dokumentationen von Frameworks erleichtern und verkürzen die Einarbeitungszeit
+- Nach einiger Zeit des "Festsitzens" sollte man andere Personen fragen, bzw. nach gleichen Problemen suchen (z.B. StackOverflow)
+- Vor dem Programmieren sollte sich intensiv mit einem Framework beschäftigt werden
+- Tests sind, auch wenn sie keinen Spaß machen, notwendig
+
+Was ich nicht gelernt habe:
+
+- /
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+
+- Kommunikation ist unfassbar wichtig
+- Aufgaben müssen klar abgegrenzt sein
+- Schnittstellen im Programm sollten zwischen Teammitgliedern klar definiert werden
+- ein Scrummaster ist von Vorteil, da er bei Unstimmigkeiten den Weg weist
+- persönliche Gespräche sind ein Zeitkiller und sollten vermieden werden
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+// Einschätzung der Arbeit mit den bereitgestellten und zusätzlich genutzten Frameworks. Was War gut? Was war verbesserungswürdig?
+- man sollte sich vor dem Programmieren intensiv mit den Bibliotheken/Frameworks beschäftigen,
+da man sonst oft Code doppelt schreibt
+- Dokumentationen erleichtern zum Teil die Einarbeitungszeit. Der Code selber hilft meiner Meinung nach mehr.
+
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+// Möglichst mit Beschreibung, warum die Umsetzung des von Ihnen angebrachten Vorschlages nötig ist.
+Das Praktikum hat mir sehr gut gefallen. Daher sind mir leider keine Verbesserungsvorschläge eingefallen.
+
+== Feedback für den Tutor
+// Fühlten Sie sich durch den vom Lehrstuhl bereitgestellten Tutor gut betreut? Was war positiv? Was war verbesserungswürdig?
+Sehr gut:
+
+- Bei Fragen gab es fast immer gab es nach wenigen Minuten eine Antwort mit Lösungsmöglichkeiten
+- Bei jedem Problem ließ sich eine Lösung finden
+- sehr höflicher Umgang in Meetings
+
+== Sonstiges und Anmerkungen
+// Welche Aspekte fanden in den oben genannten Punkten keine Erwähnung?
+- /

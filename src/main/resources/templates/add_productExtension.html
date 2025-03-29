@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html(title=#{users.title})}">
+<head>
+    <title>Users</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+    <section class="header-section">
+        <img th:src="@{/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg}" src="../static/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg" alt="Library Background">
+        <div class="header-text">
+            <p style="font-size: 50px" th:text="#{inventory.add}">NEUER ARTIKEL</p>
+        </div>
+    </section>
+
+    <section class="back">
+        <form role="form" th:action="@{/inventory/addProductExtension}" method="post" th:object="${productExtensionForm}" enctype="multipart/form-data">
+            <div th:if="${alreadyExists}">
+                <p style="color: red;" th:text="#{inventory.productExtensionAlreadyExists}"></p>
+            </div>
+            <table class="user-table">
+                <thead class="user-head">
+                <tr>
+                    <th class="table-text">Feld</th>
+                    <th class="table-text">Eingabe</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="user-row">
+                    <td>Productname:</td>
+                    <td><input type="text" maxlength="200" id="name" name="name" th:field="*{name}" required="required"/></td>
+                </tr>
+                <tr class="user-row">
+                    <td>Bild:</td>
+                    <td><input type="file" id="image" name="image" th:field="*{image}" required="required" accept="image/png, image/jpeg, image/gif"/></td>
+                </tr>
+                <tr class="user-row">
+                    <td>Informationen:</td>
+                    <td><input type="text" maxlength="200" id="info" name="infor" th:field="*{info}" required="required"/></td>
+                </tr>
+                <tr class="user-row">
+                    <td>Preis:</td>
+                    <td><input type="number" step="0.01" id="price" name="price" th:value="${defaultPrice}" th:min="${defaultPrice}" required="required"/></td>
+                </tr>
+                <tr class="user-row">
+                    <td>Kategorie:</td>
+                    <td>
+                        <select class="multi-genre-select" name="category" th:field="*{category}" required="required">
+                            <option th:each="categoryVal : ${categories}" th:value="${categoryVal.name}" th:text="${categoryVal.name}"></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="user-row">
+                    <td>Anzahl</td>
+                    <td>
+                        <input type="number" id="quantity" name="quantity" th:value="${defaultQuantity}" th:min="${defaultQuantity}" required="required"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <button type="submit" style="margin-top: 20px;" th:text="#{inventory.addingProductExtension}">Zum Katalog hinzufügen</button>
+        </form>
+    </section>
+</section>
+</body>
+</html>

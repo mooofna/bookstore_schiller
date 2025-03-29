@@ -1,0 +1,32 @@
+= Zeiterfassung für Gruppe XX
+
+Notieren Sie die Zeit in Minuten für jeden Entwickler und – getrennt davon – für Team-Treffen pro Woche (Wochengranularität).
+Die individuell erfasste Zeit beinhaltet auch das Lesen von Dokumentationen, Besprechungen mit Teamkollegen und sonstige auf das Praktikum bezogene Aufgaben, jedoch *nicht* das Team-Treffen (= letzte Spalte).
+
+// See http://asciidoctor.org/docs/user-manual/#tables
+[option="headers"]
+|===
+|Woche |Nova |Nicola |Maurice |Marcel |Benedikt |Louis |Cosme |Kristina |Internes Meeting (Sonntag der vorigen Woche) | Externes Meeting (mit Tutor)
+|1  |100   |360    |620    |180    |180    |300   |170   |150     |240    |165
+|2  |120   |450    |290    |440    |270    |420   |230   |240     |240     |95
+|3  |250   |810    |280    |390    |180    |540   |280   |200     |240    |90
+|4  |800   |750    |910   |850    |720    |600   |480   |520     |180     |90
+|5  |410   |450    |450   |380    |350    |660   |520   |360     |120     |90
+|6  |560   |950    |530   |890    |300    |540   |240   |520     |110     |90
+|7  |420   |400    |710   |350    |270    |720   |410   |400     |160     |90
+|8  |360   |460    |580   |200    |120    |410   |360   |360     |90     |90
+|9  |1020   |480    |180   |780    |120    |850   |220   |250     |90     |90
+|10  |740   |120    |610   |750    |420    |600   |240   |300     |90     |90
+|11  |480   |430    |670   |130    |420    |660   |320   |360     |90     |90
+|12  |400   |480    |260   |290    |660    |720   |480   |540     |40     |90
+|===
+
+// See http://asciidoctor.org/docs/user-manual/#tables
+[option="headers"]
+|===
+| |Nova |Nicola |Maurice |Marcel |Benedikt |Louis |Cosme |Kristina |Internes Meeting (Sonntag der vorigen Woche) | Externes Meeting (mit Tutor)
+|Summe der Arbeitsstunden pro Student  |5660   |6140    |6090    |5630    |4010    |7020   |3950   |1690     |1690    |1160
+|Arbeitsstunden pro Woche pro Student  |471,6   |511,6    |507,5    |469,2    |334,2    |585   |329   |140,83     |140,83     |96,67
+|===
+
+Damit ergibt sich eine durchschnittliche Arbeitszeit aller Studenten pro Woche von 418,63 Minuten.

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/resources/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+<!--    <style>-->
+<!--        body {-->
+<!--            background-color: rgb(238, 232, 222);-->
+<!--        }-->
+
+<!--        .left-image {-->
+<!--            display: inline-block;-->
+<!--            position: absolute;-->
+<!--            left: 0px;-->
+<!--            top:0px;-->
+<!--            vertical-align: top;-->
+<!--            margin-top: 50px;-->
+<!--        }-->
+
+<!--        button {-->
+<!--            display: block;-->
+<!--        }-->
+
+<!--        .login-box {-->
+<!--            background-color: rgb(204, 201, 195);-->
+<!--            width: 600px;-->
+<!--            height: 400px;-->
+<!--            vertical-align:top;-->
+<!--            margin-top: 60px;-->
+<!--            grid-column: 2;-->
+
+<!--        }-->
+
+<!--        .right-image{-->
+<!--            display: inline-block;-->
+<!--            position: absolute;-->
+<!--            right: 0px;-->
+<!--            top:0px;-->
+<!--            vertical-align: top;-->
+<!--            margin-top: 50px;-->
+<!--        }-->
+
+<!--        .container {-->
+<!--            display: grid;-->
+<!--            grid-template-columns: 1fr 1fr 1fr;-->
+<!--            grid-column-gap: 1000px;-->
+
+<!--        }-->
+
+<!--        .login-heading {-->
+<!--            font-family:'Red Hat Display', sans-serif;-->
+<!--            text-align: center;-->
+<!--            font-size: 27px;-->
+<!--            margin-bottom: 35px;-->
+<!--            margin-top: 35px;-->
+<!--            height: 50px-->
+
+<!--        }-->
+
+<!--        .input {-->
+<!--            background-color: rgb(187, 183, 177);-->
+<!--            margin-left: 20px;-->
+<!--            margin-right: 20px;-->
+<!--            margin-top: 20px;-->
+<!--            padding-top: 10px;-->
+<!--            padding-bottom: 10px;-->
+<!--            padding-left: 20px;-->
+<!--            font-family: 'Red Hat Display', sans-serif;-->
+<!--        }-->
+
+<!--        .login-button-div {-->
+<!--            display: flex;-->
+<!--            justify-content: center; /* Center horizontally */-->
+<!--            align-items: center;-->
+<!--            margin-top: 22px;-->
+<!--            padding: 5px;-->
+<!--        }-->
+
+<!--        .login-button {-->
+<!--            cursor: pointer;-->
+<!--            background-color: rgb(59, 26, 38);-->
+<!--            border: none;-->
+<!--            height: 40px;-->
+<!--            width: 95px;-->
+<!--            border-radius: 6px;-->
+<!--            color: rgb(187, 183, 177);-->
+<!--            font-family: 'Red Hat Display', serif;-->
+<!--            font-weight: bold;-->
+<!--            font-size: 15px;-->
+<!--            margin-top: 45px;-->
+<!--        }-->
+
+<!--        .login-button:hover {-->
+<!--            background-color: rgb(74, 49, 59);-->
+<!--        }-->
+
+<!--    </style>-->
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="main-content">
+
+    <div class="login-container">
+        <div class="left-image">
+            <img th:src="@{/resources/img/loginbooks1.jpeg}" src="../static/resources/img/loginbooks1.jpeg">
+        </div>
+        <div class="grey-box-login">
+            <div class="login-heading">
+                <p>
+                    LOG IN
+                </p>
+            </div>
+            <form class="login-form" role="form" th:action="@{/login}" method="post">
+
+                <div class="input">
+                    <label hidden="hidden" th:text="#{login.username}" for="username"></label>
+                    <input type="text" id="username" name="username" autofocus="autofocus"/> <br/>
+                </div>
+                <div class="input">
+                    <label hidden="hidden" th:text="#{login.password}" for="password" ></label>
+                    <input type="password" id="password" name="password" placeholder="Password"/> <br/>
+                </div>
+                <div th:if="${param.error}">
+                    <p style="color: red; display: block; text-align: center; margin-bottom: 15px;">Invalid username or password!</p>
+                </div>
+                <button type="submit" th:text="#{login.login}" >Log in</button>
+            </form>
+            <div class ="registered">
+                <p>
+                    Sie sind noch nicht registiert? Klicken Sie hier:
+                </p>
+                <span>
+                    <a th:href="@{/register}">
+                        <button>REGISTRIEREN</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="right-image">
+            <img th:src="@{/resources/img/loginbooks1.jpeg}" src="../static/resources/img/loginbooks2.jpeg">
+        </div>
+    </div>
+
+    </div>
+</section>
+</body>
+</html>

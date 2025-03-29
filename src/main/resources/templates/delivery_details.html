@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="#{delivery_details.title}"/>
+</head>
+<body>
+<section layout:fragment="content">
+    <form method="post" role="form" id="form" th:action="@{/cart/checkout/delivery}" th:object="${addressForm}">
+        <div>
+            <input type="radio" name="addressChoice" value="default" id="default" checked="true">
+            <label for="default" th:text="#{delivery_details.default} + ' ' + ${billingAddress}"/>
+        </div>
+        <br>
+        <div>
+            <input type="radio" name="addressChoice" value="custom" id="custom">
+            <label for="custom" th:text="#{delivery_details.custom}"/>
+        </div>
+        <br>
+        <div>
+            <input id="street"
+                   th:field="*{street}"
+                   th:placeholder="#{delivery_details.street}">
+            <input id="houseNumber"
+                   th:field="*{houseNumber}"
+                   th:placeholder="#{delivery_details.house_number}">
+            <br><br>
+            <input id="postCode"
+                   th:field="*{postCode}"
+                   th:placeholder="#{delivery_details.post_code}">
+            <input id="district"
+                   th:field="*{district}"
+                   th:placeholder="#{delivery_details.district}">
+        </div>
+        <br>
+
+        <button type="submit" class="ui button" th:text="#{delivery_details.submit}"/>
+    </form>
+</section>
+</body>
+</html>

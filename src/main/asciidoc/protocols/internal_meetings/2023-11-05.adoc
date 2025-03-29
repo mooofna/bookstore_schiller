@@ -1,0 +1,88 @@
+= Protokoll Gruppe 32
+
+Treffen am 05.11.2023
+
+Ort:      Discord +
+Beginn:   10:30 +
+Ende:     12:30 Uhr
+
+__Schriftführer:__ Maurice
+
+*Nächstes Treffen:* +
+12.11.2023, 11:00 Uhr, SLUB 0.66
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Bene
+- Nicola
+- Cosme
+- Marcel
+- Maurice
+- Louis
+- Krystina
+- Nova
+
+== Retrospektive des letzten Sprints
+
+Das Pflichtenheft wurde vollständig abgegeben und von Andreas gesichtet. Dieses kann als abgeschlossen betrachtet werden. Sofern Zeit, kann Maurice seine Top-Level-Architektur als planaren Graphen darstellen. Ebenso wurden leichte Veränderungen in der Klassenbezeichnung des Datenmodells vorgeschlagen, die von Nova übernommen wurden.
+
+== Aktueller Stand
+Anmerkungen und Kritik zum aktuellen Stand der Software, den Diagrammen und den
+Dokumenten.
+
+* Das Pflichtenheft erfüllt alle Bewertungskriterien, die obigen Vorschläge können noch umgesetzt werden.
+* Der GUI-Prototype wurde in reinem HTML/CSS umgesetzt. Dieser muss zum Ende des neuen Meilensteins dann, wenn jedes Programming-Pair das komponentenspezifische Front-End entwickelt hat, an Thymeleaf und Salespoint angepasst werden.
+* Das Kanban-Board erlaubt bisherig kein zeitliche Nachverfolgbarkeit, d.h. es kann nicht eingesehen werden, wann ein Issue/Feature angefangen/beendet/aktualisert wurde. Dies soll dadurch gelöst werden, dann der Prozess der Bearbeitung eines einzelnen Issues/Features im der Beschreibung des Eintrags dokumentiert wird.
+
+== Planung des nächsten Sprints
+=== Aufteilung der Komponenten
+
+Events Calender, Events Management werden zunächst in den Hintergrund gestellt, da diese Komponente kein essentieller Bestandteil des Verkaufs darstellt.
+
+Catalog, Inventory: Maurice, Louis
+
+* Möglichkeit verfügbare Produkte zum Bestellen einzusehen
+* Suche von Objekten in Catalog
+* Filtern von Objekten in Catalog
+* Inventarübersicht für Admin mit Möglichkeit Produkte nachzubestellen
+
+User Management, GUI: Nicola, Cosme
+
+* User-Datenbank
+* An-/Abmelden
+* Registrieren
+* GUI-Template für jede Seite in Form von reinem HTML, sodass einzelnen Gruppen Salespoint und Thymeleaf eigenständig in GUI einbauen können
+
+Shopping Cart and Ordering: Nova, Benedikt
+
+* Möglichkeit einzelne Objekte zu entfernen
+* Möglichkeit gesamten Warenkorb zu leeren
+* Möglichkeit Bestellanzahl zu verändern
+* Bezahlung abwickeln (Bar oder Rechnung)
+
+Order and Payment Overview: Kristina, Marcel
+
+* Tabelle auf einzelner Seite zur Übersicht von Bestellungen
+* Informationen zum gekauften Artikel, Anzahl, Person, Bezahlmethode, Bezahlstatus, Bestellungsstatus
+* Möglichkeit von Mitarbeitern, den Status einer Bestellung zu verändern
+
+
+Jeder wird für seine persönlichen Komponenten einen Prototyp der Benutzeroberfläche erstellen, das heißt den essentiellen Code liefern. Für den Prozess der Zusammenführung wird Cosme verantwortlich sein. Dieser wird die Oberflächen der einzelnen Komponenten zu einem zusammenhängenden Layout zusammenführen, sodass sich diese an dem an Thymeleaf und Salespoint ausgerichtetem Vorbild des Videoshops orientieren. Damit ergibt sich der gewollte vertikale Schnitt durch das System innerhalb eines jedem Programming-Pairs.
+
+
+=== Aufteilung der Abteile der Developer Documentation
+
+* Einführung und Ziele:
+** Aufgabenstellung: Maurice
+** Qualitätsziele: Louis
+* Randbedingungen: Marcel
+* Kontextabgrenzung: Maurice
+* Lösungsstrategie:
+** Erfüllung der Qualitätsziele: Louis, Kristina
+** Softwarearchitektur: Maurice in Absprache mit allen anderen Gruppen, um jede Komponente in Top-Level-Architektur zu verfeinern
+** Entwurfsentscheidungen: Jeder dynamisch für seine jeweilige Komponente, Planung der verwendenten Entwurfsmuster und Datenspeicherung
+* Bausteinsicht
+** Datenmodell: Nova, Benedikt zum Ende des Meilensteins, wenn jede Teilgruppe ihre Anforderungen an die einzelnen Klassen gestellt hat
+** Rückverfolgbarkeit zwischen Analyse- und Entwurfsmodell: Nova, Benedikt
+* Laufzeitsicht: Nicola, Marcel

@@ -1,0 +1,57 @@
+= Protokoll Gruppe 32
+
+Treffen am 14.01.2024
+
+Ort:      Discord +
+Beginn:   10:30 Uhr +
+Ende:     12:00 Uhr
+
+__Schriftführer:__ Maurice
+
+*Nächstes Treffen:* +
+18.01.2024, 10:30 Uhr, Discord
+
+__Teilnehmer:__
+
+- Nova
+- Krystina
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Marcel
+
+*Planung des nächsten Sprints*
+
+[option="headers"]
+|===
+|*Bereich* |*Personen* |*Aufgabe*
+
+|*Warenkorb-Checkout* | Nova a|
+- Cosme: Frontend
+
+|*Recommendation System*| Nicola, Louis, Maurice a|
+- Nicola: Zentrierung der Bücher fixen (Prüfen ob Produktempfehlungen negativ beeinträchtigt werden) 
+- Nicola, Louis: verschwindende Produktkategorie bei Suche fixen
+- Louis: Frontend Filterfunktion
+
+|*Rating System*| Nicola und Benedikt a|
+- Benedikt: HTML/CSS von Rating/Comments in Catalog erarbeiten, indem Comments in Form Chat mit Sender und Uhrzeit
+
+|*Event Calender*| Cosme, Nova, Kristina a|
+- Nova: Error Handling
+- Cosme: Speichern von Bildern
+- Kristina: Frontend
+
+|*Allgemein*| Alle a|
+- Code Smells entfernen
+- Test Coverage auf mindestens 60% halten
+|===
+
+*Noch offene Wünsche von Andreas*
+
+- Marcel: Bestellungen sollten nicht abgeholt werden können, wenn sie noch nicht bezahlt wurden
+- Maurice: [time] aus Navigationbar entfernen und Button in Finanz-Template packen
+- Maurice: Bei Bestellabwicklung soll geschrieben werden, dass Rechnung mitkommt
+- Nicola: Customer sollten angepasst werden können
+- Kristina: In Customer-Tabelle zusätzliche Spalte, welche anzeigt, ob für diesen Customer noch Bestellung offen ist (nach Offenheit von Bestellungen sollte gefiltert werden können)

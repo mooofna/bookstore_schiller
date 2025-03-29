@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Red+Hat+Display:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav th:fragment="navigation">
+        <div class="navigation">
+            <div class="nav-top">
+                <a class="title" th:href="@{/index}">SCHILLER</a>
+                <nav>
+                    <a class="left" href="calendar.html" th:href="@{/calendar}" th:text="#{nav.calendar}"/>
+                    <a class="left" href="catalog.html" th:href="@{/catalog}" th:text="#{nav.catalog}">KATALOG</a>
+                    <a class="left" href="cart.html" sec:authorize="!hasRole('BOSS') and !hasRole('EMPLOYEE')" th:href="@{/cart}" th:if="${#ctx.session.cart==null}" th:text="#{nav.cart}">WARENKORB</a>
+                    <a class="left"
+                       href="cart.html"
+                       sec:authorize="!hasRole('BOSS') and !hasRole('EMPLOYEE')"
+                       th:href="@{/cart}"
+                       th:unless="${#ctx.session.cart==null}"
+                       th:text="#{nav.cart} + ' (' + ${#ctx.session.cart.getNumberOfItems()} + ')'">WARENKORB</a>
+                    <a class="left" href="inventory.html" th:href="@{/inventory}" sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')" th:text="#{nav.inventory}">INVENTAR</a>
+                    <a class="left" href="orders.html" sec:authorize="isAuthenticated()" th:href="@{/orders}" th:text="#{nav.order}">BESTELLUNGEN</a>
+                    <a class="left" href="reservations.html" th:href="@{/reservations}" sec:authorize="hasRole('CUSTOMER')" th:text="#{nav.reservations}"/>
+                    <a class="left" href="users.html" sec:authorize="hasRole('BOSS')" th:text="#{nav.user}" th:href="@{/users}">NUTZERLISTE </a>
+                    <a class="left" href="events.html" th:href="@{/events}" sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')" th:text="#{nav.events}"/>
+                    <a class="right" href="finance.html" sec:authorize="hasRole('BOSS')" th:href="@{/finance}" th:text="#{nav.finance}">FINANZEN</a>
+                    <a class="right" href="account.html" sec:authorize="hasRole('CUSTOMER')" th:href="@{/account}" th:text="#{nav.account}">BENUTZERKONTO</a>
+                    <a class="right" href="support_user.html" sec:authorize="hasRole('CUSTOMER')" th:href="@{/support_user_overview}" th:text="#{nav.support}">SUPPORT</a>
+                    <a class="right" href="support_admin.html" sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')" th:href="@{/support_admin}" th:text="#{nav.ticket}">TICKETS</a>
+                </nav>
+                <a th:href="@{/login}" sec:authorize="!isAuthenticated()">
+                    <button th:text="#{nav.login}"/>
+                </a>
+                <form class="item" sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post">
+                    <button type="submit" class="ui button" th:text="#{nav.logout}">Logout</button>
+                </form>
+            </div>
+            <hr class="divider">
+        </div>
+    </nav>
+</body>
+</html>

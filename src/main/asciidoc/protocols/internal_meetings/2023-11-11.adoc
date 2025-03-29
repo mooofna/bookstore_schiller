@@ -1,0 +1,48 @@
+= Protokoll Gruppe 32
+
+Treffen am 11.11.2023
+
+Ort:      SLUB 0.66 +
+Beginn:   11.11 Uhr +
+Ende:     14:00 Uhr
+
+__Schriftführer:__ Nicola & Maurice
+
+*Nächstes Treffen:* +
+19.11.2023, 11:00 Uhr, SLUB 0.66
+
+__Teilnehmer:__
+
+- Nova
+- Krystina
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+
+== Bemerkungen
+
+- Individuelle Arbeit in Gruppen, um Code für Präsentation zusammenzuführen und Merge-Konflikte zu lösen
+- Review offener Pull Request, Kommunikation von Verbesserungsmöglichkeiten
+- Verteilung von Aufgaben an Teammitglieder, welche mit ihrer Aufgabe bereits fertig sind
+- Diskussion über die Abfolge der Erarbeitung von Code und Diagrammen, insbesondere der Sequenzdiagramme: Zunächst soll Code fertig gestellt werden, anschließend und zuletzt werden Diagramme erstellt
+- Codereview: Jedes Team präsentiert Ergebnisse der letzten Woche
+
+== Retrospektive des letzten Sprints
+
+- Grundfunktionalität im Backend bereits fast vollständig vorhanden, sodass nur noch Cosme, Nicola und Marcel das Erscheinungsbild des bereits vorhandenen Frontend konsistent machen
+
+Verbesserungsvorschläge:
+
+- Maurice: InventoryController sind in einen Controller und einen Service aufgeteilt werden, um die Logik zu separieren
+- Nicola, Cosme: Einheitliches Format (reguläre Sprache) für Speicherung von Adressen festlegen
+- Cosme, Benedikt: Login-Check bei Interaktion mit dem Warenkorb
+
+== Planung des nächsten Sprints
+
+- Code-Prototyp bis Sonntag Abend fertig
+- Developer-Documentation bis zum Meeting am Dienstag fertig
+- Jeder erarbeitet Diagramm für jeweilige Komponente selbst, da für fremde Person die Abbildung der Architektur wesentlich schwieriger und zeitaufwändiger ist
+- Nutzung des Mittwochs um Konflikte und Inkonsistenzen zu lösen

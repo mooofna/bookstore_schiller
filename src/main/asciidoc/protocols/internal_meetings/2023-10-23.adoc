@@ -1,0 +1,94 @@
+= Protokoll Gruppe 32
+
+Treffen am 22.10.2023
+
+Ort:      SLUB 066 +
+Beginn:   10:00 Uhr +
+Ende:     14:00 Uhr
+
+__Schriftführer:__ Maurice Heide
+
+*Nächstes Treffen:* +
+22.10.2022, 10:00 Uhr, SLUB 066
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Louis
+- Cosme
+- Nicola
+- Marcel
+- Nova
+- Kristina
+- Benedikt
+- Maurice
+
+== Bemerkungen
+Verwarnungen, besondere Vorfälle, Organisatorisches, wichtige getroffene Entscheidungen
+
+- Einigung auf englische Dokumentation (Code, Diagramme, Pflichtenheft, etc.)
+- Aufteilung der Aufgaben für nächsten und übernächsten Meilenstein (einsehbar unter Reiter Projekte) -> Aufteilung der Erstellung von Diagrammen sowie einzelner Abteile des Pflichtenhefts, die der OOA zugeordnet werden können
+- Einigung auf Erweiterung des Videoshop Meilensteins -> alle Aufgaben sollen erledigt und am Ende gemergt werden (vorher wird Tutor konsultiert und um Zustimmung gefragt - Kristina schickte Mail)
+- Aufteilung der übrigen Aufgaben des Videoshops, sodass alle 14 Aufgaben erledigt werden
+- Entfernen von Überschneidungen in den Aufgaben des Videoshops, sodass diese am Ende im Projekt zusammengeführt werden können und schwerwiegende Merge-Konflikte vorgebeugt werden
+- Erstellung eines Canban-Board um Überblick über gegenwärtige Aufgabenstellungen zu behalten und effizienter planen zu können
+
+== Retrospektive des letzten Sprints
+*Issue referenziert die Issue ID von GitHub*
+// Wie ist der Status der im letzten Sprint erstellten Issues/veteilten Aufgaben?
+
+- Erster GUI Prototyp entstanden, welcher in Zukunft in HTML/CSS umgesetzt wird
+- Jeder hat bereits ein Feature im Videoshop umgesetzt, sodass die restlichen verteilten disjunkten Aufgaben abgearbeitet und im Zuge der nächsten Woche zusammengeführt werden können, sofern Tutor dies erlaubt
+- Fortgeschrittene Use Case Analysis
+- Erster primitiver Entwurf von Analyse-Diagrammen, die nach und nach im Laufe der nächsten Woche durch aufwändigere Diagramme ersetzt werden (z.B. Use Case Diagram bereits vorhanden)
+
+// See http://asciidoctor.org/docs/user-manual/=tables
+[option="headers"]
+|===
+Verteilung der verschiedenen Videoshop-Aufgaben
+
+- Aufgabe 1: Registrierung (Nicola) +
+- Aufgabe 2: Bewertungen (Louis) +
+- Aufgabe 3: Bestellung (Marcel) +
+- Aufgabe 4: Rechnung (Cosme) +
+- Aufgabe 5: Kategorien (Cosme) +
+- Aufgabe 6: Löschen/Leeren-Button (Benedikt) +
+- Aufgabe 7: Durchschnitt der Bewertungen (Benedikt) +
+- Aufgabe 8: Nachbestellung (Maurice) +
+- Aufgabe 9: Genaue Bestellungen (Kris) +
+- Aufgabe 10: Suche (Louis) +
+- Aufgabe 11: Stückzahl im Warenkorb (Maurice Heide) +
+- Aufgabe 12: Registrierung (Nicola) +
+- Aufgabe 13: Passwort ändern (Nova) +
+- Aufgabe 14: Rabattierung (Marcel) +
+
+|===
+
+
+
+== Aktueller Stand
+Anmerkungen und Kritik zum aktuellen Stand der Software, den Diagrammen und den
+Dokumenten.
+
+- Gegenwärtige Protypen der Analysediagramme müssen unbedingt verfeinert werden
+- Schneller Fortschritt im Videoshop-Meilenstein
+- Planung des nächsten und übernächsten Meilensteins mit gleichmäßiger Aufteilung der Aufgaben
+
+== Planung des nächsten Sprints
+*Issue referenziert die Issue ID von GitHub*
+
+// See http://asciidoctor.org/docs/user-manual/=tables
+[option="headers"]
+|===
+|Issue |Beschreibung |Verantwortlicher |Status
+| OOA: Acceptance Criteria Analysis | Anforderungen und Akzeptanzfälle definieren | Kristina | In Progress
+| OOA: GUI Protoyp in HTML/CSS umsetzen | Grober Entwurf der verschiedenen Seiten unserer Buchhandlung in HTML/CSS umsetzen | Cosme | Next
+| OOA: Stakeholder Analysis | Ermittlung der mit Buchhaltung interagierenden Individuen für Pflichtenheft | Maurice | In Progress
+| OOA: Use Cases Analysis | Ermittlung aller Anwendungsfälle unserer Buchhandlung - Wie interagieren Menschen mit unserer Buchhandlung? | Nicola | In Progress
+| OOA: Product Usage Analysis | Wie wird die Anwendung später genutzt? Welche Bedingungen stellt die Anwendung an den Anwender? | Marcle | In Progress
+| OOA: Use Case Diagram | Festhalten der Anwendungsfälle im Diagramm (in Absprache mit Use Case Analysis) | Marcel | In Progress
+| OOA: GUI Prototype | Grober Entwurf der verschiedenen Seiten unserer Buchhandlung in Inkscape | Nicola | In Progress
+| OOA: Context Diagram | Kontextdiagramm für groben Überblick über gesamte Anwendung | Louis, Maurice | In Progress
+| OOA: Top Level Architecture Diagramm | Diagramm für Top Level Architektur um groben Überblick über gesamte Anwendung zu verfeinern | Louis, Maurice | In Progress
+| OOA: Class Diagrams | Klassendiagramme für verschiedenen Domänenobjekte | Nova, Benedikt | In Progress
+|===

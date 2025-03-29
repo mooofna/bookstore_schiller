@@ -1,0 +1,25 @@
+= Persönliches Feedback zum Softwarepraktikum 2023/24
+
+Von:: Krystsina Kurytsyna
+
+Gruppe:: 32
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+Das Praktikum war eine gute Chance, um praktische Erfahrung in Teamarbeit und Softwareentwicklung zu sammeln. Besonders hilfreich fand ich, mehr über Java und Spring Back End Entwicklung zu lernen. Bei Thymeleaf hatte ich zwar anfangs meine Bedenken, da es sich um eine etwas ältere Technologie handelt, die nicht so oft verwendet wird, aber letztendlich war es eine intressante Erfahrung, verschiedene Ansätze kennenzulernen und mich selbst zu beweisen, dass man mit alles am Ende arbeiten kann.
+
+== Erfahrungen mit der Teamarbeit
+Ich bin dankbar für die Zusammenarbeit mit einem so motiviertem und investiertem Team. Wir hatten zwar unsere Herausforderungen, besonders in Bezug auf effektive Kommunikation, strukturierte Meetings und Leistungsbereitschaft, aber diese Erfahrungen haben uns als Gruppe gestarkt. Die Arbeit in kleineren Untergruppen war manchmal problematisch, aber auch hieraus konnten wir wichtige Lektionen ziehen und von einanderer lernen.
+
+== Erfahrungen mit Bibliotheken/Frameworks
+Die Nutzung von Frameworks wie SalesPoint und Salespoint hat uns geholfen, uns auf wichtigere Aspekte des Projekts zu konzentrieren, wie die echte Feature Entwicklung und am Ende viele Stunden Arbeit gesparrt. Obwohl Thymeleaf nicht die modernste Wahl war und ich würde empfehlen, nächste Mal Javascript oder Typescript zu verwenden.
+Ein kleiner Verbesserungsvorschlag wäre, die Dokumentation zu Beginn des Projekts zu straffen und mehr auf die Realität des Arbeitsumfelds abzustimmen. Die Flexibilität in der Arbeitsweise, wie z.B. bei Pair Programming, sollte *stärker betont werden*. Es wäre auch bereichernd, einige grundlegende DevOps-Aufgaben einzubeziehen, um eine *umfassendere Erfahrung* zu bieten.
+
+== Verbesserungsvorschläge
+Ein Verbesserungsvorschlag wäre, die Dokumentation zu Beginn des Projekts zu straffen und mehr auf die Realität des Arbeitsumfelds abzustimmen. Auch Pair Programming nicht als Pflicht zu machen, sondern als eine Empfehlung. Und Thymeleaf mit JS zu ersetzen. Ansonsten, würde ich empfehlen ein Paar DevOps Aufgaben für Studenten einzufuhren, damit man auch eine arbeitsrelevante Erfahrung sammeln kann.
+
+
+== Feedback für den Tutor
+Unser Tutor war sehr freundlich, hilfreich und unterstutzbar und. Seine offene und unterstützende Art hat sehr dazu beigetragen, dass wir uns im Projekt sehr wohlgefühlt haben. Andreas hat immer schnell geantwortet und war sehr hilfsbereit was verschiedene Fehler, Debugging und allgemeine Fragen angeht.
+
+== Sonstige Anmerkungen
+Insgesamt war das Praktikum eine tolle Erfahrung für mich, ich hab mehr über Spring erfahren, aber auch die Menschen in meinem Team besser kennengelernt, was auch zu schätzen ist. Nur die UML Diagrammen waren zu viel

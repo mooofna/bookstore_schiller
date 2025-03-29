@@ -1,0 +1,26 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2023/24
+
+**Von:** Benedikt Pätzold
+
+**Gruppe:** 32
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+Ich habe gelernt Github zu nutzen um als Team an mehreren Teilen des Projekts gleichzeitig arbeiten zu können.
+Ich habe gelernt wie man Tests für seinen Code schreibt.
+Außerdem habe ich meine Kenntnisse von Java deutlich vergrößert und grundlegenden Umgang mit SpringBoot und Salespoint gelernt und kann jetzt auch einfache html-templates erstellen und mithilfe von thymeleaf mit java-code verbinden
+Ich konnte dem Praktikum jedoch nicht entnehmen wieso das Pair-Programming eine gute Sache sein soll, am Ende hatte das immer nur Probleme mit Terminfindung hervorgerufen und ich hatte auch das Gefühl mich besser konzentrieren zu können, wenn ich alleine an meinem Teil gearbeitet habe.
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+Meine Erfahrungen mit der Zusammenarbeit im Team sind ausnahmslos positiv. Ich war zwar der einzige in der Gruppe, der niemanden kannte, habe mich jedoch niemals ausgeschlossen oder übrig gefühlt. Außerdem war die Arbeitsmotivation von Anfang an auf einem sehr hohen Level, was mich dann auch sehr motiviert hat, obwohl ich eigentlich wirklich faul bin. Ich wollte eigentlich ursprünglich mit Kommilitonen in eine Gruppe die ich schon kannte, diese Gruppe wurde jedoch aufgrund des Tutormangels aufgelöst, ich bin im Nachhinein sehr froh darüber.
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+Anfangs fand ich die bloße Menge an für mich Unbekanntem ein wenig abschreckend, jedoch war es umso belohnender, wenn man einen Teil verstanden hatte und für das eigene Projekt verwenden konnte. Das hat dann auch meistens sehr schöne Lösungen für bestimmte Probleme ergeben.
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+Ich denke das SWT-Praktikum ist in einem sehr guten Zustand, die meisten Probleme die es gab, hatten den Ursprung nach meinem Verständnis im Tutormangel. 
+
+== Feedback für den Tutor
+Andreas war ein sehr guter Tutor, man konnte bei Problemen immer mit einem sehr guten Lösungsvorschlag rechnen. Außerdem war er von Anfang an auch schon dahin unterstützend, dass er uns für die Meilensteine fast immer Zeit bis zum nächsten Tutor-Treffen mehr gegeben hat und gute Tutorials und Informationen abseits der von der TU bereitgestellten Materialien empfohlen hat. Und auch völlig unabhängig von seiner Rolle als Tutor war Andreas sehr freundlich und entgegenkommend.
+
+== Sonstiges und Anmerkungen
+Schade, dass die Bewertung am Ende nur Bestanden/Nicht Bestanden ist, das Modul war bis jetzt das spannendste und spaßigste des Bachelor Studiums.

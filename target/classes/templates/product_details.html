@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html(title=${product.name})}">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="book-detail-container">
+        <div class="book-detail-image">
+            <img th:src="@{/files/{image}(image=${product.image})}" th:alt="${product.name}"/>
+        </div>
+
+        <div class="detail-container">
+            <div class="detail-box">
+                <div class="book-detail-title">
+                    <p th:text="${product.name}">Default Book Title</p>
+                </div>
+                <a th:if="${product instanceof T(schiller.inventory.productSpecialization.book.Book)}">
+                    <div class="book-detail-author">
+                        <p th:text="${product.author.name}">Default Book Author</p>
+                    </div>
+                    <div>
+                        <div class="detail-descriptor" style="font-weight: bold" th:text="#{detail.publisher}">Default Publisher</div>
+                        <div class="detail-descriptor" th:text="${product.publisher}">Default Publisher</div>
+                    </div>
+                    <div>
+                        <div class="detail-descriptor" style="font-weight: bold" th:text="#{detail.isbn}">Default ISBN</div>
+                        <div class="detail-descriptor" th:text="${product.isbn}">Default ISBN</div>
+                    </div>
+                    <div>
+                        <div class="detail-descriptor" style="font-weight: bold" th:text="#{detail.instock}">In Stock</div>
+                        <div class="detail-descriptor" th:text="${quantity}">10</div>
+                    </div>
+                    <div>
+                        <div class="detail-descriptor" style="font-weight: bold" th:text="#{detail.genre}">Genre</div>
+                        <div class="detail-descriptor" th:each="genre : ${product.genres}">
+                            <a th:text="${genre.name}">Genre</a>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 15px">
+                        <div class="detail-blurb" style="margin-top: 20px;font-weight: bold" th:text="#{detail.blurb}">Blurb</div>
+                        <div class="detail-blurb" th:text="${product.coverText}">Cover Text</div>
+                    </div>
+                </a>
+                <a th:if="${product instanceof T(schiller.inventory.productSpecialization.productExtension.ProductExtension)}">
+                    <div class="book-detail-author">
+                        <p th:text="${product.info}">Default Product Info</p>
+                    </div>
+                </a>
+                <div class="detail-bottom">
+                    <div class="detail-descriptor" style="font-weight: bolder" th:text="${product.price}">Price</div>
+                    <form class="purchase" method="post" th:action="@{/cart/addOrUpdate}" th:if="${orderable}">
+                        <input type="hidden" name="productId" value="0" th:value="${product.id}"/>
+                        <input type="hidden" name="onCartSite" value="0" th:value="false"/>
+                        <div class="detail-descriptor">
+                            <label for="number">Anzahl</label>
+                            <input id="number" type="number" name="amount" min="1" max="5" step="1" value="1"/><br/>
+                        </div>
+                        <button type="submit" class="catalog-submit-button">
+                            <i class="add to cart icon"></i><span th:text="#{detail.addToBasket}"> Hinzufügen</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="detail-box" style="margin-top:20px" >
+                <p th:unless="${product.comments.isEmpty()}" th:text="#{detail.averageRating} + ${product.getAverageRating()}"></p>
+                <p th:unless="${!product.comments.isEmpty()}" th:text="#{detail.noRating}"></p>
+                <div class="comments" th:text="#{detail.comment.comments}">Comments</div>
+                <div class="comment-box" th:each="comment : ${product.comments}">
+                    <div>
+                        <div class="text" th:text="#{detail.comment.reviewed} + ' '
+                        + ${comment.getAuthor().getUsername()}
+                        + ' ' + #{detail.comment.on}
+                        + ' ' + ${comment.getDate().getDayOfMonth()}
+                        + '. ' + ${comment.getDate().getMonthValue()}
+                        + '. ' + ${comment.getDate().getYear()}"></div>
+                        <span th:text="#{detail.comment.rating} + ': ' + ${comment.getStringRating()}">5</span>
+                        <div class="text" th:text="#{detail.comment.content} + ': ' + ${comment.text}">Guter Film vom Inhalt her</div>
+                    </div>
+                </div>
+                <form role="form" th:object="${form}" th:action="@{/product/{id}/comments(id=${product.id})}" method="post">
+                    <p th:if="${#fields.hasErrors('*')}">
+                        Einige Angaben sind nicht korrekt.
+                    </p>
+                    <div class="detail-descriptor" th:classappend="${#fields.hasErrors('comment')} ? 'error' : ''">
+                        <label th:text="#{detail.comment.addComment}" for="comment">Kommentieren</label> <br>
+                        <textarea id="comment" name="comment" th:field="*{comment}" cols="40" rows="5" required="required"></textarea><br/>
+                    </div>
+                    <div class="detail-descriptor" th:classappend="${#fields.hasErrors('rating')} ? 'error' : ''">
+                        <label th:text="#{detail.comment.rating}" for="rating">Bewertung</label>
+                        <input id="rating" name="rating" type="number" th:field="*{rating}" value="5" required="required" min="1" max="5" />
+                    </div>
+                    <button type="submit" style="margin:7px">
+                        <i class="icon edit"></i><span th:text="#{detail.comment.addComment}"> Kommentieren</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div th:unless="${sameAuthorBooksEmpty}">
+        <div class="associated-books-heading">
+            Bücher gleichen Autors:
+        </div>
+
+        <div class="Catalog" th:remove="all-but-first">
+            <div class="book" th:each="book : ${sameAuthorBooks}">
+                <div class="image">
+                    <a th:href="@{/product/{id}(id=${book.id})}">
+                        <img class="thumbnail" th:src="@{/files/{image}(image=${book.image})}" th:alt="${book.name}"/>
+                    </a>
+                </div>
+                <div class="content">
+                    <a class="header" th:href="@{/product/{id}(id=${book.id})}" th:text="${book.name}"></a>
+                    <div class="extra content" th:text="${book.author.name}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:unless="${sameGenreBooksEmpty}">
+        <div class="associated-books-heading">
+            Bücher gleichen Genres:
+        </div>
+
+        <div class="Catalog" th:remove="all-but-first">
+            <div class="book" th:each="book : ${sameGenreBooks}">
+                <div class="image">
+                    <a th:href="@{/product/{id}(id=${book.id})}">
+                        <img class="thumbnail" th:src="@{/files/{image}(image=${book.image})}" th:alt="${book.name}"/>
+                    </a>
+                </div>
+                <div class="content">
+                    <a class="header" th:href="@{/product/{id}(id=${book.id})}" th:text="${book.name}"></a>
+                    <div class="extra content" th:text="${book.author.name}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:unless="${sameCategoryProductExtensionsEmpty}">
+        <div class="associated-books-heading">
+            Produkte gleicher Kategorie:
+        </div>
+
+        <div class="Catalog" th:remove="all-but-first">
+            <div class="book" th:each="productExtension : ${sameCategoryProductExtensions}">
+                <div class="image">
+                    <a th:href="@{/product/{id}(id=${productExtension.id})}">
+                        <img class="thumbnail" th:src="@{/files/{image}(image=${productExtension.image})}" th:alt="${productExtension.name}"/>
+                    </a>
+                </div>
+                <div class="content">
+                    <a class="header" th:href="@{/product/{id}(id=${productExtension.id})}" th:text="${productExtension.name}"></a>
+                    <div class="extra content" th:text="${productExtension.info}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:unless="${associatedProductsEmpty}">
+        <div class="associated-books-heading">
+            Andere Nutzer kauften auch:
+        </div>
+
+        <div class="Catalog associated-books-container" th:remove="all-but-first">
+            <div class="book" th:each="product : ${associatedProducts}">
+                <div class="image">
+                    <a th:href="@{/product/{id}(id=${product.id})}">
+                        <img class="thumbnail" th:src="@{/files/{image}(image=${product.image})}" th:alt="${product.name}"/>
+                    </a>
+                </div>
+                <div class="content">
+                    <a class="header" th:href="@{/product/{id}(id=${product.id})}" th:text="${product.name}"></a>
+                    <a th:if="${product instanceof T(schiller.inventory.productSpecialization.book.Book)}">
+                        <div class="extra content" th:text="${product.author.name}"></div>
+                    </a>
+                    <a th:if="${product instanceof T(schiller.inventory.productSpecialization.productExtension.ProductExtension)}">
+                        <div class="extra content" th:text="${product.info}"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

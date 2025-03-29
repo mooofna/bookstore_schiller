@@ -1,0 +1,53 @@
+= Protokoll Gruppe 32
+
+Treffen am 19.10.2023
+
+Ort:      SLUB 0.66 + virtuell über BBB +
+Beginn:   14:50 Uhr +
+Ende:     17:10 Uhr
+
+__Schriftführer:__ Maurice Heide
+
+*Nächstes Treffen:* +
+29.10.2023, 10:00 Uhr, APB
+
+__Teilnehmer:__
+//Tabellarisch oder Aufzählung, Kennzeichnung von Teilnehmern mit besonderer Rolle (z.B. Kunde)
+
+- Andreas (Kunde/Tutor)
+- Maurice
+- Louis
+- Nicola
+- Marcel
+- Cosme
+- Kristina
+- Nova (online)
+- Benedikt (online)
+
+== Bemerkungen
+- Vorstellungsrunde mit Angabe bisheriger Programmierkenntnisse
+- Reflektion des letzten Sprints
+- Reflektion gängiger Fehler im Softwaretechnologiepraktikum
+- Einführung in Spring und Salespoint Framework
+
+== Retrospektive des letzten Sprints
+*Issue referenziert die Issue ID von GitHub* +
+
+- Jedes Gruppenmitglied hat sich mit dem Salespoint Framework auseinandergesetzt
+- Es wurde an den individuellen Videoshop Erweiterungen gearbeitet
+- Maurice bereitete Kundenfragen zur Planung des Domänenmodells vor
+- Nächstes internes Treffen wurde bereits vereinbart
+
+
+
+== Aktueller Stand
+- Nicht alle Gruppenmitglieder haben sich mit dem Salespoint Framework auseinandergesetzt
+- Nicht alle Gruppenmitglieder haben ihre individuellen Videoshop Erweiterungen fertiggestellt
+- Kunde/Andreas antwortete sehr schnell auf Fragen, sodass die Planung des Domänenmodells bereits beginnen kann
+
+== Planung des nächsten Sprints
+*Issue referenziert die Issue ID von GitHub* +
+
+- Jedes Gruppenmitglied hat bis zum nächsten internen Treffen sich mit dem Salespoint Framework auseinandergesetzt
+- Jedes Gruppenmitglied hat bis zum nächsten internen Treffen seine individuellen Videoshop Erweiterungen fertiggestellt
+

@@ -1,0 +1,131 @@
+= Protokoll Gruppe 32
+
+Treffen am 17.12.2023
+
+Ort:      Discord +
+Beginn:   12:00 Uhr +
+Ende:     13:30 Uhr
+
+__Schriftführer:__ Maurice
+
+*Nächstes Treffen:* +
+10.12.2023, 16:00 Uhr, Discord
+
+__Teilnehmer:__
+
+- Nova
+- Krystina
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+
+== Retrospektive des letzten Sprints
+
+*Was fehlt oder muss verbessert werden?*
+
+[option="headers"]
+|===
+|*Person* |*Aufgabe*
+|Nicola a|
+
+|Marcel a|
+
+- Bearbeiten der Bestelldetails
+
+|Louis a|
+
+- Produktkategorien hinzufügen
+- Datenmodell umsetzen (z.B. Ergänzen einer Klasse, die alle Produkte enthält, die kein Buch sind)
+
+|Kristina a|
+
+- Erhöhung der Test Coverage
+
+|Cosme a|
+
+|Benedikt a|
+
+- HTML/CSS Rating/Comments in Catalog
+- Falsches Rendering der Rating-Sterne korrigieren
+
+|Nova a|
+
+- Bestellprozess erweitern: Shop -> Cart -> Delivery -> Payment -> Bezahlung abgeschlossen (jeweils eigene Templates)
+
+|Maurice a|
+
+
+|===
+
+== Planung des nächsten Sprints
+
+[option="headers"]
+|===
+|*Person* |*Aufgabe*
+|Nicola a|
+
+|Marcel a|
+
+- Bearbeiten der Bestelldetails
+
+|Louis a|
+
+- Produktkategorien hinzufügen
+- Datenmodell umsetzen (z.B. Ergänzen einer Klasse, die alle Produkte enthält, die kein Buch sind)
+
+|Kristina a|
+
+- Erhöhung der Test Coverage
+
+|Cosme a|
+
+|Benedikt a|
+
+- HTML/CSS Rating/Comments in Catalog
+- Falsches Rendering der Rating-Sterne korrigieren
+
+|Nova a|
+
+- Bestellprozess erweitern: Shop -> Cart -> Delivery -> Payment -> Bezahlung abgeschlossen (jeweils eigene Templates)
+
+|Maurice a|
+
+|===
+
+*Gilt für jede Person:*
+
+- Input Validation im eigenen Package (javax.validation)
+- Code Smells korrigieren
+- Fehlersuche im eigenen Package, um Anwendung robust zu machen
+- Schreiben von Tests, sodass Coverage von 90% erreicht wird
+
+== Kundenwünsche
+
+[option="headers"]
+|===
+| |Recommendation System |Support- und Ticket-System | Event Kalender
+
+|*Verantwortliche Personen*| Louis, Krystina, Maurice | Benedikt, Marcel, Nicola | Nova, Cosme
+|*Aufgabenbeschreibung* a| 
+
+* GUI-Prototype (Bücher: Bücher gleichen Autors, Bücher gleichen Genres, ähnliche Bücher mit Association Rule Mining; Nicht-Buch-Produkte: ähnliche Artikel mit Association Rule Mining)
+* Umsetzung des GUI-Prototypes im Frontend
+* Update der Statistik beim Abschließen eines Einkaufs mit Informationen des Warenkorbs a|
+
+* GUI-Prototype
+* Umsetzung des GUI-Prototypes im Frontend
+* Möglichkeit, dass Kunden Tickets öffnen können
+* Übersicht aller Beschwerden / Meldungen / Anfragen mit Nutzer und Beschreibung als Liste für Boss
+* Chat-System mit Back-And-Forth-Nachrichten zwischen Boss / Mitarbeiter und Kunden
+* Issues können vom Boss geschlossen werden (Issues sind entweder offen oder geschlossen) a|
+
+* GUI-Prototype und 
+* Umsetzung des GUI-Prototypes im Frontend
+* Detailansicht für Kunde für jede Veranstaltung mit Informationen zur Veranstaltung und Möglichkeiten zur Platzauswahl
+* Detailansicht für Boss für jede Veranstaltung mit Liste aller Teilnehmenden Personen, die auch angepasst werden kann (z.B. Personen entfernen)
+* Person soll sich von einer Veranstaltung abmelden können (Ansicht im gleichen Template wie für Bestellungen, jedoch in eigener Tabelle)
+
+|===

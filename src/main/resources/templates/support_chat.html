@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>Support Chat</title>
+    <link rel="stylesheet" href="../static/resources/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="login-container" style="margin-top: 25px;">
+        <div class="grey-box" style="width: 43%; min-width: 80px; justify-content: space-around; padding-bottom: 20px;">
+            <p class="chat" th:text="#{support.subject} + ': ' + ${issue.title}"></p>
+            <div class="chat-messages">
+                <div th:each="message : ${issue.messages}" th:style="${message.isCustomer()} ? 'align-self: flex-end;' : ''">
+                    <p class="message-meta" th:text="${message.getAuthor().getUserAccount().getUsername()}"></p>
+                    <div class="ticket-form" style="margin-top: 0; margin-bottom: 0; min-width: 160px" th:text="${message.content}"></div>
+                    <p class="message-meta" style="margin-bottom: 10px;" th:text="${#temporals.format(message.getMessageTime(), 'HH:mm    dd/MM/yyyy')}"></p>
+                </div>
+                <div class="messages-bottom">
+                    <form class="send" th:if="${!issue.isClosed()}" role="form" th:action="@{/support_chat/{issueId}(issueId=${issueId})}" method="post" th:object="${messageForm}">
+                        <div th:if="${param.error}">
+                            <p style="color: red;">Invalid username or password.</p>
+                        </div>
+                        <div class="form-div" style="width: 100%;">
+                            <label th:text="#{support.description}" for="content" hidden="hidden"></label>
+                            <textarea class="ticket-form" style="margin-right: 50px; width: 100%" id="content" name="content" th:field="*{content}" th:errorclass="fieldError" required="required" autofocus="autofocus"
+                            placeholder="Write a new message here...">
+                            </textarea>
+                        </div>
+                        <button th:text="#{support.send-message}" type="submit">Send Message</button>
+                    </form>
+                    <form th:if="${issue.isClosed()&&issue.getRating()==null}" th:action="@{/support_chat/rate_support}" method="post">
+                        <label for="rating" th:text="#{support.user_rating}"></label>
+                        <input type="number" min="0" max="5" step="1" name="rating" id="rating">
+                        <label for="issueId" hidden="hidden"></label>
+                        <input id="issueId" hidden="hidden" name="issueId" th:value="${issueId}">
+                        <button type="submit" th:text="#{support.rating_button}"></button>
+                    </form>
+                    <p th:if="${issue.isClosed()&&issue.getRating()!=null}" th:text="#{issue.rating} + ' ' + ${issue.getRating()}"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

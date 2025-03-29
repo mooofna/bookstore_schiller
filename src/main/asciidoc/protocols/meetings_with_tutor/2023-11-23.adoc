@@ -1,0 +1,62 @@
+= Protokoll Gruppe 32
+
+Treffen am 23.11.2023
+
+Ort:      APB 2101 +
+Beginn:   14.50 Uhr +
+Ende:     16.35 Uhr
+
+__Schriftführer:__ Maurice, Cosme
+
+*Nächstes Treffen:* +
+30.11.2023, 14:50 Uhr, APB 2101
+
+__Teilnehmer:__
+
+- Andreas (Kunde/Tutor)
+- Nova
+- Krystina
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+
+== Bemerkungen
+
+- Positives Feedback für Developer Documentation
+- Reflexion der zukünftigen Pläne im Programming Pair
+- Lösung des Uploads von Bildern mit dem Modul "Fire Storage"
+- Feature: Finanzübersicht
+- Features für nächsten zwei Wochen: Der Shop muss Kohle machen können B)
+** Kalender hinter ranstellen
+** Bestellprozess, Warenkorb fixen
+
+== Verbesserungen für nächste Presentation
+
+- Wieder 30 Minuten
+- Zielgruppe: Frau Schiller, Fachexperte für Salespoint
+- Kein zu starker Kontextwechsel
+
+- Besserer Foliensatz!!!
+- Frontend lesbarer machen, indem wir Kontraste erhöhen (insbesondere Tabellenansicht)
+- Diagramme Vergrößern bzw. lesbarer machen
+- Vorher mit Beamer testen (Farben und Separation der Elemente)
+- Richtigen Foliensatz erstellen und vor allem vor der Präsentation einmal üben! Ein solcher Blooper, wie die Eingabe durch Benedikt an Louis Mac mit Neo-Layout sollte nicht nochmal passieren.
+- Zu viel Information in Diagrammen
+** Triviale Objekte auslassen: Controller, Getter und Setter entfernen
+** Negatives Feedback für Package Diagramm von Inventory und Catalog
+** Thematisch ist die Erweiterung von Salespoint am interessantesten, z.B. solche Teile in den Folien farblich hervorheben
+- Neustrukturierung: Von außen nach innen, schrittweise Verfeinerung
+** High Level Diagramm erstellen zur Präsentation grober Zusammenhänge in der Domäne
+** Bestimmte Klassen einzeln vorstellen
+- Diagramme müssen nicht zwingend aus StarUML für die Präsentation genommen werden. Diagramme aus StarUML sind gut für das Programmieren, aber unübersichtlich. Eventuell sollten diese in einem Grafikprogramm gezeichnet
+- Probleme, auf welche die Programming Pairs gestoßen sind, gehören mit auf die Folien.
+- Vortragenden sollten sich vor ihrem Part, am besten zu Beginn der Dokumentation vorstellen.
+- Folienüberschriten einbinden, eine inhaltliche Gliederung wir mit fortschreitender Größe der Präsentation immer wichtiger.
+** Domäne vorstellen (gerne in Form von plastischer Vorstellung des Plots)
+** Design-Entscheidungen
+** Probleme
+** Lessons learned
+

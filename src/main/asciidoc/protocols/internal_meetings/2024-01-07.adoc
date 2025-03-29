@@ -1,0 +1,62 @@
+= Protokoll Gruppe 32
+
+Treffen am 07.01.2024
+
+Ort:      Discord +
+Beginn:   14:00 Uhr +
+Ende:     14:30 Uhr
+
+__Schriftführer:__ Maurice
+
+*Nächstes Treffen:* +
+14.01.2024, 10:00 Uhr, Discord
+
+__Teilnehmer:__
+
+- Nova
+- Krystina
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+
+*Planung des nächsten Sprints*
+
+[option="headers"]
+|===
+|*Bereich* |*Personen* |*Aufgabe*
+
+|*Warenkorb-Checkout* | Nova a|
+- Nova: Beim Checkout überprüfen, ob Inhalt des Warenkorbs noch im Inventar verfügbar ist
+- Cosme: Frontend
+
+|*Recommendation System* | Louis, Maurice und Kristina a|
+- Maurice: Kontrollieren, ob richtige Association Rule gewählt wird (Kontrolle Update der Empfehlung nach mehreren Bestellungen)
+- Maurice: Testen, ob Bücher gleichen Autors angezeigt werden
+- Louis: Erweiterung der Produktempfehlungen auf Product-Extension
+- Kristina: Horizontale Scrollbar für Produktempfehlungen (Navigation durch Buttons)
+
+|*Storage System* | Louis, Maurice a|
+- Louis: Problem lösen, dass beim Hochladen neuer Bilder mit gleichem Dateinamen das Bild ersetzt wird
+
+|*Rating System*| Nicola und Benedikt a|
+- Benedikt: HTML/CSS von Rating/Comments in Catalog erarbeiten, indem Comments in Form Chat mit Sender und Uhrzeit
+- Nicola: Falsches Rendering der Rating-Sterne korrigieren
+
+|*Support Chat*| Marcel, Benedikt und Nicola a|
+- Marcel: Tickets werden korrekt geöffnet und geschlossen
+- Benedikt: Messages werden nicht gespeichert, Customer soll eigene Tickets öffnen können
+- Nicola: Frontend
+
+|*Event Calender*| Cosme, Nova, Kristina a|
+- Nova: Error Handling
+- Cosme: Speichern von Bildern
+- Kristina, Cosme, Nova: Frontend
+
+|*Allgemein*| Alle a|
+- Cosme: Schiller-Icon sollte nicht fix beim Scrollen in der linken Ecke des Bildschirms bleiben
+- Code Smells entfernen
+- Test Coverage auf mindestens 90%
+|===

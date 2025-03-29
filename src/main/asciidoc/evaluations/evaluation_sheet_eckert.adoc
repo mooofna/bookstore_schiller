@@ -1,0 +1,40 @@
+
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2023/24
+// Auch wenn der Bogen nicht anonymisiert ist, dürfen Sie gern Ihre Meinung offen kundtun.
+// Sowohl positive als auch negative Anmerkungen werden gern gesehen und zur stetigen Verbesserung genutzt.
+// Versuchen Sie in dieser Auswertung also stets sowohl Positives wie auch Negatives zu erwähnen.
+
+**Von:** Marcel Eckert
+
+**Gruppe:** 32
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+// Ausführung der positiven und negativen Erfahrungen, die im Softwarepraktikum gesammelt wurden
+In meiner Erfahrung aus dem Softwarepraktikum habe ich besonders viel durch die Teamarbeit gelernt. Die Zusammenarbeit in einem längerfristigen Projekt mit sieben weiteren Personen war sowohl eine Herausforderung als auch eine Bereicherung. Von meinen erfahreneren Teamkollegen konnte ich verschiedene Methoden und Herangehensweisen an ein solches Projekt erlernen. Zusätzlich vertiefte ich meine Kenntnisse in Java und beschäftigte mich erstmalig intensiv mit Frontend-Entwicklung, wodurch ich viel über Thymeleaf, HTML und CSS lernte.
+
+Leider durften wir kein JavaScript benutzen bzw hatten nur Nachteile, wenn wir es taten. Kann verstehen warum sich dafür entschieden wurde, finde es trotzdem einfach schade. JavaScript hätte zum einem weitaus mehr Möglichkeiten bei gewissen Designentscheidungen gegeben, andererseits hätten wir einen sehr weit verbreiteten und wichtigen Teil der Frontend Entwicklung gelernt
+
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+// Kurze Beschreibung der Zusammenarbeit im Team. Was lief gut? Was war verbesserungswürdig? Was würden Sie das nächste Mal anders machen?
+Die Teamarbeit verlief größtenteils sehr gut, allerdings gab es auch kleinere, verbesserungswürdige Aspekte. Bei internen Meetings fehlte es öfter an Struktur, was zu Zeitverschwendung führte. Einige Teammitglieder neigten dazu, sich in Untergruppen abzusprechen, anstatt Themen im gesamten Team zu diskutieren. Kommunikationsprobleme traten ebenfalls auf. 
+Sowas ist jedoch erwartbar und nicht ungewöhnlich für ein Team unerfahrener Studierender ohne feste Leitung. Unsere Teamstärke half, diese kleineren Probleme zu überwinden. Ein frustrierendes Erlebnis war das einmalige Einführen von Änderungen kurz vor einer Deadline, was zu teilweise nicht funktionierenden Features führte. Dieses Problem trat glücklicherweise nur bei der ersten Präsentation auf und wiederholte sich nicht mehr.
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+// Einschätzung der Arbeit mit den bereitgestellten und zusätzlich genutzten Frameworks. Was War gut? Was war verbesserungswürdig?
+Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+Frameworks sind unverzichtbar und erleichtern die Arbeit erheblich. SalesPoint, speziell für die universitären Bedürfnisse entwickelt, war ein praktisches Werkzeug für unser Projekt. Trotz einiger Schwierigkeiten ersparte es viel Arbeit und ermöglichte es, den Fokus auf wichtigere Aspekte zu legen. Meine persönliche Abneigung gegen Thymeleaf rührt wahrscheinlich von anfänglichen Schwierigkeiten mit einigen Funktionen her, die ich aber letztlich überwinden konnte. Gewisse Antpathie bleibt jedoch bestehen.
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+// Möglichst mit Beschreibung, warum die Umsetzung des von Ihnen angebrachten Vorschlages nötig ist.
+Eine bessere Verteilung der Lerninhalte über vorherige Module wäre hilfreich gewesen, da zu Beginn des Praktikums der Stress durch das Erlernen von HTML, CSS, Maven, Thymeleaf, Spring und Salespoint sehr hoch war. Ansonsten - ich fände es besser, wenn man zumindest eine Wahl bei den Themen hätte. Wir hatten, mMn, noch Glück mit dem Buchladen. Wäre jedoch sehr viel unmotivierter gewesen, wenn wir z.B. eine Glückspielseite als Thema gehabt hätten. Auch wenn sowas erstmal als, ich sag mal, Luxusproblem klingt. Am Ende macht es schon sehr viel aus.
+
+== Feedback für den Tutor
+// Fühlten Sie sich durch den vom Lehrstuhl bereitgestellten Tutor gut betreut? Was war positiv? Was war verbesserungswürdig?
+Unser Tutor Andreas war äußerst hilfreich, sympathisch und flexibel.  Man hat sich sehr willkommen gefühlt. Danke dafür :)
+
+MMn war Andreas manchmal zu positiv. In den meisten Meeting wurde uns gesagt, dass wir sehr gut in der Zeit sind und gut gearbeitet haben. Auch wenn ich dem allgemein zustimmen würde, manche Bestehkriterien waren nicht umbedingt immer so gut wie angenommen. Beispiel: die Events/Veranstaltungen haben erst wenige Tage vor Ende des Projekts richtig funktioniert. Wäre dabei noch was schiefgegangen, dann hätte es sehr stressig werden können. Gleichzeitig vertraute uns Andreas mit der Abgabe und meinte, dass wir gut dabei sind.
+Eventuell hab ich nicht die richtige Position um es einschätzen zu können, jedoch hätte uns ein bisschen mehr Ansporn in solchen Situationen geholfen.
+
+== Sonstiges und Anmerkungen
+// Welche Aspekte fanden in den oben genannten Punkten keine Erwähnung?

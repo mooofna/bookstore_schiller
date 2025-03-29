@@ -1,0 +1,55 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2021/22
+// Auch wenn der Bogen nicht anonymisiert ist, dürfen Sie gern Ihre Meinung offen kundtun.
+// Sowohl positive als auch negative Anmerkungen werden gern gesehen und zur stetigen Verbesserung genutzt.
+// Versuchen Sie in dieser Auswertung also stets sowohl Positives wie auch Negatives zu erwähnen.
+
+**Von:** Cosme Schuenemann
+
+**Gruppe:** 32
+
+== Was habe ich gelernt ?
+- Pear Programming also mit anderen Personen zusammen an einem Gerät zu arbeiten.
+- Spring und salespoint framework zu arbeiten. Die Vor- und Nachteile von dem jeweiligen Programm um es effektiv zu
+nutzen
+- Javadoc zu benutzen und die nützlichkeit zu erkennen
+- An einem großen Projekt mit einem Team zu arbeiten und wie man am besten die Probleme, die zu solchen großen
+Projekten dazukommen am besten löst
+
+== Was habe ich nicht gelernt?
+- Ich bin nicht dazu gekommen tiefgehender in das Salespoint framework zu schauen
+- Besser zu debuggen um schneller Fehler zu finden. Es dauert bei mir viel zu lange
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+// Kurze Beschreibung der Zusammenarbeit im Team. Was lief gut? Was war verbesserungswürdig? Was würden Sie das nächste Mal anders machen?
+- Wie wichtig effektive Kommunikation im Team ist. Probleme können entstehen, wenn man etwas falsch versteht und
+wie viel Zeit verloren gehen kann durch Meetings. (obwohl unsere Gruppe recht Produktiv in meetings war)
+- In großen Teams zu arbeiten ist viel komplizierter als kleine (2 bis 4) und braucht mehr bereitschaft von jedem
+Gruppenmitglied
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+// Einschätzung der Arbeit mit den bereitgestellten und zusätzlich genutzten Frameworks. Was War gut? Was war verbesserungswürdig?
+- Bevor man am Projekt arbeitet, am besten in die Doku oder den Code hineinzugehen um zu wissen, was es alles gibt um
+es später auch benutzen zu können.
+- Es gibt eine Menge hilfreiche Funktionen im Framework versteckt, die man in der Doku nicht so leicht finden kann
+- Frameworks können die Arbeit enorm erleichtern, besonders wenn man viel Vorerfahrung mit dem Framework schon hat
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+// Möglichst mit Beschreibung, warum die Umsetzung des von Ihnen angebrachten Vorschlages nötig ist.
+Ich persönlich finde, dass viele moderne web stacks eine bessere umgebung bieten, um web development zu lernen. Es
+gab ein paar Dinge die durch solche Veränderung verbessern würde wie zum Beispiel frontend development. Mit javascript
+kann man die User Interface besser gestalten und man bekommt auch ein besseres Verständnis für wie Webseiten
+funktionieren. Spring deckt wichtige aspekte, im web development ab und macht Sachen anders als in der traditionellen
+web entwicklung.
+
+Das ganze Praktikum war aber an sich super gut gemacht und organisiert und ich bin so wie es jetzt ist super zufrieden.
+Dazu kann ich verstehen, falls es bestimmte limitationen gibt, die solche änderung nicht erlauben wie zum Beispiel die
+Bedingung Java einzubinden.
+
+== Feedback für den Tutor
+// Fühlten Sie sich durch den vom Lehrstuhl bereitgestellten Tutor gut betreut? Was war positiv? Was war verbesserungswürdig?
+
+Top Tutor, immer hilfsbereit, verständnisvoll und hatte immer eine Antwort zu allen Fragen. Dazu hat er immer
+schnell bei Fragen online geantwortet und hat diese ausführlich erklärt, sodass man es immer verstanden hat.
+
+== Sonstiges und Anmerkungen
+// Welche Aspekte fanden in den oben genannten Punkten keine Erwähnung?

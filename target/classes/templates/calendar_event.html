@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="${event.getTitle()}"/>
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="reservation-space">
+        <h2 th:text="${event.getTitle()}"/>
+        <!-- show the calendar event>
+        </!-->
+
+        <div th:if="${event.getUserReservation(userAccount).isEmpty()}" sec:authorize="hasRole('CUSTOMER')">
+        <form method="post" th:action="@{/calendar/event/reserve}">
+            <input type="hidden" name="eventId" th:value="${event.getId()}"/>
+            <p th:text="#{calendar.remaining_seats} + ': ' + ${event.getRemainingSeats()}"/>
+            <input type="number" name="numberOfSeats" id="numberOfSeatsCreate" min="1" th:max="${event.getRemainingSeats()}"/>
+            <label for="numberOfSeatsCreate" th:text="#{calendar.number_of_seats}"/>
+            <button type="submit" th:text="#{calendar.reserve_button}"/>
+            <div style="display:block; color: red" th:if="${failedReservation}" class="alert alert-danger">
+                <p th:text="#{calendar.failed_reservation}" th:class="red-text"></p>
+            </div>
+        </form>
+        </div>
+
+        <div th:unless="${event.getUserReservation(userAccount).isEmpty()}" sec:authorize="hasRole('CUSTOMER')">
+        <form method="post" th:action="@{/reservations/update}">
+            <input type="hidden" name="eventId" th:value="${event.getId()}">
+            <p th:text="#{calendar.remaining_seats} + ': ' + ${event.getRemainingSeats()}"/>
+            <input type="number"
+                   name="numberOfSeats"
+                   id="numberOfSeatsUpdate"
+                   th:value="${event.getUserReservation(userAccount).get().getQuantity()}"
+                   min="1"
+                   th:max="${event.getRemainingSeats().add(event.getUserReservation(userAccount).get().getQuantity())}">
+            <label for="numberOfSeatsUpdate" th:text="#{calendar.number_of_seats}"/>
+            <button type="submit" th:text="#{calendar.update_button}"/>
+            <div style="display:block; color: red" th:if="${failedReservation}" class="alert alert-danger">
+                <p th:text="#{calendar.failed_reservation}" th:class="red-text"></p>
+            </div>
+        </form>
+
+        <form method="post" th:action="@{/reservations/cancel}">
+            <input type="hidden" name="eventId" th:value="${event.getId()}">
+            <button type="submit" th:text="#{reservations.cancel_button}"/>
+        </form>
+        </div>
+
+        <p th:text="#{calendar.login_necessary}" sec:authorize="!hasRole('CUSTOMER')"/>
+    </div>
+</section>
+</body>
+</html>

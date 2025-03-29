@@ -1,0 +1,65 @@
+= Protokoll Gruppe 32
+
+Treffen am 11.01.2024
+
+Ort:      BBB +
+Beginn:   14:50 Uhr +
+Ende:     16:20 Uhr
+
+__Schriftführer:__ Maurice
+
+*Nächstes Treffen:* +
+18.01.2024, 14:50 Uhr, BBB
+
+__Teilnehmer:__
+
+- Nova
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+
+== Retrospektive des letzten Sprints
+
+*Allgemeines*
+
+- Andreas zufrieden mit Fortschritt der über die Weihnachtsferien erfolgte
+- Nach letzten PR ist die Test Coverage auf 58% gefallen und sollte noch auf 60% erhöht werden
+- Angebot offener SHK-Stellen am SWT-Lehrstuhl (Testen von Artemis), Angebot offener SHK-Stelle als Tutor für SWT-Praktikum
+
+*Code Review*
+
+- Template im Ticket-System, Cart muss noch verbessert werden
+- Bestellungen sollten nicht abgeholt werden können, wenn sie noch nicht bezahlt wurden
+    - Alle State-Kombinationen sollten in den Tests geprüft werden
+- Bei Bestellabwicklung soll geschrieben werden, dass Bestellabwicklung mitkommt
+- Zwei Felder für Passwort-Eingabe, die identisch sein müssen
+- Auslagern der Buttons beim Hinzufügen neuer Produktkategorien
+- Kalender-Button aus Katalog rausnehmen
+- Bild-Upload beim Editieren von sämtlichen Produkten optional machen
+- Filterfunktionen im Inventar (Preis, Filter)
+- Customer sollten angepasst werden können
+- In Customer-Tabelle zusätzliche Spalte, welche anzeigt, ob für diesen Customer noch Bestellung offen ist (nach Offenheit von Bestellungen sollte gefiltert werden können)
+
+== Planung des nächsten Sprints
+
+*Projektdeadline am 21. Januar 2024*
+
+- Letzte Codeanpassungen
+- Anpassungen in der Developer Documentation für Konsistenz zwischen Code und dem Modell
+- Build-Pipeline muss durchlaufen können
+- 60% Test Coverage auf SonarCube
+- Code Smells entfernen
+- evaluation_sheet.adoc muss von jedem Teammitglied im Ordner des Templates abgelegt werden (Bezeichnungsbeispiel: evaluation_sheet_adomanowski.adoc)
+- Jedes Team muss seine "Arbeitszeiten" eingetragen haben, um fair bewertet werden zu können
+- Bis zum nächsten Meeting mit limesurvey vertraut machen
+
+*Abschließende Präsentation*
+
+- Donnerstag, 2. Februar, 14.50 Uhr, INF2021 (das Ei)
+- Vor Abgabe müssen die Farben der Folien kontrolliert werden
+- 10 Minuten Folienpräsentation / 10 Minuten Demo / 10 Minuten Diskussion
+- Keine UML-Tapeten
+- Anwesende: Zwei Personen vom Lehrstuhl, Oliver Drotbohm

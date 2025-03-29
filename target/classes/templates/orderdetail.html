@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html(title=#{order.title})}">
+<head>
+  <title>Bestellliste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+  <div class="main-container">
+      <div class="order-detail-layout">
+          <img class="cart-image" th:src="@{/resources/img/loginbooks2.jpeg}" src="../static/resources/img/loginbooks2.jpeg" alt="bookimage">
+            <div class="catalog-row">
+                <div class="header-section">
+                    <img th:src="@{/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg}" src="../static/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg" alt="Library Background">
+                    <div class="header-text">
+                        <p style="font-size: 50px">BESTELLLISTE</p>
+                    </div>
+                </div>
+                <div class="orderdetail-card">
+                    <h2 class="orderdetail-title">Bestellungsübersicht</h2>
+                    <div class="orderdetail-content">
+                        <div class="orderdetail-item"><span class="itemdetail-label">NUTZER</span><span class="itemdetail-value" th:text="${userName}"></span></div>
+                        <div class="orderdetail-item"><span class="itemdetail-label">NUTZER EMAIL</span><span class="itemdetail-value" th:text="${email}" ></span></div>
+                        <div class="orderdetail-item"><span class="itemdetail-label">METHODE BEZAHLUNG</span><span class="itemdetail-value" th:text="${order.getPaymentMethod().toString()}">Goldmünzen</span></div>
+                        <div class="orderdetail-item"><span class="itemdetail-label">LIEFERUNG/ABHOLUNG</span><span class="itemdetail-value itemdetail-highlight" th:text="${deliveryMethod}"></span></div>
+                        <div class="orderdetail-item"><span class="itemdetail-label">BESTELLSTATUS</span><span class="itemdetail-value" th:text="${order.orderStatus}">-</span></div>
+                        <div class="orderdetail-item"><span class="itemdetail-label">PRODUKTE</span><span> <div th:each="string:${products}" class="itemdetail-value" th:text="${string}"></div></span></div>
+                        <div class="orderdetail-item order-total"><span class="itemdetail-label">GESAMTPREIS</span><span class="itemdetail-value" th:text="${order.getTotal()}">EUR 99.99</span></div>
+                    </div>
+                </div>
+            </div>
+      </div>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,103 @@
+= Protokoll Gruppe 32
+
+Treffen am 14.12.2023
+
+Ort:      APB PC Raum +
+Beginn:   14:50:00 Uhr +
+Ende:     16:20 Uhr
+
+__Schriftführer:__ Nicola
+
+*Nächstes Treffen:* +
+17.12.2023, 11:00 Uhr, Slub
+
+__Teilnehmer:__
+
+- Nova
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+- Krystina
+
+== Bemerkungen
+
+* Diskussion der Website der Gruppe 27: Fazit Website nicht sehr intuitiv
+* Für Calendar gibt es schon sehr gute Libraries !!
+
+**Fragen an Frau Schiller:** 
+
+Events: 
+* Anmeldung/Eintragen nur als angemeldeter User 
+* Bild 
+* Titel
+* Beschreibung 
+* Raum (kein Raummanagement nötig, String reicht)
+* kein Eintritt
+Finanzübersicht:
+* genügt so wie es gerade ist
+
+
+== Retrospektive des letzten Sprints#
+
+* Schon abgeschlossene Orders hinzufügen, damit man bei der Finanzübersicht schon Sachen sehen kann
+* Keine Bücher mit doppelter ISBN
+* Orderübersicht: Idee Brief (?)
+    ** Delivery Zustand: funktioniert bei der Bill nicht? möglicherweise durch Vererbung von Payment
+    ** Zustand bleibt gleich
+
+
+== Planung des nächsten Sprints
+
+!! Bis Sonntag eine Mail, wer was macht 
+
+**KUNDENWÜNSCHE:**
+
+1. Recommendation System
+
+- Zielgerichet Vorschläge aus dem Katalog (ex. this item is oft bought with this item)
+- Methode: **association rule learning** definiert einfache Metric...
+- Nicht sehr Salespoint gerichtet btw
+
+2. Rudimentäres Support und Ticket System
+
+- Bei Beschwerden neues Ticket eröffnen
+- Ticket und Beschreibung
+- Admin und Mitarbeiter können mit Button/Page Issues anschauen
+- Issues sind offen oder geschlossen
+- Chat System: Mitarbeiter und Admin müssen antworten können
+
+**ANSONSTEN:** 
+
+* Test Rates sollen steigen (gerade bei 48%)
+* Man soll noch Kategorien hinzufügen sollen !! (dynamisch, als Admin)
+* Bestellungen: Sortieren -> Wer muss noch bezahlen 
+
+Nicola:
+* Adjust table colours to make text more visible
+* Thank You page button seems to have moved
+* Finance Update button seems to have moved
+* Mitarbeiter und Kunden eigene Daten verarbeiten
+
+Maurice/Louis:
+
+* Buch editieren:
+    * Inventar: Detailansicht, wo man drin schon editieren kann (Formular zum Hinzufügen benutzen fürs editieren)
+    * Mit Edit Button, um Editieren Funktionalität zu aktivieren
+    * Edit Button nur für Admin/Boss
+
+Nova:
+
+- Templates durchgehen
+
+
+EVENT CALENDAR:
+Nova, Cosme (Nicola?)
+
+RECOMMENDATION: 
+Maurice, Krystina, Louis
+
+SUPPORT SYSTEM:
+Marcel, Benedikt (Nicola?)

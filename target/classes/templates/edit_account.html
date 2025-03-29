@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title>Edit Account</title>
+    <link rel="stylesheet" href="../static/resources/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="main-content">
+
+        <div class="login-container">
+            <div class="left-image">
+                <img th:src="@{/resources/img/loginbooks1.jpeg}" src="../static/resources/img/loginbooks1.jpeg">
+            </div>
+            <div class="grey-box-login">
+                <div class="login-heading">
+                    <p th:text="#{account.edit-account}">
+                    </p>
+                </div>
+
+                <form class="form" role="form" th:action="@{/edit_account}" method="post" th:object="${registrationForm}">
+                    <div th:if="${param.error}">
+                        <p style="color: red;">Invalid username or password.</p>
+                    </div>
+                    <div class="input">
+                        <label th:text="#{login.username}" for="name" hidden="hidden"></label>
+                        <input type="text" maxlength="200" id="name" name="name" th:field="*{name}" th:errorclass="fieldError" required="required"
+                               autofocus="autofocus" th:placeholder="${username}"/> <br/>
+                    </div>
+                    <div class="input">
+                        <label th:text="#{register.email}" for="email" hidden="hidden"></label>
+                        <input type="text" maxlength="200" id="email" name="email" th:field="*{email}" th:errorclass="fieldError" required="required"
+                               autofocus="autofocus" th:placeholder="${email}"/> <br/>
+                    </div>
+                    <div class ="input">
+                        <label th:text="#{login.password}" for="password" hidden="hidden">Password</label>
+                        <input type="password" id="password" name="password" th:field="*{password}" th:errorclass="fieldError"
+                               required="required" autofocus="autofocus" placeholder="Passwort"/><br/>
+                    </div>
+                    <div class="input">
+                        <label th:text="#{register.address}" for="address" hidden="hidden">Addresse</label>
+                        <input id="address" maxlength="200" name="address" th:field="*{address}" th:errorclass="fieldError" type="text"
+                               required="required" th:placeholder="${address}"/><br/>
+
+                    </div>
+                    <button style ="margin: 15px" type="submit" th:text="#{register.register}">Register</button>
+                </form>
+            </div>
+            <div class="right-image">
+                <img th:src="@{/resources/img/loginbooks1.jpeg}" src="../static/resources/img/loginbooks2.jpeg">
+            </div>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,168 @@
+= Protokoll Gruppe 32
+
+Treffen am 19.11.2023
+
+Ort:      SLUB 0.47 +
+Beginn:   14.30 Uhr +
+Ende:     17:00 Uhr
+
+__Schriftführer:__ Maurice
+
+*Nächstes Treffen:* +
+26.11.2023, 11:00 Uhr, SLUB 0.47
+
+__Teilnehmer:__
+
+- Nova
+- Krystina
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+
+== Bemerkungen
+
+- Zu Besprechen in diesem Meeting? : Präsentation aufteilen (wer macht was, welche Reihenfolge), nächste Schritte im Prototyp (siehe individuelle Aufgaben below)
+- Vorschlag der Aktualisierung der developer_documentation.adoc in 2-Wochen-Intervallen, d.h. in größeren Patches, um im Flow zu bleiben
+
+== Retrospektive des letzten Sprints
+
+*Was fehlt oder muss verbessert werden?*
+
+[option="headers"]
+|===
+|*Person* |*Aufgabe*
+|Nicola a|
+
+- Fonts müssen konsistent gehalten gehalten werden
+- Implementierung der Rollenverteilung (Erweiterung von Salespoint durch Mitarbeiter-Role)
+- CSS für Registration
+- Implementierung der Benutzerübersicht
+- Userklasse ist gegenwärtig noch eine Vereinfachung des Datenmodells
+
+|Marcel a|
+
+- Suchfunktion für konkrete Bestellungen zum Einsehen von Bestelldetails
+- Filter aller Bestellungen nach Bestellstatus
+- Übersicht für alle Benutzer
+
+|Louis a|
+
+- Verwendung der message.properties im Katalog
+- GENRE-Enum muss modularisiert werden
+- Genre und Autoren werden im Buch noch nicht als Set verwendet
+- Code für das Durchiterieren durch alle Bücher doppelt in Templates
+- Hinzufügen von Merchandise als Artikel
+
+|Kristina a|
+
+- Frontend der Bestellübersicht
+- In Bestellübersicht sollen auch die Adressen angezeigt werden, evtl. Implementierung einer Detailansicht für jede Bestellung (ähnlich wie im Katalog)
+
+|Cosme a|
+
+- Nach Prototyp-Phase kann Veranstaltungskalender hinzugefügt zusammen mit Programming Pair (gemeinsames Interesse mit Nova, beide können zusammen den Veranstaltungskalender übernehmen)
+
+|Benedikt a|
+
+- Übertragung des Inhalts beim Warenkorb nach An- und Abmeldung verwirrend und ungewollt - vielleicht sollten wir Entfernen, dass unangemeldete Nutzer, Objekte zum Warenkorb hinzufügen können (Nova widerspricht)
+
+|Nova a|
+
+- CartController in Controller und Service aufteilen
+- Problem: Nach Kauf im Warenkorb, wenn Quantität im Inventar erst geupdated, wenn Bestellungen vollständig abgeschlossen, d.h. auch bezahlt ist
+- Interesse an der Implementierung des Eventkalenders
+
+|Maurice a|
+
+- Tatsächliche Bestellabwicklung beim Nachbestellen im Inventar durch den Benutzer
+- Frontend in Detailübersicht - Anpassung des Styles
+- Implementieren eines Formulars für das Hinzufügen neuer Artikel
+- Inventar soll nur für Boss sichtbar sein (Funktionalität war vorher noch nicht verfügbar)
+
+|===
+
+== Planung des nächsten Sprints
+
+[option="headers"]
+|===
+|*Person* |*Aufgabe*
+|Nicola a|
+
+- Frontend Detailansicht eines Artikels implementieren
+- Benutzerübersicht
+- CSS für Registration, Fonts konsistent halten
+
+|Marcel a|
+
+- Frontend Inventar konsistent mit allgemeinen Design halten
+- Benutzerübersicht
+
+|Louis a|
+
+- Verwendung der message.properties im Katalog
+- Suchfunktion für konkrete Bestellungen zum Einsehen von Bestelldetails
+
+|Kristina a|
+
+- Bestellungsübersicht zum Prototyp hinzufügen
+- Filter für Bestellungen nach Bestellstatus
+- Frontend Bestellübersicht
+
+|Cosme a|
+
+- Frontend des Warenkorbs implementieren
+
+|Benedikt a|
+
+- Nachbestellen von Objekten fixen, da gegenwärtig keine Bestellungen erfolgen
+- Problem: Nach Kauf im Warenkorb, wenn Quantität im Inventar erst geupdated, wenn Bestellungen vollständig abgeschlossen, d.h. auch bezahlt ist
+
+|Nova a|
+
+- Problem: Nach Kauf im Warenkorb, wenn Quantität im Inventar erst geupdated, wenn Bestellungen vollständig abgeschlossen, d.h. auch bezahlt ist
+- Eingabeformular für Lieferadresse neben dem Eingabeformular für Addresse für Bezahlung
+
+
+|Maurice a|
+
+- Formular zum Hinzufügen neuer Items im Katalog implementieren
+- Inventar nur für Boss sichtbar an
+- CSS-Klasse für Katalog-Karten hinzufügen
+
+|===
+
+== Planung: Präsentation Prototyp
+
+*Vortragenden*
+
+- Louis
+- Nicola
+- Marcel
+- Benedikt
+
+*Plot*
+
+- User experience:
+    - Szenario Schulleiter
+    - muss viele Buecher bestellen
+    - Moeglichkeit viele features in die story einzubinden
+- Mit ganz viel Sarkasmus und Drama!
+
+*Gliederung*
+
+1. Plot (2')
+    - Geführt und erzählt von Maurice
+    - Zwei Personen für Analog-Digital-Kontrast
+3. Interaktion mit der Anwendung (6')
+    - Benedikt als einkaufender Schulleiter: Login -> Katalog zum Einkaufen von Büchern -> Packt Auswahl (mit einem Artikel zu viel) in Warenkorb -> Besucht Warenkorb -> Verändert Quantität und entfernt Artikel -> Gibt Bestellung auf
+    - Louis als Admin: Kriegt Warnungs-Mail vom Inventar -> Login -> Besucht Inventar und sieht Ressourcenknappheit -> Geht in Bestellübersicht und sieht Ursache ->
+3. Design-Entscheidungen und Selbstreflektion (12')
+    - User: Nicola (3')
+    - Katalog & Inventar: Louis (3')
+    - Cart: Benedikt (3')
+    - Bestellüberscht: Marcel (3')
+    Jeder kann zuletzt noch über Probleme und Herausforderungen sprechen.
+4. Diskussion (10')

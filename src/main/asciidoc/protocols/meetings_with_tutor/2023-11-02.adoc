@@ -1,0 +1,65 @@
+Treffen am 2.11.2023
+
+Ort: Oval Office +
+Beginn: 14:50 Uhr +
+Ende: 16:20 Uhr
+
+__Schriftführer:__ Maurice, Nicola
+
+*Nächstes Treffen:* +
+07.11.2023, 16:40 Uhr, APB 2101
+
+__Teilnehmer:__
+
+- Maurice
+- Louis
+- Cosme
+- Kristina
+- Marcel
+- Nicola
+- Nova
+- Benedikt
+
+== Bemerkungen
+Verwarnungen, besondere Vorfälle, Organisatorisches, wichtige getroffene Entscheidungen
+
+- Marcel muss Videoshop-Aufgabe aufgrund Misskommunikation nachreichen
+- Cosme muss Videoshop-Aufgabe noch pushen
+- Besprechung der fertigen Videoshop Erweiterungen, Vorschläge für noch bessere Lösungen besprochen
+- Wiederholung Spring MVC: Service als Komponente für Business Logik, Controller als Komponente welches die Web-Requests an die richtigen Service Methoden weiterleitet (und diese danach an das Model, bzw HTML weitergibt)
+- Vorschlag "semantik commits" (a la Kristina): Präfixe erklären was im Commit beinhaltet ist (ex. feat, fix, ...)
+- Sonarlint als Erweiterung der IDE, um gleiches Feedback wie von sonarqube, jedoch vor dem Push auf den Main-Branch, zu erhalten. Auf OPAL soll eine Seite sein, welche bei der Integration in die eigene IDE hilft.
+
+
+== Retrospektive des letzten Sprints
+
+- Reflektion der Bearbeitung der Videoshop-Erweiterungen +
+- Maurice: Back-End-Validation über Front-End-Validation +
+- Nova: Traf auf Probleme des Salespoint Frameworks hinsichtlich der Eingabe des alten Passworts +
+- Louis: Suche kann als Service angelegt und annotiert werden +
+
+*Allgemein:*
+
+- Konventionen der Salespoint Annotation, z.B. dass nicht zwingend alles mit Component annotiert werden, sondern stärker differenziert, werden sollte
+- Keine manuelle Verwaltung von Dependencies (Verantwortung sollte bei Salespoint liegen)
+
+*Verbesserungsvorschläge Pflichtenheft*
+
+- Kontextdiagramm: Erklären, dass User in Registered und Unregistered unterteilt wurde, sodass klar wird, dass dieser nicht vergessen wurde - User wegnehmen
+- Top-Level-Architektur: Verbesserung der graphischen Aufbereitung hinsichtlich der Kanten (anderenfalls Beweis mit der Eulerschen Polyederformel, dass kein planarer Graph möglich ist)
+- Use-Cases Diagramm: Übersichtlichkeit der vielen Kanten soll verbessert werden
+- Domänenmodell: Merchandise und Calender sollte Instanz der Klasse Kategorie sein; Unterscheidung zwischen Produkten, die Buch bzw. kein Buch sind; Klasse Kategorie wird dementsprechend Klasse, welche Produkte repräsentiert, die keine Bücher sind
+
+
+== Aktueller Stand
+
+Anmerkungen und Kritik zum aktuellen Stand der Software, den Diagrammen und den
+Dokumenten.
+(siehe Verbesserungsvorschläge Pflichtenheft)
+
+== Planung des nächsten Sprints
+
+- Nächste Deadline: 14. November 2023 (ggf. bei Zeitproblemen der 16. November 2023)
+- Besprechung der theoretischen Grundlagen des V-Modells -> Fazit: Altes Modell, welches für unsere Anforderungen nicht zwingend geeignet ist. Dennoch lässt sich ein schnellerer, vereinfachter Durchgang durch das Modell als Ziel setzen.
+ 
+- Jedes Teammitglied beginnt für „seine“ Komponente, einen Anwendungsprototypen zu implementieren: Dieser darf "Buggy" sein, ähnlich wie die initiale Version des Videoshops. Im Allgemeinen sollen zunächst in Spring/Salespoint das Domänenmodell bereits in Code abgegossen werden, vollständige Funktionalität und soll noch nicht vorhanden sein. Ebenso müssen noch keine Tests geschrieben werden. Wichtig ist jedoch, dass das Feedback von sonarqube während der kontinuerlichen Integration berücksichtigt und umgesetzt wird, um hinreichende Codequaltität und Wartbarkeit zu wahren. Es kann nur bestanden werden, wenn ein Score von mindestens 40% erreicht werden. Der Technologie-Stack bleibt über das gesamte Projekt hinweg der gleiche. Der Event Calender soll zunächst wenig Priorität zugewiesen bekommen. Eine mobile Version wird nicht verlangt. Im Allgemeinen ist empfohlen, eine Person für das Front-End verantwortlich zu machen. Die Arbeit mit Thymeleaf, durch seine Natural Templates, eignet sich hervorragend für Rapid Prototyping.

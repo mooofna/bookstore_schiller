@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html(title=#{inventar.title})}">
+<head>
+    <title>Inventar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+
+    <section class="header-section">
+        <img th:src="@{/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg}" src="../static/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg" alt="Library Background">
+        <div class="header-text">
+            <p style="font-size: 50px">INVENTAR</p>
+        </div>
+    </section>
+
+    <section class="back">
+        <a class="inventory-buttons">
+            <form class="ui form" method="get" th:action="@{/inventory/addBookView}">
+                <button type="submit" class="ui button" th:text="#{inventory.add}">Hinzufügen</button>
+            </form>
+            <form class="ui form" method="get" th:action="@{/inventory/addGenreView}">
+                <button type="submit" class="ui button" th:text="#{inventory.addGenre}">Hinzufügen</button>
+            </form>
+            <form class="ui form" method="get" th:action="@{/inventory/addProductExtensionView}">
+                <button type="submit" class="ui button" th:text="#{inventory.addProductExtension}">Hinzufügen</button>
+            </form>
+            <form class="ui form" method="get" th:action="@{/inventory/addCategoryView}">
+                <button type="submit" class="ui button" th:text="#{inventory.addCategory}">Hinzufügen</button>
+            </form>
+        </a>
+        <table class="user-table">
+            <thead class="user-head">
+            <tr>
+                <th class="table-text" th:text="#{inventory.title}">TITEL</th>
+                <th class="table-text" th:text="#{inventory.quantity}">ANZAHL</th>
+                <th class="table-text" th:text="#{inventory.notification}">MELDUNG</th>
+                <th class="table-text" th:text="#{inventory.order}">ORDER</th>
+            </tr>
+            </thead>
+            <tbody style="margin-top: 20px">
+            <tr class="inventory-row" th:each="item : ${inventory}" th:class="user-row">
+                <td class="item1" th:text="${item.product.name}">Product Name></td>
+                <td th:text="${item.quantity}">Lagerbestand></td>
+                <td class="amount" th:if="${inventoryService.isProductBelowRestockThreshold(item.product.id)}">
+                    <span th:text="' Restock!'">Restock!</span>
+                </td>
+                <td th:unless="${inventoryService.isProductBelowRestockThreshold(item.product.id)}"></td>
+                <td>
+                    <form class="ui form reorder-form" method="post" th:action="@{/inventory/reorder}">
+                        <div class="reorder-field-container">
+                            <input type="number" name="reorder-quantity" min="1" step="1" required placeholder="Menge" class="reorder-quantity"/>
+                            <button type="submit" class="reorder-button">+</button>
+                        </div>
+                        <input type="hidden" th:value="${item.product.id}" name="pid"/>
+                    </form>
+                </td>
+                <td>
+                    <a th:if="${item.product instanceof T(schiller.inventory.productSpecialization.book.Book)}">
+                        <form class="ui form" method="get" th:action="@{/inventory/editBookView}">
+                            <input type="hidden" th:name="pid" th:value="${item.product.id}" />
+                            <button type="submit" th:text="#{inventory.editItem}"/>
+                        </form>
+                    </a>
+                    <a th:if="${item.product instanceof T(schiller.inventory.productSpecialization.productExtension.ProductExtension)}">
+                        <form class="ui form" method="get" th:action="@{/inventory/editProductExtensionView}">
+                            <input type="hidden" th:name="pid" th:value="${item.product.id}" />
+                            <button type="submit" th:text="#{inventory.editItem}"/>
+                        </form>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="#{events.title}"/>
+</head>
+<body>
+<section layout:fragment="content">
+    <form method="get" th:action="@{/events/new}">
+        <button class="events-button" type="submit" th:text="#{events.new}"/>
+    </form>
+
+    <h2 class="events-empty" th:if="${events.isEmpty()}" th:text="#{events.no_events}"/>
+
+    <table class="user-table" th:unless="${events.isEmpty()}">
+        <thead>
+        <tr>
+            <th class="table-text" th:text="#{events.event_title}"/>
+            <th class="table-text" th:text="#{events.date}"/>
+            <th class="table-text" th:text="#{events.time}"/>
+            <th class="table-text" th:text="#{events.reservations}"/>
+            <th class="table-text" th:text="#{events.capacity}"/>
+            <th class="table-text"></th> <!details>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="event : ${events}">
+            <!Title>
+            <td th:text="${event.getTitle()}"/>
+
+            <!Date>
+            <td th:text="${formatter.formatDate(event.getTime())}"/>
+
+            <!Time>
+            <td th:text="${formatter.formatTime(event.getTime())}"/>
+
+            <!Reservations>
+            <td th:text="${event.getOccupiedSeats()}"/>
+
+            <!Capacity>
+            <td th:text="${event.getCapacity()}"/>
+
+            <!Details>
+            <td>
+            <form method="get" th:action="@{/events/view}">
+                <input type="hidden" name="eventId" th:value="${event.getId()}"/>
+                <input type="hidden" name="updatable" th:value="${false}">
+                <button type="submit" th:text="#{events.details_button}"/>
+            </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>

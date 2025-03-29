@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html(title=#{${title}})}">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+    </head>
+    <body>
+        <header>
+            <h1 th:text="#{${title}}">Bücherkatalog</h1>
+        </header>
+        <nav th:include="navigation :: navigation"></nav>
+        <section layout:fragment="content">
+            <section class="header-section">
+                <img class="catalog " th:src="@{/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg}" src="../static/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg" alt="Library Background">
+                <div class="header-buttons">
+                    <form class="item" th:action="@{/catalog}" method="get">
+                        <button type="submit" class="ui-button" th:text="#{catalog.books}">BÜCHER</button>
+                    </form>
+                    <form class="search-form" th:action="@{/search}" method="get">
+                        <input id="searchTerm" name="searchTerm" type="text" autofocus="autofocus" required="required"/>
+                        <button type="submit"  class="ui button" th:text="#{search.searchs}">Suche</button>
+                    </form>
+                </div>
+            </section>
+            <section class="catalog-section">
+                <div class="Book-Categories">
+                    <a class="categories-header" th:text="#{catalog.genres}" style="font-family: Red Hat Display, Arial, sans-serif; font-weight: bold; letter-spacing: 1px;
+                    padding: 0;"></a>
+                    <div class="buttons-container">
+                        <div th:each="genre : ${genres}" class="button">
+                            <a th:href="@{/catalog(genreId=${genre.id})}">
+                                <button style="font-size: 17px;" type="submit" class="tab" th:text="${genre.name}"></button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a th:unless="${categoriesEmpty}">
+                        <a class="categories-header" th:text="#{catalog.categories}"></a>
+                        <div class="buttons-container">
+                            <div class="button" th:each="category : ${categories}">
+                                <a th:href="@{/catalog(categoryId=${category.name})}">
+                                    <button type="submit" class="tab" th:text="${category.name}">CATEGORY</button>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="categories-header" th:text="#{catalog.filter}" style="font-family: Red Hat Display, Arial, sans-serif; font-weight: bold; letter-spacing: 1px; margin-top: 25px;
+                    padding: 0;"></a>
+                    <form class="categories-header" method="get" th:action="@{/catalog/filter}">
+                        <a class="categories-subheader" th:text="#{catalog.productType}"></a>
+                        <div  class="button">
+                            <input type="radio" id="book" th:value="Book" name="ProductType" checked="true"/>
+                            <label  class="button" for="book" th:text="#{catalog.books}"/><br>
+                        </div>
+                        <div class="button">
+                            <input type="radio" id="productExtension" th:value="ProductExtension" name="ProductType"/>
+                            <label for="productExtension" th:text="#{catalog.productExtensions}"/>
+                        </div>
+                        <a class="categories-subheader" th:text="#{catalog.price}" style="margin-top: 15px"></a>
+                        <div  class="button">
+                            <input type="radio" id="5to10" th:value="5" name="Price"/>
+                            <label for="5to10" th:text="#{catalog.5to10}"/>
+                        </div>
+                        <div class="button">
+                            <input type="radio" id="10to20" th:value="10" name="Price"/>
+                            <label for="10to20" th:text="#{catalog.10to20}"/><br>
+                        </div>
+                        <div  class="button">
+                            <input type="radio" id="more20" th:value="20" name="Price"/>
+                            <label for="more20" th:text="#{catalog.more20}"/>
+                        </div>
+                        <button class="button" type="submit" th:text="#{catalog.doFilter}"/>
+                    </form>
+                </div>
+                <div class="Catalog" th:remove="all-but-first">
+                    <div class="book" th:each="product : ${catalog}">
+                        <div class="image">
+                            <a th:href="@{/product/{id}(id=${product.id})}">
+                                <img class="thumbnail" th:src="@{/files/{image}(image=${product.image})}" th:alt="${product.name}"/>
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a class="book-title" style="font-size: 25px;" th:href="@{/product/{id}(id=${product.id})}" th:text="${product.name}"></a>
+                            <a th:if="${product instanceof T(schiller.inventory.productSpecialization.book.Book)}">
+                                <div class="book-author" th:text="${product.author.name}"></div>
+                            </a>
+                            <a th:if="${product instanceof T(schiller.inventory.productSpecialization.productExtension.ProductExtension)}">
+                                <div class="extra content" th:text="${product.info}"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+= Protokoll Gruppe 32
+
+Treffen am 07.12.2023
+
+Ort:      APB E001 +
+Beginn:   14:50:00 Uhr +
+Ende:     00:00 Uhr
+
+__Schriftführer:__ Nicola
+
+*Nächstes Treffen:* +
+10.12.2023, 16:00 Uhr, Discord
+
+__Teilnehmer:__
+
+- Nova
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+
+== Bemerkungen
+- Note: OWASP (Pen-Testing for Web Applications)
+- SonarQube kann nicht analysieren da der Build failed, und ist somit nicht up-to-date !!
+
+
+== Retrospektive des letzten Sprints#
+
+- Diskussion der Bild Speicherung bzw File Upload (Maurice)
+- Mann muss noch Genres hinzufügen können
+- Tests müssen noch geschrieben werden
+- Detailsansichten müssen noch hinzugefügt werden
+- Finanzübersicht:
+    - Problem Zeiteinteilung Skalen bzw Units
+    - Entscheidung Zeiteinheiten abhängig von User Eingabe?
+    - Überlegung welche Intervalle beinhaltet sollen (Quartal/Jahr ?)
+- Problem Warenkorb und dann als Boss anmelden, solution: fork Login process
+    - Boss: Redirected to Boss Home Page, Order deleted 
+    - Customer: Redirected to Payment
+
+== Planung des nächsten Sprints
+
+FÜR ALLE/ALS GRUPPE:
+Cross-Testing Requirements (bis Sonntag):
+
+- Plichtenheft als pdf
+- Anwendung als Jar gebaut
+- Hinweise Document mit z.B. Boss und Mitgleid Login Daten
+- Strukturierte Ablegung in Repo (make it obvious!)
+Testen der Application der anderen Gruppe (bis Donnerstag):
+
+- Cross-Testing Feedback
+- Pfad: ex localhost:8080/cart
+- Rückgabe: Stack trace/ Root cause/ Klasse
+- Parameter: ex. im Formular im Field der Name "Hans"
+
+Nova/Nicola: 
+
+- Finanzübersicht Backend (Nova) und Frontend (Nicola)
+
+Cosme:
+
+- Warenkorb Images
+- Warenkorb Quantity Funktionalität, dass man nicht manuell refreschen muss
+
+Maurice/Louis:
+
+- File Upload in img dir
+- Mock Files im img dir nicht löschen
+- Genres hinzufügen
+- Bücher editieren / Detailansicht
+- mit JAR testen
+
+- File Upload? im so confused yall are using so many words i dont know 
+- daanke (*sparkles*)
+
+Benedikt: 
+
+- User können eigene Bestellungen ansehen, muss noch "schön" gemacht werden
+
+Nova/Krystina: 
+
+- Bug bei Item Removal from Inventory
+

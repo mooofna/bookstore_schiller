@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrieren</title>
+    <link rel="stylesheet" href="../static/resources/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="main-content">
+
+        <div class="login-container">
+            <div class="left-image">
+                <img th:src="@{/resources/img/loginbooks1.jpeg}" src="../static/resources/img/loginbooks1.jpeg">
+            </div>
+            <div class="grey-box-login">
+                <div class="login-heading">
+                    <p>
+                        REGISTRIEREN
+                    </p>
+                </div>
+                <form class="login-form" role="form" th:action="@{/register}" method="post" th:object="${registrationForm}">
+                    <div th:if="${param.error}">
+                        <p style="color: red;">Invalid username or password.</p>
+                    </div>
+                    <div class="error message" th:if="${#fields.hasErrors('*')}">
+                        <p>Einige Angaben sind nicht korrekt.</p>
+                    </div>
+                    <div class="input">
+                        <label th:text="#{login.username}" for="name" hidden="hidden"></label>
+                        <input type="text" maxlength="200" id="name" name="name" th:field="*{name}" th:errorclass="fieldError" required="required"
+                               autofocus="autofocus" placeholder="Name"/>
+                        <!--                        <div class="error message" th:if="${#field.hasErrors('name')" th:errors="{name}">-->
+                        <!--                            <p>Name is not allowed to be empty</p>-->
+                        <!--                        </div>-->
+                        <!--                        <div th:if="${username_error}" class="alert alert-danger">-->
+                        <!--                            <p th:text="${username_error}" th:class="red-text"></p>-->
+                        <!--                        </div>-->
+                        <div th:if="${username_error}" class="alert alert-danger" >
+                            <p style="color: red" th:text="${username_error}" th:class="red-text"></p>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label th:text="#{register.email}" for="email" hidden="hidden"></label>
+                        <input type="text" maxlength="200" id="email" name="email" th:field="*{email}" th:errorclass="fieldError" required="required"
+                               autofocus="autofocus" placeholder="E-Mail"/>
+                        <!--                        <div class="error message" th:if="${#field.hasErrors('email')" th:errors="{email}">-->
+                        <!--                            <p>E-Mail is not allowed to be empty</p>-->
+                        <!--                        </div>-->
+                        <!--                        <div th:if="${email_error}" class="alert alert-danger">-->
+                        <!--                            <p th:text="${email_error}" th:class="red-text"></p>-->
+                        <!--                        </div>-->
+                        <div style="display:block; color: red" th:if="${email_error}" class="alert alert-danger">
+                            <p th:text="${email_error}" th:class="red-text"></p>
+                        </div>
+                    </div>
+                    <div class ="input">
+                        <label th:text="#{login.password}" for="password" hidden="hidden">Password</label>
+                        <input type="password" id="password" name="password" th:field="*{password}" th:errorclass="fieldError"
+                               required="required" autofocus="autofocus" placeholder="Passwort"/>
+                        <!--                        <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Das Passwort darf-->
+                        <!--                            nicht leer sein.-->
+                        <!--                        </p>-->
+                        <div style="display:block; color: red" th:if="${password_weak}" class="alert alert-danger">
+                            <p th:text="${password_weak}" th:class="red-text"></p>
+                        </div>
+                    </div>
+                    <div class ="input">
+                        <label th:text="#{login.password}" for="password" hidden="hidden">confirmPassword</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" th:field="*{confirmPassword}" th:errorclass="fieldError"
+                               required="required" autofocus="autofocus" placeholder="Confirm Passwort"/><br/>
+                    </div>
+                    <div class="input" style="margin-bottom: 10px">
+                        <label th:text="#{register.address}" for="address" hidden="hidden">Addresse</label>
+                        <input id="address" name="address" th:field="*{address}" th:errorclass="fieldError" type="text"
+                               required="required" placeholder="Addresse"/>
+                        <!--                        <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Die Adresse darf-->
+                        <!--                            nicht leer sein.-->
+                        <!--                        </p>-->
+                    </div>
+                    <button type="submit" th:text="#{register.register}">Register</button>
+                </form>
+            </div>
+            <div class="right-image">
+                <img th:src="@{/resources/img/loginbooks1.jpeg}" src="../static/resources/img/loginbooks2.jpeg">
+            </div>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

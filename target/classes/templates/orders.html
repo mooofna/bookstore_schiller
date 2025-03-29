@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="#{order.title}">Bestellliste</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        th {
+            border: none;
+        }
+
+        .user-head {
+            font-family: "Red Hat Display", Arial, sans-serif;
+            padding-bottom: 15px;
+            height: 42px;
+        }
+
+        .back {
+            padding: 40px;
+            text-align: center;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 5%;
+            border-radius: 10px;
+        }
+
+        .user-table {
+            width:100%;
+            border-spacing: 0px 10px;
+            border-collapse: collapse;
+        }
+
+        input {
+            text-align: center;
+            height: 20px;
+            line-height: 30px;
+        }
+
+        .order-forms-container form {
+            margin-right: 2px;
+        }
+
+        .order-forms-container form:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+<section layout:fragment="content">
+
+    <section class="header-section">
+        <img th:src="@{/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg}" src="../static/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg" alt="Library Background">
+        <div class="header-text">
+            <p style="font-size: 50px">BESTELLLISTE</p>
+        </div>
+    </section>
+
+    <section class="back">
+        <table class="user-table">
+            <thead class="user-head">
+            <tr>
+                <th class="table-text" th:text="#{order.name}" sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')"/> <!username>
+                <th class="table-text" th:text="#{order.price}"/> <!price>
+                <th class="table-text" th:text="#{order.delivery_status}" sec:authorize="hasRole('CUSTOMER')"/> <!delivery status>
+                <th class="table-text" th:text="#{order.payment_status}" sec:authorize="hasRole('CUSTOMER')"/> <!payment status>
+                <th class="table-text" th:text="#{order.delivery_action}" sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')"/> <!delivery action>
+                <th class="table-text" th:text="#{order.payment_action}" sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')"/> <!payment action>
+                <th class="table-text" th:text="#{order.status}"> <!complete>
+                <th class="table-text"></th> <!details>
+            </tr>
+            </thead>
+            <tbody style="margin-top: 20px">
+            <tr th:each="order : ${orders}" class="user-row">
+
+                <!username>
+                <td sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')" th:text="${order.getUserName()}"/>
+
+                <!price>
+                <td th:text="${order.getTotal()}"/>
+
+                <!delivery status>
+                <td sec:authorize="hasRole('CUSTOMER')">
+                    <div th:if="${order.getDeliveryMethod().toString().equals('Delivery()')}">
+                        <div th:if="${order.getDeliveryMethod().getDeliveryStatus().toString().equals('READY_FOR_SHIPPING')}"
+                             th:text="#{order.ready_for_shipping}"/>
+                        <div th:if="${order.getDeliveryMethod().getDeliveryStatus().toString().equals('SHIPPED')}"
+                             th:text="#{order.shipped}"/>
+                        <div th:if="${order.getDeliveryMethod().getDeliveryStatus().toString().equals('DELIVERED')}"
+                             th:text="#{order.delivered}"/>
+                    </div>
+                    <div th:if="${order.getDeliveryMethod().toString().equals('Pickup()')}">
+                        <div th:if="${!order.getDeliveryMethod().isPickedUp()}"
+                             th:text="#{order.not_picked_up}"/>
+                        <div th:if="${order.getDeliveryMethod().isPickedUp()}"
+                             th:text="#{order.is_picked_up}"/>
+                    </div>
+                </td>
+
+                <!payment status>
+                <td sec:authorize="hasRole('CUSTOMER')">
+                    <div th:if="${order.isPaid() or order.isCompleted()}" th:text="#{order.payment_registered}"/>
+                    <div th:unless="${order.isPaid() or order.isCompleted()}" th:text="#{order.not_paid}"/>
+                </td>
+
+                <!delivery action>
+                <td sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')">
+                    <div th:if="${order.getDeliveryMethod().toString.equals('Pickup()')}">
+                        <div th:if="${order.getDeliveryMethod().isPickedUp()}" th:text="#{order.is_picked_up}"/>
+                        <div th:unless="${order.getDeliveryMethod().isPickedUp()}">
+                            <form th:if="${order.isPaid() or order.isCompleted()}" action="/orders/pickup" method="post">
+                                <input type="hidden" th:name="orderId" th:value="${order.getId()}"/>
+                                <button type="submit" th:text="#{order.pickup_button}"/>
+                            </form>
+                            <span th:unless="${order.isPaid() or order.isCompleted()}" th:text="#{order.awaiting}"></span>
+                        </div>
+                    </div>
+                    </div>
+                    <div th:if="${order.getDeliveryMethod().toString().equals('Delivery()')}">
+                        <div th:if="${order.getDeliveryMethod().getDeliveryStatus().toString().equals('READY_FOR_SHIPPING')}">
+                            <form th:if="${order.isPaid() or order.isCompleted()}" action="/orders/shipOrder" method="post">
+                                <input type="hidden" th:name="orderId" th:value="${order.getId()}"/>
+                                <button type="submit" th:text="#{order.shipping_button}"/>
+                            </form>
+                            <span th:unless="${order.isPaid() or order.isCompleted()}" th:text="#{order.awaiting}"></span>
+                        </div>
+                        <div th:if="${order.getDeliveryMethod().getDeliveryStatus().toString().equals('SHIPPED')}">
+                            <form action="/orders/deliverOrder" method="post">
+                                <input type="hidden" th:name="orderId" th:value="${order.getId()}"/>
+                                <button type="submit" th:text="#{order.delivery_button}"/>
+                            </form>
+                        </div>
+                        <div th:if="${order.getDeliveryMethod().getDeliveryStatus().toString().equals('DELIVERED')}"
+                             th:text="#{order.delivered}"/>
+                    </div>
+                    </div>
+                </td>
+
+                <!payment action>
+                <td sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')">
+                    <div th:if="${order.getPaymentMethod().toString().equals('Cash()')}">
+                        <div th:if="${order.isPaid() || order.isCompleted()}" th:text="#{order.is_paid}"/>
+                        <div th:if="${order.isOpen()}">
+                        <form action="/orders/pay/cash/markPaid" method="post">
+                            <input type="hidden" name="orderId" th:value="${order.getId()}"/>
+                            <button type="submit" th:text="#{order.mark_paid_button}"/>
+                        </form>
+                        </div>
+                    </div>
+                    <div th:if="${order.getPaymentMethod().toString().equals('Bill()')}">
+                        <div th:if="${order.isPaid() || order.isCompleted()}" th:text="#{order.is_paid}"/>
+                        <div th:unless="${order.isPaid() || order.isCompleted()}">
+                        <form action="/orders/pay/bill/markPaid" method="post">
+                            <input type="hidden" name="orderId" th:value="${order.getId()}"/>
+                            <button type="submit" th:text="#{order.mark_paid_button}"/>
+                        </form>
+                        </div>
+                    </div>
+                </td>
+
+                <!complete>
+                <td th:text="${((order.isCompleted()) ? 'COMPLETED' : 'OPEN')}"/>
+
+                <!details>
+                <td>
+                    <form action="/orderdetail" method="get">
+                        <input type="hidden" name="orderId" th:value="${order.getId()}" />
+                        <button type="submit" th:text="#{order.details_button}"/>
+                    </form>
+                </td>
+
+            </tr>
+            <div class="button-container" sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')">
+                <form action="/orders/open" method="get">
+                    <button type="submit" th:text="#{orders.showOpen}"></button>
+                </form>
+                <form action="/orders/completed" method="get">
+                    <button type="submit" th:text="#{orders.showCompleted}"></button>
+                </form>
+                <form action="/orders" method="get">
+                    <button type="submit" th:text="#{orders.showAll}"></button>
+                </form>
+            </div>
+            <div class="search-form-container" sec:authorize="hasRole('BOSS') or hasRole('EMPLOYEE')">
+                <form class="search-form" th:action="@{/orders/search}" method="get">
+                    <input id="searchTerm" name="searchTerm" type="text" autofocus="autofocus" required="required"/>
+                    <button type="submit" class="ui button" th:text="#{search.searchs}">Suche</button>
+                </form>
+            </div>
+            </div>
+            </tbody>
+        </table>
+    </section>
+
+</section>
+</body>
+</html>

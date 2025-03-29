@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html(title=#{users.title})}">
+<head>
+    <title>Users</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+    <section class="header-section">
+        <img th:src="@{/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg}" src="../static/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg" alt="Library Background">
+        <div class="header-text">
+            <p style="font-size: 50px" th:text="#{inventory.addGenre}">NEUES GENRE</p>
+        </div>
+    </section>
+
+    <section class="back">
+        <form class="book-form" role="form" th:action="@{/inventory/addGenre}" method="post" th:object="${genreForm}" enctype="multipart/form-data">
+            <div th:if="${alreadyExists}">
+                <p style="color: red;" th:text="#{inventory.genreAlreadyExists}"></p>
+            </div>
+            <table class="user-table">
+                <thead class="user-head">
+                <tr>
+                    <th class="table-text">Feld</th>
+                    <th class="table-text">Eingabe</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="user-row">
+                    <td>Name:</td>
+                    <td><input type="text" maxlength="200" id="name" name="name" th:field="*{name}" required="required"/></td>
+                </tr>
+                </tbody>
+            </table>
+            <button type="submit" style="margin-top: 20px;" th:text="#{inventory.addingGenre}">Genre hinzufügen</button>
+        </form>
+    </section>
+</section>
+</body>
+</html>

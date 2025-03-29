@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="#{calendar.title}"/>
+</head>
+<body>
+<section layout:fragment="content">
+    <div th:remove="all-but-first">
+        <div class="calendar-container">
+            <div class="calendar-group" th:each="event : ${events}" >
+                <h2 class="calendar-title" th:text="${formatter.formatDate(event.getTime())} + ': ' + ${event.getTitle()}"/>
+                <div class="calendar-split">
+                    <div>
+                        <p th:text="#{calendar.speaker} + ': ' + ${event.getSpeaker()}"/>
+                        <p th:text="#{calendar.room} + ': ' + ${event.getRoom()}"/>
+                        <p th:text="#{calendar.time} + ': ' +${formatter.formatTime(event.getTime())}"/>
+                        <p th:text="#{calendar.description} + ': ' + ${event.getDescription()}"/>
+                        <form method="get" th:action="@{/calendar/event}">
+                            <input type="hidden" name="eventId" th:value="${event.getId()}">
+                            <button th:text="#{calendar.details}" type="submit"/>
+                        </form>
+                    </div>
+                    <div>
+                        <img class="calendar-image" th:src="@{/files/{image}(image=${event.getImage()})}" th:alt="${event.getTitle()}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

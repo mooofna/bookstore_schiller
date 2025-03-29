@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="#{order.title}">Bestellliste</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+    <section class="header-section">
+        <img th:src="@{/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg}" src="../static/resources/img/cover/PHOTO-2023-10-27-10-31-24.jpg" alt="Library Background">
+        <div class="header-text">
+            <p style="font-size: 50px" th:text="#{support.user_overview}"></p>
+        </div>
+    </section>
+    <div class="login-container" style="margin-top: 25px">
+        <div class="grey-box" style="width: 43%; min-width: 80px; justify-content: space-around; padding-bottom: 20px;">
+            <div th:if="${issue != null}" style="width: 100%">
+                <p class="chat" style="margin-bottom: 0" th:text="#{support.subject} + ': ' + ${issue.title}"></p>
+                <p class="chat-description" style="background-color: #999897 "> <span th:text="#{support.description} + ': ' + ${issue.content}"></span></p>
+            </div>
+            <div class="chat-messages" style="align-items: flex-end">
+                <div th:each="message : ${issue.messages}" th:style="${message.isCustomer()} ? 'align-self: flex-start;' : ''">
+                    <p class="message-meta" th:text="${message.getAuthor().getUserAccount().getUsername()}"></p>
+                    <div class="ticket-form" style="margin-top: 0; margin-bottom: 0; min-width: 160px" th:text="${message.content}"></div>
+                    <p class="message-meta" style="margin-bottom: 10px;" th:text="${#temporals.format(message.getMessageTime(), 'HH:mm    dd/MM/yyyy')}"></p>
+                </div>
+                <div class="messages-bottom">
+                    <form class="send" th:if="${!issue.isClosed()}" role="form" th:action="@{/admin/support_chat/{issueId}(issueId=${issueId})}" method="post" th:object="${messageForm}">
+                        <div th:if="${param.error}">
+                            <p style="color: red;">Invalid username or password.</p>
+                        </div>
+                        <div class="form-div">
+                            <label th:text="#{support.description}" for="content" hidden="hidden"></label>
+                            <input class="ticket-form" style="margin-right: 50px;" type="text" id="content" name="content" th:field="*{content}" th:errorclass="fieldError"
+                                   required="required" autofocus="autofocus" placeholder="Write a new message here...">
+                        </div>
+                        <button th:text="#{support.send-message}" type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <form th:if="${!issue.isClosed()}" th:action="@{/admin/support_chat/closeIssue}" method="post">
+                <label for="issueId" hidden="hidden"></label>
+                <input id="issueId" hidden="hidden" name="issueId" th:value="${issueId}">
+                <button th:text="#{support.close}" type="submit">ClOSE ISSUE</button>
+            </form>
+        </div>
+
+
+    </div>
+</section>
+</body>
+</html>

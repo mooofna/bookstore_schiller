@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="#{thank_you.title}"/>
+    <link rel="stylesheet" href="../static/resources/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+</head>
+    <body>
+    <section layout:fragment="content">
+        <div class="main-content">
+
+            <div class="login-container">
+                <div class="thank-you-box">
+                    <div>
+                        <img style="height: 40px; margin-top: 15px;" th:src="@{/resources/img/black-heart-svgrepo-com.svg}" src="../static/resources/img/black-heart-svgrepo-com.svg">
+                    </div>
+                    <div class="thank-you" th:text="#{thank_you.title}" ></div>
+                    <div class="thank-you-text" th:text="${randomBookNerdQuote}"></div>
+                    <form action="/index">
+                        <button type="submit" th:text="#{thank_you.button}"/>
+                    </form>
+                </div>
+                <div class="thank-you-image">
+                    <img th:src="@{/resources/img/catontablecropped.jpg}" src="../static/resources/img/catontablecropped.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+</html>

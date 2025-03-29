@@ -1,0 +1,141 @@
+= Protokoll Gruppe 32
+
+Treffen am 26.11.2023
+
+Ort:      SLUB 0.47 +
+Beginn:   11.00 Uhr +
+Ende:     12:15 Uhr
+
+__Schriftführer:__ Maurice
+
+*Nächstes Treffen:* +
+03.12.2023, 11:00 Uhr, SLUB 0.47
+
+__Teilnehmer:__
+
+- Nova
+- Krystina
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+
+== Retrospektive des letzten Sprints
+
+*Was fehlt oder muss verbessert werden?*
+
+[option="headers"]
+|===
+|*Person* |*Aufgabe*
+|Nicola a|
+
+- Implementierung der Rollenverteilung (Erweiterung von Salespoint durch Mitarbeiter-Role)
+- Extra Klasse nur für Customer, da dieser besondere Funktionalität verlangt
+- Übersicht für Benutzerkonto
+- Edit-Button in Benutzerübersicht, um Mitarbeiter hinzuzufügen
+- GUI-Prototyp für Finanzübersicht
+
+|Marcel a|
+
+- Suchfunktion für konkrete Bestellungen zum Einsehen von Bestelldetails
+- Filtern und Sortieren aller Bestellungen nach Bestellstatus, standardmäßig nur offene Bestellungen anzeigen
+
+|Louis a|
+
+- Genres sollen hinzugefügt über Maske werden können
+- Abbildung des vollständigen Datenmodells im Katalog
+- GenreDataInitializer muss vor dem CatalogDataInitializer ausgeführt werden
+- CatalogController in Controller und Service aufteilen
+- Suche soll nicht in einem separaten Template erfolgen, sodass Auswahl zwischen Bücher, Merchandise, etc. separat erfolgen kann
+
+|Kristina a|
+
+- In Bestellübersicht sollen auch die Adressen und Mail angezeigt werden
+- Detailansicht für Bestellungen
+- Besseres Error-Handling
+
+|Cosme a|
+
+- Schiller-Button in Navbar auf die linke Seite setzen und als Home-Button verwenden
+- Warenkorb-GUI sollte an den Prototyp aus dem Pflichtenheft angepasst werden
+- Höhere Kontraste in Tabellenansicht
+
+|Benedikt a|
+
+- Fehler beim Erhöhen der Anzahl von Büchern im Inventar behoben
+
+|Nova a|
+
+- Bestellprozess erweitern: Shop -> Cart -> Delivery -> Payment -> Bezahlung abgeschlossen (jeweils eigene Templates)
+- Verwendung des Strategy-Patterns für die verschiedenen Bezahlmethoden: Erweiterung der Order-Klasse durch Strategy-Pattern für DeliveryMethod und Strategy-Pattern für PaymentMethod
+
+|Maurice a|
+
+- Implementieren eines Formulars für das Hinzufügen neuer Artikel
+- GenreAuswahl im Katalog nicht sichtbar, wenn keine Bücher gesucht werden
+- Rating-Logik für Artikel
+- Comment-Logik für Artikel
+
+|===
+
+== Planung des nächsten Sprints
+
+[option="headers"]
+|===
+|*Person* |*Aufgabe*
+|Nicola a|
+
+- Implementierung der Rollenverteilung (Erweiterung von Salespoint durch Mitarbeiter-Role)
+- Extra Klasse nur für Customer, da dieser besondere Funktionalität verlangt
+- GUI-Prototyp für Finanzübersicht
+- GUI-Prototyp für Bestell-Ansicht
+
+|Marcel a|
+
+- Suchfunktion für konkrete Bestellungen zum Einsehen von Bestelldetails
+- Filtern und Sortieren aller Bestellungen nach Bestellstatus, standardmäßig nur offene Bestellungen anzeigen
+- Übersicht für Benutzerkonto
+- Edit-Button in Benutzerübersicht, um Mitarbeiter hinzuzufügen
+
+|Louis a|
+
+- Abbildung des vollständigen Datenmodells im Katalog
+- GenreDataInitializer muss vor dem CatalogDataInitializer ausgeführt werden
+- CatalogController in Controller und Service aufteilen
+- Suche soll nicht in einem separaten Template erfolgen, sodass Auswahl zwischen Bücher, Merchandise, etc. separat erfolgen kann
+
+|Kristina a|
+
+- In Bestellübersicht sollen auch die Adressen und Mail angezeigt werden
+- 2 Tests für jedes Package
+- Besseres Error-Handling
+
+|Cosme a|
+
+- Bestellprozess erweitern: Shop -> Cart -> Delivery -> Payment -> Bezahlung abgeschlossen (jeweils eigene Templates)
+- Verwendung des Strategy-Patterns für die verschiedenen Bezahlmethoden: Erweiterung der Order-Klasse durch Strategy-Pattern für DeliveryMethod und Strategy-Pattern für PaymentMethod
+- Warenkorb-GUI sollte an den Prototyp aus dem Pflichtenheft angepasst werden
+- Höhere Kontraste in Tabellenansicht
+
+|Benedikt a|
+
+- Detailansicht für Bestellungen
+- Fehler beheben, dass man zwar maximal die gesamte verfügbare Anzahl eines Buches auf einmal in den Warenkorb legen kann, aber dies mehrfach tun kann und dadurch mehr Bücher im Warenkorb sein können als verfügbar sind
+- Individuelle Hilfe oder Übernahme von Aufgaben von anderen Teams
+
+|Nova a|
+
+- Bestellprozess erweitern: Shop -> Cart -> Delivery -> Payment -> Bezahlung abgeschlossen (jeweils eigene Templates)
+- Verwendung des Strategy-Patterns für die verschiedenen Bezahlmethoden: Erweiterung der Order-Klasse durch Strategy-Pattern für DeliveryMethod und Strategy-Pattern für PaymentMethod
+- Schiller-Button in Navbar auf die linke Seite setzen und als Home-Button verwenden
+
+
+|Maurice a|
+
+- Formular zum Hinzufügen neuer Items im Katalog implementieren
+- Inventar nur für Boss sichtbar an
+- CSS-Klasse für Katalog-Karten hinzufügen
+
+|===

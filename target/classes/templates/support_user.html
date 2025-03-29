@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>Support</title>
+    <link rel="stylesheet" href="../static/resources/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="login-container" style="margin-top: 25px">
+        <div class="grey-box" style="width: 40%; min-width: 80px; justify-content: space-around; padding: 25px;">
+            <div class="ticket" th:text="#{support.openIssue}">
+                we are sorry to hear you are having trouble
+            </div>
+            <div class="ticket-sub" th:text="#{support.text}">
+                please give a title and desciprtion bla bla
+            </div>
+            <div class="form" style="width:100%">
+                <form class="form" style="width:100%" role="form" th:action="@{/support_user}" method="post" th:object="${messageForm}">
+                    <div th:if="${param.error}">
+                        <p style="color: red;">Invalid username or password.</p>
+                    </div>
+                    <div class="error message" th:if="${#fields.hasErrors('*')}">
+                        <p>Einige Angaben sind nicht korrekt.</p>
+                    </div>
+                    <div class="form-div">
+                        <label for="title" hidden="hidden">Title</label>
+                        <input class="ticket-form" type="text" maxlength="200" id="title" name="title" th:field="*{title}" required="required" th:placeholder="#{support.title}" autofocus="autofocus">
+                    </div>
+                    <div class="form-div">
+                        <label th:text="#{support.description}" for="content" hidden="hidden"></label>
+                        <input class="ticket-form" type="text" id="content" name="content" th:field="*{content}" th:placeholder="#{support.content}" th:errorclass="fieldError" required="required">
+                    </div>
+                    <button style="margin-top: 15px;" type="submit" th:text="#{support.send}">Open Issue</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+</html>

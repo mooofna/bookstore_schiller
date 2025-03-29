@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{layout.html}">
+<head>
+    <title th:text="#{events.new_event.title}"/>
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="new-event-container">
+        <h2 class="new-event-form-header" th:text="#{events.new_event.title}"></h2>
+        <form class="new-event-form" method="post" th:action="@{/events/create}" th:object="${eventForm}" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="label" for="title" th:text="#{events.event_title}"></label>
+                <input id="title" maxlength="200" th:field="*{title}" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="image" th:text="#{events.image}"></label>
+                <input type="file" id="image" th:field="*{image}" accept="image/png, image/jpeg, image/gif" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="date" th:text="#{events.date}"></label>
+                <input id="date" type="date" th:field="*{date}" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="time" th:text="#{events.time}"></label>
+                <input id="time" type="time" th:field="*{time}" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="room" th:text="#{events.room}"></label>
+                <input id="room" maxlength="200" th:field="*{room}" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="capacity" th:text="#{events.capacity}"></label>
+                <input id="capacity" type="number" th:min="0" th:field="*{capacity}" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="speaker" th:text="#{events.speaker}"></label>
+                <input id="speaker" maxlength="200" th:field="*{speaker}" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="description" th:text="#{events.description}"></label>
+                <textarea id="description" th:field="*{description}" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" th:text="#{events.create_event}"></button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

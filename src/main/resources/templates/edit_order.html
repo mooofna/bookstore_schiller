@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html(title=#{order.title})}">
+<head>
+  <title>Edit Order</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+  <!-- Add other stylesheets as needed -->
+</head>
+<body>
+<section layout:fragment="content">
+  <div class="main-container">
+    <div class="order-detail-layout">
+      <h2>Edit Order Details</h2>
+      <form th:action="@{/orderdetail/update(orderId=${order.id})}" th:object="${order}" method="post">
+        <div class="form-group">
+          <label for="userName">User Name:</label>
+          <input type="text" maxlength="200" id="userName" name="userName" th:value="${userName}" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" maxlength="200" id="email" name="email" th:value="${email}" />
+        </div>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,43 @@
+= Persönliches Feedback eines Teammitgliedes des Softwarepraktikums 2023/24
+// Auch wenn der Bogen nicht anonymisiert ist, dürfen Sie gern Ihre Meinung offen kundtun.
+// Sowohl positive als auch negative Anmerkungen werden gern gesehen und zur stetigen Verbesserung genutzt.
+// Versuchen Sie in dieser Auswertung also stets sowohl Positives wie auch Negatives zu erwähnen.
+
+**Von:** Nova Melde
+
+**Gruppe:** 32
+
+== Was habe ich gelernt / was habe ich nicht gelernt?
+Ich habe definitiv meine git Kenntnisse vertieft und gefestigt.
+
+Ich habe gelernt, wie man html-templates erstellt und mit code verbindet, um webviews mit custom daten zu fuellen.
+
+Ich habe einige grundlegende Sachen ueber Praesentationen in fachlichen Kontexten gelernt, die im Nachhinein ziemlich offensichtlich sind, aber ich wahrscheinlich einfach mal ausgesprochen hoeren musste.
+
+== Welche Erfahrungen habe ich mit der Zusammenarbeit im Team gemacht?
+Die Teamarbeit war fuer mich manchmal etwas herausfordernd. Ich habe sehr viel ueber mein eigenes Verhalten in verschiedenen Gruppensituationen gelernt. Verstaendlicherweise waren vor allem unsere ersten Meetings,
+sowie die Gruppenstruktur zu anfang noch etwas lose, aber ich denke, dass wir uns ueber das Praktikum sowohl in unserer Arbeitsweise als auch auf persoenlicher Ebene zusammengefunden haben.
+
+Es gab Momente, in denen die Arbeit im Team frustrierend war, aber gluecklicherweise einige mehr, in denen ich froh war, ein tolles Team an meiner Seite zu haben.
+
+== Welche Erfahrungen habe ich bei der Wiederverwendung von Bibliotheken/Frameworks (insbesondere SalesPoint) gemacht?
+SalesPoint zu nutzen war zu grossen Teilen sehr angenehm, da es weite Teile des Modellierungsprozesses und der Grundfunktionalitaet schon uebernimmt, sodass man sehr intuitiv und high-level progammieren konnte.
+SalesPoint zu erweitern war interessant und satisfying. Manchmal war es jedoch auch frustrierend, naemlich dann, wenn die Domain Modelle von SalesPoint und dem eigenen Projekt nicht ganz uebereinstimmen und man
+gewisse Sachen, die SalesPoint eigentlich von sich aus schon macht, aber eben etwas anders als man es haben will, eher unelegant ummanteln oder beschraenken muss, sodass sie den eigenen Anforderungen entsprechen.
+
+== Welche Vorschläge zur weiteren Verbesserung des Softwarepraktikums gibt es?
+Fuer mich persoenlich war das Pair Programming als Hauptkonzept nicht sehr sinnvoll. Man hat zwar mit Pair programming angefangen aber es hat sich ziemlich schnell aufgesplittert, sodass es am Ende eher
+8 einzelne Personen waren, von denen sich ab und zu mal 2 fuer eine Aufgabe getroffen haben, wenn es grad passte. Im stressigen Uni Alltag fand SWT seinen Platz bei mir eher dann, wenn man grad Zeit und Energie zur Verfuegung
+hatte. Diese Spontanitaet ist schwer mit Pair Programming zu verbinden.
+
+Dementsprechend war ich kein Fan von der "Anweisung" zum Pair Programming, auch bei einer so grossen Gruppe.
+
+== Feedback für den Tutor
+Ich habe mich bei Andreas fachlich sehr gut betreut gefuehlt und auch menschlich war es mit ihm super angenehm. Er hat uns immer gute Einordnung gegeben, wo wir im Praktikum stehen und war bei
+Code Problemen jederzeit bereit und in der Lage, uns weiterzuhelfen.
+
+Ein einziger kleiner Verbesserungsvorschlag waere eine klarere Trennung der verschiedenen Rollen in Meetings. Die Mischung aus Tutor und Kund:in war manchmal etwas verwirrend, sodass eine klare zeitliche Trennung,
+wann welche Rolle eingenommen wird, vielleicht hilfreich waere.
+
+== Sonstiges und Anmerkungen
+Keine

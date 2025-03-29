@@ -1,0 +1,128 @@
+= Protokoll Gruppe 32
+
+Treffen am 03.12.2023
+
+Ort:      Discord +
+Beginn:   16:00 Uhr +
+Ende:     17:30 Uhr
+
+__Schriftführer:__ Maurice, Nova
+
+*Nächstes Treffen:* +
+10.12.2023, 16:00 Uhr, Discord
+
+__Teilnehmer:__
+
+- Nova
+- Krystina
+- Maurice
+- Benedikt
+- Nicola
+- Louis
+- Cosme
+- Marcel
+
+== Retrospektive des letzten Sprints
+
+*Was fehlt oder muss verbessert werden?*
+
+[option="headers"]
+|===
+|*Person* |*Aufgabe*
+|Nicola a|
+
+- GUI-Prototyp für Finanzübersicht
+- HTML/CSS "Thank you"-Page
+- NavigationBar so erweitern, dass neben dem Warenkorb die Anzahl der im Warenkorb liegenden Objekte angezeigt werden
+
+|Marcel a|
+
+- Filtern und Sortieren aller Bestellungen nach Bestellstatus, standardmäßig nur offene Bestellungen anzeigen
+- Bestelldetails abschließen
+
+|Louis a|
+
+- Suche soll nicht in einem separaten Template erfolgen, sodass Auswahl zwischen Bücher, Merchandise, etc. separat erfolgen kann
+- Refaktorisierung Suche (Wunsch von Marcel)
+
+|Kristina a|
+
+- In Bestellübersicht sollen auch die Adressen und Mail angezeigt werden
+- Problem der doppelten Abzählung mit Nova lösen
+
+|Cosme a|
+
+- Warenkorb-GUI sollte an den Prototyp aus dem Pflichtenheft angepasst werden
+- Höhere Kontraste in Tabellenansicht
+
+|Benedikt a|
+
+- HTML/CSS Rating/Comments in Catalog
+- Boss sollen keine Bestellungen abwickeln können (Warenkorb wird für Boss nicht gerendert, im Katalog wird Button sowie Auswahl der Anzahl nicht gerendert)
+
+|Nova a|
+
+- Bestellprozess erweitern: Shop -> Cart -> Delivery -> Payment -> Bezahlung abgeschlossen (jeweils eigene Templates)
+- Problem der doppelten Abzählung mit Kristina lösen
+
+|Maurice a|
+
+- Implementieren eines Formulars für das Hinzufügen neuer Artikel und Genres
+- Genre Auswahl im Katalog nicht sichtbar, wenn keine Bücher gesucht werden
+
+|===
+
+== Planung des nächsten Sprints
+
+[option="headers"]
+|===
+|*Person* |*Aufgabe*
+|Nicola a|
+
+- GUI-Prototyp für Finanzübersicht
+- HTML/CSS "Thank you"-Page
+- NavigationBar mit Nova so erweitern, dass neben dem Warenkorb die Anzahl der im Warenkorb liegenden Objekte angezeigt werden
+
+|Marcel a|
+
+- Filtern und Sortieren aller Bestellungen nach Bestellstatus, standardmäßig nur offene Bestellungen anzeigen
+- Bestelldetails abschließen
+- Möglichkeit für den Kunden, seine Bestellungen anzusehen (Bestellseite nach Nutzer filtern und Buttons nicht rendern)
+
+|Louis a|
+
+- Suche soll nicht in einem separaten Template erfolgen, sodass Auswahl zwischen Bücher, Merchandise, etc. separat erfolgen kann
+- Refaktorisierung Suche (Wunsch von Marcel)
+
+|Kristina a|
+
+- In Bestellübersicht sollen auch die Adressen und Mail angezeigt werden
+- Problem der doppelten Abzählung mit Nova lösen
+
+|Cosme a|
+
+- Warenkorb-GUI sollte an den Prototyp aus dem Pflichtenheft angepasst werden
+- Höhere Kontraste in Tabellenansicht
+
+|Benedikt a|
+
+- HTML/CSS Rating/Comments in Catalog
+- Boss sollen keine Bestellungen abwickeln können (Warenkorb wird für Boss nicht gerendert, im Katalog wird Button sowie Auswahl der Anzahl nicht gerendert)
+
+|Nova a|
+
+- Bestellprozess erweitern: Shop -> Cart -> Delivery -> Payment -> Bezahlung abgeschlossen (jeweils eigene Templates)
+- Problem der doppelten Abzählung mit Kristina lösen
+- NavigationBar mit Nicola so erweitern, dass neben dem Warenkorb die Anzahl der im Warenkorb liegenden Objekte angezeigt werden
+
+|Maurice a|
+
+- Implementieren eines Formulars für das Hinzufügen neuer Artikel und Genres
+- Genre Auswahl im Katalog nicht sichtbar, wenn keine Bücher gesucht werden
+
+|===
+
+* Gilt für jede Person:
+
+- Input Validation im eigenen Package (javax.validation)
+- Fehlersuche im eigenen Package, um Anwendung robust zu machen
